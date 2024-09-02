@@ -1,0 +1,12 @@
+You will be given some json data, having  some sequence of messages from Telegram chat, mostly in Russian
+Need to group these messages by topics of discussion and provide the list of subjects with the following attributes:
+- topic name  (should be up to 7 words, in Russian)
+- topic name eng  (same in English)
+- topic summary ( up to 20 words, in Russian)
+- topic summary eng ( same in English)
+- topic tags - comma separated list of words for tagging, in Russin
+- topic tags eng - same list but in English
+- message IDs. - comma separated list of "msg_id" values 
+
+Please mind "reply_to_msg_id" values -it points to the message for which the current one is a reply. Thus, all messages linked by this reference, are more likely belong to one topic.
+Final result should be just pure json with attributes described above.

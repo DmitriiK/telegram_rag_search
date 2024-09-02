@@ -1,0 +1,84 @@
+
+[
+    {
+        "topic_name": "Медицинские вопросы и страховка",
+        "topic_name_eng": "Medical Issues and Insurance",
+        "topic_summary": "Обсуждение экстренных медицинских ситуаций и страховок.",
+        "topic_summary_eng": "Discussion of emergency medical situations and insurances.",
+        "topic_tags": "медицина, страховка, экстренные ситуации",
+        "topic_tags_eng": "medicine, insurance, emergency situations",
+        "message_ids": "188375, 188376, 188377, 188378, 188379, 188380, 188381, 188382, 188384, 188386, 188387, 188390, 188392"
+    },
+    {
+        "topic_name": "Переписка и обсуждение цен",
+        "topic_name_eng": "Correspondence and Price Discussion",
+        "topic_summary": "Обсуждение цен на страхование и медицинские осмотры.",
+        "topic_summary_eng": "Discussion about prices for insurance and medical examinations.",
+        "topic_tags": "цены, страховка, медицинские услуги",
+        "topic_tags_eng": "prices, insurance, medical services",
+        "message_ids": "188380, 188381, 188382, 188384, 188390, 188393, 188394"
+    },
+    {
+        "topic_name": "Обсуждение аренды и показа товаров",
+        "topic_name_eng": "Discussion about Renting and Displaying Goods",
+        "topic_summary": "Рекомендации по аренде и предстоящим покупкам.",
+        "topic_summary_eng": "Recommendations for renting and upcoming purchases.",
+        "topic_tags": "аренда, товары, рекомендации",
+        "topic_tags_eng": "renting, goods, recommendations",
+        "message_ids": "188407, 188443, 188444, 188445, 188449, 188459"
+    },
+    {
+        "topic_name": "Свидетели Иеговы и реакции",
+        "topic_name_eng": "Witnesses of Jehovah and Reactions",
+        "topic_summary": "Обсуждение свидетелей Иеговы и мнений о них.",
+        "topic_summary_eng": "Discussion about Jehovah's Witnesses and opinions on them.",
+        "topic_tags": "свидетели Иеговы, мнения, обсуждения",
+        "topic_tags_eng": "witnesses of Jehovah, opinions, discussions",
+        "message_ids": "188487, 188488, 188492, 188493, 188494, 188496"
+    },
+    {
+        "topic_name": "Алкоголь и покупки",
+        "topic_name_eng": "Alcohol and Purchases",
+        "topic_summary": "Обсуждение цен на алкоголь и рекомендации по покупкам.",
+        "topic_summary_eng": "Discussion about alcohol prices and purchase recommendations.",
+        "topic_tags": "алкоголь, покупки, цены",
+        "topic_tags_eng": "alcohol, purchases, prices",
+        "message_ids": "188780, 188791, 188797"
+    },
+    {
+        "topic_name": "Обсуждение школ и онлайн-образования",
+        "topic_name_eng": "Discussion about Schools and Online Education",
+        "topic_summary": "Вопросы и ответы по онлайн-образованию.",
+        "topic_summary_eng": "Questions and answers about online education.",
+        "topic_tags": "школа, онлайн-образование, вопросы",
+        "topic_tags_eng": "school, online education, questions",
+        "message_ids": "188670, 188671, 188675, 188682"
+    },
+    {
+        "topic_name": "Налоги и товары из-за границы",
+        "topic_name_eng": "Taxes and Foreign Goods",
+        "topic_summary": "Обсуждение налогов на товары и доставки из-за границы.",
+        "topic_summary_eng": "Discussion on taxes for goods and deliveries from abroad.",
+        "topic_tags": "налоги, доставка, товары из-за границы",
+        "topic_tags_eng": "taxes, delivery, goods from abroad",
+        "message_ids": "188847, 188848, 188850, 188852, 188862"
+    },
+    {
+        "topic_name": "Поездки и трансферы",
+        "topic_name_eng": "Trips and Transfers",
+        "topic_summary": "Обсуждение путей и маршрутов в Турции.",
+        "topic_summary_eng": "Discussion on routes and trips in Turkey.",
+        "topic_tags": "трансфер, поездки, маршруты",
+        "topic_tags_eng": "transfer, trips, routes",
+        "message_ids": "188571, 188577, 188580, 188583" 
+    },
+    {
+        "topic_name": "Развлечения и мероприятия",
+        "topic_name_eng": "Entertainment and Events",
+        "topic_summary": "Рекомендации по путешествиям и мероприятиям в Турции.",
+        "topic_summary_eng": "Recommendations on travels and events in Turkey.",
+        "topic_tags": "развлечения, музыка, мероприятия",
+        "topic_tags_eng": "entertainment, music, events",
+        "message_ids": "188573, 188825, 188843" 
+    }
+]
