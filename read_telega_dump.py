@@ -35,10 +35,6 @@ def __extract_message_data(msg) -> TelegaMessage:
                       )
     return tm
 
-dump_path = r"/Users/dklmn/Documents/data/telega/result.json"
-tms = telega_dump_parse_essential(dump_path=dump_path)
-# note: for data, taken from "export chat history", we do not have number of reactions 
-print(list(tms)[0])
 
     
 
