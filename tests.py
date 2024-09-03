@@ -1,6 +1,7 @@
 from unittest import TestCase
 from datetime import datetime
 from data_classes import TelegaMessage, TelegaMessageIndex
+from read_telega_dump import telega_dump_parse_essential
 
 class TestTelega(TestCase):
 
@@ -40,10 +41,22 @@ class TestTelega(TestCase):
         print([x.msg_id for x in chain])
         assert [x.msg_id for x in chain] == [2, 3, 4, 5, 7]
 
+    def test_family_adding(self):
+        dump_path = r"/Users/dklmn/Documents/data/telega/result.json"
+        msgs = telega_dump_parse_essential(dump_path=dump_path)
+        mi = TelegaMessageIndex()
+        for msg in msgs:
+            mi.add_item(msg)
+        topic_msgs = mi.get_messages_tree(189845)
+        assert len(topic_msgs) > 1
+        mi.attach_near_messages(topic_msgs)
 
 
 
-TestTelega().test_parent_child_chain()
+
+
+
+TestTelega().test_family_adding()
 
 
 

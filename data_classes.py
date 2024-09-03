@@ -2,12 +2,14 @@ import datetime
 from pydantic import BaseModel, Field
 from typing import Optional, List
 from collections import defaultdict
+
+import config as cfg
 class TelegaMessage(BaseModel):
     msg_id:   int = Field(description='Telegram message id, unique for particular chat or group')
     msg_date: datetime.datetime = Field(description='date of message creation')
     user_name: Optional[str] = Field(description='User full name for my chat')
     user_id: Optional[str] = Field(description='user id')
-    reply_to_msg_id: Optional[int] = Field(description='reference to the message, this is respondint to')
+    reply_to_msg_id: Optional[int] = Field(description='reference to the message, this is responding to')
     msg_text: Optional[str] = Field (description='text of the message')
 
 
@@ -49,7 +51,7 @@ class TelegaMessageIndex:
         dfs(msg_id)
         return descendants
 
-    def get_messages_tree(self, msg_id: int):
+    def get_messages_tree(self, msg_id: int) -> List[TelegaMessage]:
         msg = self.msdg_ids.get(msg_id)
         ancestors =self.get_parent_messages(msg_id)[::-1] # reverting of order of list, topmost first
         descendants = self.get_children_messages(msg_id)
@@ -62,8 +64,27 @@ class TelegaMessageIndex:
         family =  direct_relatives+ in_direct_relatives
         family.sort(key=lambda x: x.msg_id)
         return family
+    
+    def attach_near_messages(self, family: List[TelegaMessage]):
+        family_ids = {x.msg_id for x in family}
+        family_candidate_ids = set()
+ 
+        for m in family:
+            dt_interval = (m.msg_date - cfg.near_messages_time_delta, m.msg_date + cfg.near_messages_time_delta)
+            # as family candidates we are considering the messages some time before and after every explicit member of family
+            for _, msg_ids in filter(lambda itm: dt_interval[0]< itm[0] < dt_interval[1], self.msg_date_ids.items()):
+                for msg_id in filter(lambda id: id not in self.reply_to_msg_ids and id not in family_ids, msg_ids):
+                    family_candidate_ids.add(msg_id)
+                    candidate_message = self.msdg_ids[msg_id]
+                    print(candidate_message)
+                    family_ids.add(msg_id)
 
+        family_candidates = [self.msdg_ids[msg_id] for msg_id in family_candidate_ids]
+        return family_candidates
 
+                    
+
+                                            
 
 
 
