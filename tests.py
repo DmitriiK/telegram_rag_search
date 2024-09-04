@@ -49,14 +49,9 @@ class TestTelega(TestCase):
             mi.add_item(msg)
         topic_msgs = mi.get_messages_tree(189845)
         assert len(topic_msgs) > 1
-        mi.attach_near_messages(topic_msgs)
+        fc = mi.attach_near_messages(topic_msgs)
+        print(fc[-5:])
 
-
-
-
-
-
-TestTelega().test_family_adding()
 
 
 
