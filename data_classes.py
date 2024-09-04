@@ -66,19 +66,29 @@ class TelegaMessageIndex:
         return family
     
     def attach_near_messages(self, family: List[TelegaMessage]):
+        nm_td  = cfg.near_messages_time_delta
+        nm_nm = cfg.near_messages_number_of_messages_delta
         family_ids = {x.msg_id for x in family}
+        family.sort(key=lambda x: x.msg_id)
         family_candidate_ids = set()
  
-        for m in family:
-            dt_interval = (m.msg_date - cfg.near_messages_time_delta, m.msg_date + cfg.near_messages_time_delta)
-            # as family candidates we are considering the messages some time before and after every explicit member of family
-            for _, msg_ids in filter(lambda itm: dt_interval[0]< itm[0] < dt_interval[1], self.msg_date_ids.items()):
-                for msg_id in filter(lambda id: id not in self.reply_to_msg_ids and id not in family_ids, msg_ids):
-                    family_candidate_ids.add(msg_id)
-                    candidate_message = self.msdg_ids[msg_id]
-                    print(candidate_message)
-                    family_ids.add(msg_id)
+        for i, m in enumerate(family):
+            dt_interval = (m.msg_date - nm_td,  m.msg_date + nm_td)
+            next_family_msg_id = family[i+1].msg_id if i < len(family) - 1 else None 
+            prev__family_msg_id = family[i-1].msg_id if i > 0 else 0
+            msgs_interval = max(m.msg_id - nm_nm, prev__family_msg_id), min(m.msg_id + nm_nm, next_family_msg_id if next_family_msg_id else m.msg_id + nm_nm)
 
+            # as family candidates we are considering the messages some time before and after every explicit member of family
+            for _, msg_ids in filter(lambda itm: dt_interval[0] <= itm[0] <= dt_interval[1], self.msg_date_ids.items()):
+                for msg_id in filter(lambda msg_id:
+                                        (msg_id not in self.reply_to_msg_ids
+                                        and msg_id not in family_ids, msg_ids
+                                        and  msgs_interval[0] <= msg_id <= msgs_interval[1]
+                                        )
+                                    ,msg_ids
+                                     ):
+                    family_candidate_ids.add(msg_id)
+                    family_ids.add(msg_id)
         family_candidates = [self.msdg_ids[msg_id] for msg_id in family_candidate_ids]
         return family_candidates
 
