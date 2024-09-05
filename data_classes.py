@@ -1,16 +1,44 @@
-import datetime
+from  datetime import datetime
 from pydantic import BaseModel, Field
 from typing import Optional, List
 from collections import defaultdict
 
 import config as cfg
+date_time_format = '%Y-%m-%d %H:%M:%S'
+
+def date_to_json_serialize(obj):
+    if isinstance(obj, datetime):
+        return obj.isoformat()  # or obj.strftime('%Y-%m-%d %H:%M:%S')
+    raise TypeError("Type not serializable")
+
 class TelegaMessage(BaseModel):
     msg_id:   int = Field(description='Telegram message id, unique for particular chat or group')
-    msg_date: datetime.datetime = Field(description='date of message creation')
+    msg_date: datetime = Field(description='date of message creation')
     user_name: Optional[str] = Field(description='User full name for my chat')
     user_id: Optional[str] = Field(description='user id')
     reply_to_msg_id: Optional[int] = Field(description='reference to the message, this is responding to')
     msg_text: Optional[str] = Field (description='text of the message')
+
+    def __str__(self):
+         return f'{self.msg_date.strftime(date_time_format)}; {self.msg_text}'
+    
+    def __repr__(self):
+         return f'{self.msg_id}:{self.msg_date.strftime(date_time_format)}; {self.msg_text}'
+    
+    def __eq__(self, other): 
+        if isinstance(other, TelegaMessage): 
+            if other.msg_id == self.msg_id: 
+                return True
+        return False
+    
+    def __hash__(self):
+        return self.msg_id
+    
+    def to_dict(self, is_in_family:bool = None):
+        dmsg = self.model_dump()
+        if is_in_family  is not None:
+            dmsg['is_in_family'] = is_in_family
+        return dmsg
 
 
 class TelegaMessageIndex:
@@ -65,35 +93,27 @@ class TelegaMessageIndex:
         family.sort(key=lambda x: x.msg_id)
         return family
     
-    def attach_near_messages(self, family: List[TelegaMessage]):
+    def get_family_candidates(self, family: List[TelegaMessage]):
         nm_td  = cfg.near_messages_time_delta
         nm_nm = cfg.near_messages_number_of_messages_delta
         family_ids = {x.msg_id for x in family}
         family.sort(key=lambda x: x.msg_id)
-        family_candidate_ids = set()
+        family_candidates = []
 
-        def filter_by_id_range(msg_id: int):
-            if msg_id in family_ids:
-                    return False
-            if msg_id  in self.reply_to_msg_ids:
-                    return False
-            if not (msgs_interval[0] <= msg_id <= msgs_interval[1]):
-                    return False
-            return True
- 
         for i, m in enumerate(family):
             dt_interval = (m.msg_date - nm_td,  m.msg_date + nm_td)
             next_family_msg_id = family[i+1].msg_id if i < len(family) - 1 else None 
             prev__family_msg_id = family[i-1].msg_id if i > 0 else 0
-            msgs_interval = max(m.msg_id - nm_nm, prev__family_msg_id), min(m.msg_id + nm_nm, next_family_msg_id if next_family_msg_id else m.msg_id + nm_nm)
+            msgs_interval = max(m.msg_id - nm_nm - 1, prev__family_msg_id), min(m.msg_id + nm_nm + 1, next_family_msg_id if next_family_msg_id else m.msg_id + nm_nm)
             # as family candidates we are considering the messages some time before and after every explicit member of family
             for _, msg_ids in filter(lambda itm: dt_interval[0] <= itm[0] <= dt_interval[1], self.msg_date_ids.items()):
-                for msg_id in filter(filter_by_id_range, msg_ids):
-                    family_candidate_ids.add(msg_id)
-        family_candidates = [self.msdg_ids[msg_id] for msg_id in family_candidate_ids]
+                for msg_id in filter(lambda msg_id: msgs_interval[0] < msg_id < msgs_interval[1] and msg_id not in family_ids, msg_ids):
+                    new_msg = self.msdg_ids[msg_id]
+                    if new_msg not in family_candidates: # need to sort out why it happens
+                        family_candidates.append(new_msg)
         return family_candidates
 
-                    
+               
 
                                             
 

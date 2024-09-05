@@ -1,6 +1,9 @@
 from unittest import TestCase
 from datetime import datetime
-from data_classes import TelegaMessage, TelegaMessageIndex
+
+import pyclip
+
+from data_classes import TelegaMessage, TelegaMessageIndex, date_to_json_serialize
 from read_telega_dump import telega_dump_parse_essential
 
 class TestTelega(TestCase):
@@ -42,6 +45,7 @@ class TestTelega(TestCase):
         assert [x.msg_id for x in chain] == [2, 3, 4, 5, 7]
 
     def test_family_adding(self):
+        import json
         dump_path = r"/Users/dklmn/Documents/data/telega/result.json"
         msgs = telega_dump_parse_essential(dump_path=dump_path)
         mi = TelegaMessageIndex()
@@ -49,9 +53,12 @@ class TestTelega(TestCase):
             mi.add_item(msg)
         topic_msgs = mi.get_messages_tree(189845)
         assert len(topic_msgs) > 1
-        fc = mi.attach_near_messages(topic_msgs)
-        print(fc[-5:])
-
-
-
+        fc = mi.get_family_candidates(topic_msgs) # calculation of family candidates
+        msgs_to_feed = [(m, True) for m in topic_msgs] + [(m, False) for m in fc]
+        msgs_to_feed.sort(key = lambda x: x[0].msg_date)
+        print(msgs_to_feed[0:3])
+        dls = [msg.to_dict(is_in_family) for  msg, is_in_family in msgs_to_feed]
+        json_string = json.dumps(dls, default=date_to_json_serialize,  ensure_ascii=False, indent=4)
+        print(f'len str ={len(json_string)}')
+        pyclip.copy(json_string) # copy to clipboard for feeding to LLM
 
