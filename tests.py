@@ -54,6 +54,9 @@ class TestTelega(TestCase):
         topic_msgs = mi.get_messages_tree(189845)
         assert len(topic_msgs) > 1
         fc = mi.get_family_candidates(topic_msgs) # calculation of family candidates
+        fe = [m.msg_id for m in topic_msgs] + [m.msg_id for m in fc] # family extended
+        fe.sort()
+        print(fe)
         msgs_to_feed = [(m, True) for m in topic_msgs] + [(m, False) for m in fc]
         msgs_to_feed.sort(key = lambda x: x[0].msg_date)
         print(msgs_to_feed[0:3])

@@ -43,5 +43,17 @@ telegram-topics:
         analyzer: russian
       topic_tags_eng:
         type: text
-      msg_id_s:
-        type: keyword
+      msg_ids:
+        type: integer
+        index: False
+
+      topic_name_vector:
+        type: dense_vector
+        dims: 512
+        index: True
+        similarity: "cosine"        
+      topic_name_eng_vector:
+        type: dense_vector
+        dims: 512
+        index: True
+        similarity: "cosine"
