@@ -1,12 +1,20 @@
-You will be given some json data, having  some sequence of messages from Telegram chat, mostly in Russian
-Need to group these messages by topics of discussion and provide the list of subjects with the following attributes:
+You will be given some json data, having  some sequence of messages from Telegram chat, mostly in Russian.
+The group, these messages are given from, is about expats life in Antalya city, Turkey, so mind this fact as  a default context.
+Sequence is ordered by "msg_date"  (message date ).
+There will be two types of messages, 
+- the first one is "is_in_family" - and that means that they are explicitly linked in parent child relationship to each other by  "reply_to_msg_id"  attribute.  If there are no value for reply_to_msg_id for one of such messages, -that means this message is a root of such tree, probably starting discussion on some topic.
+- the second one, where "is_in_family" ==False, - do not have explicit relation to main tree of discussion.
+They can be related to it or not, so were are consider them as "family candidates"
+
+Need to analyze the messages that are "in family", extract main subject of discussion (topic), and then  for each message not in family make a decision, - whether the message is related to main subject or not.
+Ultimately you should output in json format following:
 - topic name  (should be up to 7 words, in Russian)
 - topic name eng  (same in English)
-- topic summary ( up to 20 words, in Russian)
+- topic summary ( up to 50 words, for long topics may consist from up to 4 sentences in Russian)
 - topic summary eng ( same in English)
-- topic tags - comma separated list of words for tagging, in Russin
+- topic tags - list of words for tagging, in Russian
 - topic tags eng - same list but in English
-- message IDs. - comma separated list of "msg_id" values 
-
-Please mind "reply_to_msg_id" values -it points to the message for which the current one is a reply. Thus, all messages linked by this reference, are more likely belong to one topic.
-Final result should be just pure json with attributes described above.
+- new family members message IDs. - list of "msg_id" for "new family members",  subset of messages "not in family" that, according to your decision, relates to topic and thus need to be attributed "to family"
+- questions: list of 2 possible questions, in Enlish,  for which the answer can be found in some of the messages, from set "in_family" plus "new family members"
+Please mind "reply_to_msg_id" values -it points to the message for which the current one is a reply. Thus, all messages linked by this reference, are more likely belong to one topic. And if some message that is initially "family candidate" is attributed to "family" - you need to add to family all the tree of descendant messages, if any.
+Final result should be just pure json with attributes described above.'
