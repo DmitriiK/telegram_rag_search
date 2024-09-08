@@ -1,0 +1,47 @@
+telegram-messages:
+  settings:
+    number_of_shards: 1
+    number_of_replicas: 0
+  mappings:
+    properties:
+      msg_id: 
+        type: integer
+      reply_to_msg_id:
+        type: integer
+      msg_text:
+        type: text
+        analyzer: russian
+      msg_date:
+        type: date
+      # msg_text_vector:
+      #   type: dense_vector
+      #   dims: 768
+      #   index: true
+      #   similarity: cosine
+
+telegram-topics:
+  settings:
+    number_of_shards: 1
+    number_of_replicas: 0
+    
+  mappings:
+    properties:
+      topic_name:
+        type: text
+        analyzer: russian
+      topic_name_eng:
+        type: text
+        analyzer: standard
+      topic_summary:
+        type: text
+        analyzer: russian
+      topic_summary_eng:
+        type: text
+        analyzer: standard
+      topic_tags:
+        type: text
+        analyzer: russian
+      topic_tags_eng:
+        type: text
+      msg_id_s:
+        type: keyword
