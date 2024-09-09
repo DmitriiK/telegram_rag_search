@@ -79,9 +79,17 @@ class TestTelega(TestCase):
         print(f'len str ={len(json_string)}')
         pyclip.copy(json_string) # copy to clipboard for feeding to LLM
 
+index_name_topics = 'telegram-topics'
+
 class TestES(TestCase):
+
     def test_topics_index(self):
-        topics_path,  index_name = 'output/llm_output/topics.json', 'telegram-topics'
-        es.index_json_file(topics_path, index_name)
+        topics_path = 'output/llm_output/topics.json' 
+        es.index_json_file(topics_path, index_name_topics)
+    
+    def test_knn_search(self):
+        search_term = 'Cats feeding'
+        ret = es.question_text_vector_knn(search_term,index_name_topics)
+        print(ret)
 
 

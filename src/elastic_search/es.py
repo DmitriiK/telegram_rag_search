@@ -39,7 +39,7 @@ def index_docs(docs: Iterable[Dict], index_name, recreate_index = True):
 
 
 
-def elastic_search_knn(field, vector, course, index_name):
+def elastic_search_knn(field, vector, index_name):
     knn = {
         "field": field,
         "query_vector": vector,
@@ -47,14 +47,16 @@ def elastic_search_knn(field, vector, course, index_name):
         "num_candidates": 10000,
         "filter": {
             "term": {
-                "course": course
+                "chat_id": cfg.telegram_group_id
             }
         }
     }
+   
 
+    ind_flds = cfg.read_index_settings(index_name)['mappings']['properties']
     search_query = {
         "knn": knn,
-        "_source": ["text", "section", "question", "course", "id"]
+        "_source": [x for x in ind_flds]
     }
 
     es_results = es_client.search(
@@ -69,13 +71,11 @@ def elastic_search_knn(field, vector, course, index_name):
 
     return result_docs
 
-def question_text_vector_knn(q):
-    question = q['question']
-    course = q['course']
-    model = '' # stub
-    v_q = model.encode(question)
+def question_text_vector_knn(question: str, index_name: str):
 
-    return elastic_search_knn('question_text_vector', v_q, course)
+    model = get_st_model()
+    v_q = model.encode(question)
+    return elastic_search_knn('topic_name_eng_vector', v_q, index_name)
 
 def rag(query: dict, model='gpt-4o') -> str:
     search_results = question_text_vector_knn(query)
