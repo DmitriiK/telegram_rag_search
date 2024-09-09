@@ -6,7 +6,7 @@ from tqdm import tqdm
 import pandas as pd
 import ijson
 
-from data_classes import TelegaMessage
+from src.data_classes import TelegaMessage
 
 
 def telega_dump_to_pandas(dump_path: str) -> pd.DataFrame:
