@@ -7,6 +7,7 @@ import pyclip
 from src.data_classes import TelegaMessage,  date_to_json_serialize
 from src.telegram_messages_index import TelegaMessageIndex
 from src.read_telega_dump import telega_dump_parse_essential
+from src.elastic_search import es
 
 
 class TestTelega(TestCase):
@@ -77,4 +78,10 @@ class TestTelega(TestCase):
         json_string = json.dumps(dls, default=date_to_json_serialize,  ensure_ascii=False, indent=4)
         print(f'len str ={len(json_string)}')
         pyclip.copy(json_string) # copy to clipboard for feeding to LLM
+
+class TestES(TestCase):
+    def test_topics_index(self):
+        topics_path,  index_name = 'output/llm_output/topics.json', 'telegram-topics'
+        es.index_json_file(topics_path, index_name)
+
 

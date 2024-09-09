@@ -6,6 +6,9 @@ telegram-messages:
     properties:
       msg_id: 
         type: integer
+      chat_id: 
+        type: keyword
+      
       reply_to_msg_id:
         type: integer
       msg_text:
@@ -26,6 +29,8 @@ telegram-topics:
     
   mappings:
     properties:
+      chat_id: 
+        type: keyword
       topic_name:
         type: text
         analyzer: russian

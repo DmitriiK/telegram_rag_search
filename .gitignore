@@ -4,3 +4,4 @@ __pycache__/*.*
 
 .env
 src/__pycache__/*
+src/elastic_search/*
