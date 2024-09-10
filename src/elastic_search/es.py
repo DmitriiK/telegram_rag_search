@@ -1,5 +1,5 @@
 import json
-from typing import Iterable, Dict
+from typing import Iterable, Dict, List
 from sentence_transformers import SentenceTransformer
 from elasticsearch import Elasticsearch
 
@@ -39,9 +39,9 @@ def index_docs(docs: Iterable[Dict], index_name, recreate_index = True):
 
 
 
-def elastic_search_knn(field, vector, index_name):
+def elastic_search_knn(search_field:str,  vector, index_name: str, output_fields: List[str] = None):
     knn = {
-        "field": field,
+        "field": search_field,
         "query_vector": vector,
         "k": 5,
         "num_candidates": 10000,
@@ -52,11 +52,13 @@ def elastic_search_knn(field, vector, index_name):
         }
     }
    
-
-    ind_flds = cfg.read_index_settings(index_name)['mappings']['properties']
+    if not output_fields:
+        ind_flds = cfg.read_index_settings(index_name)['mappings']['properties']
+        output_fields = output_fields
     search_query = {
         "knn": knn,
-        "_source": [x for x in ind_flds]
+        "_source": [f for f in ind_flds
+                    if ind_flds[f]['type']!='dense_vector']
     }
 
     es_results = es_client.search(
