@@ -1,7 +1,7 @@
 
 # %%
 import datetime
-from typing import Iterable
+from typing import Iterable, Dict
 from tqdm import tqdm
 import pandas as pd
 import ijson
@@ -15,13 +15,18 @@ def telega_dump_to_pandas(dump_path: str) -> pd.DataFrame:
     df = pd.DataFrame.from_dict(dd)
     return df
 
-def telega_dump_parse_essential(dump_path: str) -> Iterable[TelegaMessage]:
+def telega_dump_parse_raw_docs(dump_path: str) -> Iterable[Dict]:
     with open(dump_path, "rb") as f:
         msgs = (msg for msg in ijson.items(f, 'messages.item')
                 if msg['type'] != 'service')
-        for raw_msg in tqdm(msgs):
-            tm = __extract_message_data(raw_msg)
-            yield tm
+        for raw_msg in msgs:
+            yield raw_msg
+
+def telega_dump_parse_essential(dump_path: str) -> Iterable[TelegaMessage]:
+    raw_docs = telega_dump_parse_raw_docs(dump_path)
+    for raw_msg in raw_docs:
+        tm = __extract_message_data(raw_msg)
+        yield tm
 
 def __extract_message_data(msg) -> TelegaMessage:
     tes = msg.get('text_entities')

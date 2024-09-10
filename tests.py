@@ -1,6 +1,7 @@
 from unittest import TestCase
 from datetime import datetime
 import json
+from  tqdm import tqdm
 
 import pyclip
 
@@ -8,6 +9,7 @@ from src.data_classes import TelegaMessage,  date_to_json_serialize
 from src.telegram_messages_index import TelegaMessageIndex
 from src.read_telega_dump import telega_dump_parse_essential
 from src.elastic_search import es
+import src.config as cfg
 
 
 class TestTelega(TestCase):
@@ -79,17 +81,26 @@ class TestTelega(TestCase):
         print(f'len str ={len(json_string)}')
         pyclip.copy(json_string) # copy to clipboard for feeding to LLM
 
-index_name_topics = 'telegram-topics'
+
 
 class TestES(TestCase):
 
     def test_topics_index(self):
         topics_path = 'output/llm_output/topics.json' 
-        es.index_json_file(topics_path, index_name_topics)
-    
+        es.index_json_file(topics_path, cfg.index_name_topics)
+
+    def test_messages_index(self):
+        messages_dump_path = "/Users/dklmn/Documents/data/telega/result.json"
+        msgs = telega_dump_parse_essential(dump_path=messages_dump_path)
+        subset = (msg.model_dump() for msg in msgs)
+        # subset = (x for x in subset if x['msg_date']> datetime(2024,1, 1))
+        # encoding = tiktoken.encoding_for_model(cfg.llm_model)
+        es.index_docs(docs = subset, index_name=cfg.index_name_messages, recreate_index=True)
+
+
     def test_knn_vector_search(self):
         search_term, search_field = 'Cats feeding', 'topic_name_eng_vector'
-        ret = es.knn_vector_search(search_term=search_term,index_name=index_name_topics, search_field=search_field)
+        ret = es.knn_vector_search(search_term=search_term,index_name=cfg.index_name_topics, search_field=search_field)
         print(ret)
 
 

@@ -11,6 +11,9 @@ telegram_group_id = 1688539638 # Kebab Antalia
 
 es_url = 'http://localhost:9200'
 elastic_search_index_config_path = "src/elastic_search/index_settings.yml"
+index_name_topics = 'telegram-topics'
+index_name_messages = "telegram-messages"  
+ 
 sent_tranformer_model_name = 'distiluse-base-multilingual-cased-v1'
 
 llm_model = "gpt-4o-mini"

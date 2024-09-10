@@ -1,5 +1,6 @@
 import json
 from typing import Iterable, Dict, List
+from tqdm import tqdm
 from sentence_transformers import SentenceTransformer
 from elasticsearch import Elasticsearch
 
@@ -29,7 +30,7 @@ def index_docs(docs: Iterable[Dict], index_name, recreate_index = True):
     vector_flds = [f for f in ind_flds if ind_flds[f]['type']=='dense_vector']
     if vector_flds:
         model = get_st_model()
-    for d in docs:
+    for d in tqdm(docs):
         d['chat_id'] = cfg.telegram_group_id
         for ftv in vector_flds:
             fld_to_encode = ftv[0: len(ftv)- len ('_vector')] # lets rely on this convention
