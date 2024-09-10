@@ -5,7 +5,7 @@ telegram-messages:
   mappings:
     properties:
       msg_id: 
-        type: integer
+        type: keyword
       chat_id: 
         type: keyword
       

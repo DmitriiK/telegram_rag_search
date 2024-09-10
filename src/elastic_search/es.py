@@ -5,6 +5,7 @@ from sentence_transformers import SentenceTransformer
 from elasticsearch import Elasticsearch
 
 import src.config as cfg
+from src.data_classes import TelegaMessage
 
 es_client = Elasticsearch(cfg.es_url) 
 
@@ -65,10 +66,7 @@ def knn_vector_search(search_term: str, search_field:str, index_name: str, outpu
                     if ind_flds[f]['type']!='dense_vector']
     }
 
-    es_results = es_client.search(
-        index=index_name,
-        body=search_query
-    )
+    es_results = es_client.search(index=index_name, body=search_query )
     
     result_docs = []
     
@@ -78,3 +76,28 @@ def knn_vector_search(search_term: str, search_field:str, index_name: str, outpu
             result_docs.append((score, hit['_source']))
 
     return result_docs
+
+def get_messages_by_id(chat_id: int, msg_ids: List[int]) -> List[TelegaMessage]:
+    query = {
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "terms": {
+                        "msg_id": msg_ids  # Filter by msg_id values
+                    }
+                },
+                {
+                    "term": {
+                        "chat_id": chat_id  # Filter by specific chat_id
+                    }
+                }
+            ]
+        }
+    }
+    }
+    es_results = es_client.search(index=cfg.index_name_messages, body=query)
+
+    tms = [TelegaMessage.model_validate(x['_source']) for x  in es_results['hits']['hits'] ]
+    return tms
+

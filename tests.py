@@ -101,6 +101,12 @@ class TestES(TestCase):
     def test_knn_vector_search(self):
         search_term, search_field = 'Cats feeding', 'topic_name_eng_vector'
         ret = es.knn_vector_search(search_term=search_term,index_name=cfg.index_name_topics, search_field=search_field)
-        print(ret)
+        assert ret
+        score, doc = ret[0][0], ret[0][1]
+        ret = es.get_messages_by_id(chat_id =  doc['chat_id'],  msg_ids=doc['msg_ids'])
+        for hit in ret:
+            
+            result_docs.append((score, hit['_source']))
+
 
 
