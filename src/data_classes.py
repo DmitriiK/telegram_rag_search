@@ -1,6 +1,7 @@
 from  datetime import datetime
+import json
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Optional, List
 
 date_time_format = '%Y-%m-%d %H:%M:%S'
 
@@ -37,4 +38,9 @@ class TelegaMessage(BaseModel):
         if is_in_family  is not None:
             dmsg['is_in_family'] = is_in_family
         return dmsg
+
+def convert_to_json_list(messages: List[TelegaMessage]):
+    dss = [msg.model_dump() for msg in messages]
+    json_string = json.dumps(dss, default=date_to_json_serialize, ensure_ascii=False, indent=4)
+    return json_string
 

@@ -104,9 +104,16 @@ class TestES(TestCase):
         assert ret
         score, doc = ret[0][0], ret[0][1]
         ret = es.get_messages_by_id(chat_id =  doc['chat_id'],  msg_ids=doc['msg_ids'])
-        for hit in ret:
-            
-            result_docs.append((score, hit['_source']))
+
+class TestLLM(TestCase):
+    def test_rag(self):
+        import src.llm as llm
+        ret = llm.rag('How can I feed my cat and how much would it cost?')
+        print (ret)
+
+
+    
+
 
 
 
