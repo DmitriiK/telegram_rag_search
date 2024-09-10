@@ -39,7 +39,10 @@ def index_docs(docs: Iterable[Dict], index_name, recreate_index = True):
 
 
 
-def elastic_search_knn(search_field:str,  vector, index_name: str, output_fields: List[str] = None):
+
+def knn_vector_search(search_term: str, search_field:str, index_name: str, output_fields: List[str] = None, min_score: float = 0.7):
+    model = get_st_model()
+    vector = model.encode(search_term)
     knn = {
         "field": search_field,
         "query_vector": vector,
@@ -69,18 +72,8 @@ def elastic_search_knn(search_field:str,  vector, index_name: str, output_fields
     result_docs = []
     
     for hit in es_results['hits']['hits']:
-        result_docs.append(hit['_source'])
+        score = hit['_score']
+        if score >= min_score:
+            result_docs.append((score, hit['_source']))
 
     return result_docs
-
-def question_text_vector_knn(question: str, index_name: str):
-
-    model = get_st_model()
-    v_q = model.encode(question)
-    return elastic_search_knn('topic_name_eng_vector', v_q, index_name)
-
-def rag(query: dict, model='gpt-4o') -> str:
-    search_results = question_text_vector_knn(query)
-    prompt = '' # build_prompt(query['question'], search_results)
-    answer = '' # llm(prompt, model=model)
-    return answer

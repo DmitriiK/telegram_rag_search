@@ -87,9 +87,9 @@ class TestES(TestCase):
         topics_path = 'output/llm_output/topics.json' 
         es.index_json_file(topics_path, index_name_topics)
     
-    def test_knn_search(self):
-        search_term = 'Cats feeding'
-        ret = es.question_text_vector_knn(search_term,index_name_topics)
+    def test_knn_vector_search(self):
+        search_term, search_field = 'Cats feeding', 'topic_name_eng_vector'
+        ret = es.knn_vector_search(search_term=search_term,index_name=index_name_topics, search_field=search_field)
         print(ret)
 
 
