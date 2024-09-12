@@ -1,16 +1,17 @@
 
 [
     {
-        "topic_name": "Кормление и здоровье кошек",
-        "topic_name_eng": "Feeding and health of cats",
-        "topic_summary": "Участники обсуждают корма для кошек, включая предпочтительные бренды и рацион. Основными темами являются влияние корма на здоровье питомцев, рекомендации по нормированию порций и советы по выбору качественного корма.",
-        "topic_summary_eng": "Participants discuss cat food, including preferred brands and diets. Main topics include the impact of food on pet health, recommendations for portion control, and tips for selecting quality food.",
-        "topic_tags": ["кошки", "кормление", "здоровье", "порции", "выбор корма"],
-        "topic_tags_eng": ["cats", "feeding", "health", "portions", "food selection"],
-        "msg_ids":  [189842, 189843, 189844, 189845, 189846, 189847, 189848, 189872, 189873, 189874, 189875, 189876, 189877, 189878, 189913, 189914, 189915, 189916, 189917, 189918, 189919, 189920, 189921, 189922, 189923, 189924, 189925, 189926, 189927, 189928, 189929, 189930, 189931, 189932, 189933, 189934, 189935, 189936, 189937, 189938, 189940, 189941, 189942, 189943, 189944, 189945, 189946, 189947, 189948, 189949, 189950, 189951, 189952, 190341, 190342, 190343, 190344, 190345],
+        "topic_name": "Рекомендации по кормлению кошек",
+        "topic_name_eng": "Recommendations for feeding cats",
+        "topic_summary": "Дмитрий Калманович задал вопрос о кормлении кошек, вызвав активное обсуждение. Рекомендовано кормить кошек нормированным количеством корма для предотвращения ожирения. Пользователи поделились опытом использования различных кормов, таких как Farmina и Royal Canin, обсуждая их плюсы и минусы.",
+        "topic_summary_eng": "Dmitrii Kalmanovich asked about feeding cats, sparking an active discussion. It was recommended to feed cats a regulated amount of food to prevent obesity. Users shared their experiences with various brands of food, such as Farmina and Royal Canin, discussing their pros and cons.",
+        "topic_tags": ["кошки", "кормление", "корм", "здоровье животных"],
+        "topic_tags_eng": ["cats", "feeding", "food", "pet health"],
+        "msg_ids": [189845, 189875, 189916, 189917, 189918, 189919, 189920, 189922, 189923, 189924, 189926, 189929, 189930, 189933, 189935, 189943, 189944, 189945, 189949, 190343
+                    ,189876, 189877, 189878, 189915, 189927, 189928, 189950, 189951],
         "questions": [
-            "Что рекомендуют участники по выбору корма для стерилизованных котов?",
-            "Какой режим кормления наиболее эффективен для поддержания здоровья кота?"
+            "What are the recommended daily amounts of food for a 5 kg sterilized cat?",
+            "Which cat food brands are preferred by chat members and why?"
         ]
     }
     ,

@@ -3,7 +3,7 @@ The group, these messages are given from, is about expats life in Antalya city, 
 Sequence is ordered by "msg_date"  (message date ).
 There will be two types of messages, 
 - the first one is "is_in_family" - and that means that they are explicitly linked in parent child relationship to each other by  "reply_to_msg_id"  attribute.  If there are no value for reply_to_msg_id for one of such messages, -that means this message is a root of such tree, probably starting discussion on some topic.
-- the second one, where "is_in_family" ==False, - do not have explicit relation to main tree of discussion.
+- the second one, where "is_in_family" == False, - do not have explicit relation to main tree of discussion.
 They can be related to it or not, so were are consider them as "family candidates"
 
 Need to analyze the messages that are "in family", extract main subject of discussion (topic), and then  for each message not in family make a decision, - whether the message is related to main subject or not.
@@ -14,7 +14,61 @@ Ultimately you should output in json format following:
 - topic summary eng ( same in English)
 - topic tags - list of words for tagging, in Russian
 - topic tags eng - same list but in English
-- new family members message IDs. - list of "msg_id" for "new family members",  subset of messages "not in family" that, according to your decision, relates to topic and thus need to be attributed "to family"
-- questions: list of 2 possible questions, in Enlish,  for which the answer can be found in some of the messages, from set "in_family" plus "new family members"
+- new family members message IDs. - list of "msg_id" for "new family members",  subset of messages "not in family", that, according to your decision, relates to topic and thus need to be attributed "to family"
+- questions: list of 2 possible questions, in English,  for which the answer can be found in some of the messages, from set "in_family" plus "new family members"
 Please mind "reply_to_msg_id" values -it points to the message for which the current one is a reply. Thus, all messages linked by this reference, are more likely belong to one topic. And if some message that is initially "family candidate" is attributed to "family" - you need to add to family all the tree of descendant messages, if any.
 Final result should be just pure json with attributes described above.'
+--
+example of usage:
+for set of messages:
+`
+[
+ {
+        "msg_id": 123,
+        "msg_date": "2024-08-29T10:14:18",
+        "user_name": "Dima",
+        "reply_to_msg_id": null,
+        "msg_text": "What kind of motor oil do you recommend to put in a Volkswagen car?",
+        "is_in_family": True
+    },
+     {
+        "msg_id": 124,
+        "msg_date": "2024-08-29T10:14:18",
+        "user_name": "John",
+        "reply_to_msg_id": null,
+        "msg_text": "I prefer Shell oil. But change it every 6 month",
+        "is_in_family": False
+    },
+    ,
+     {
+        "msg_id": 126,
+        "msg_date": "2024-08-29T10:14:18",
+        "user_name": "Janet",
+        "reply_to_msg_id": null,
+        "msg_text": "I have a nice cat",
+        "is_in_family": False
+    },
+     {
+        "msg_id": 127,
+        "msg_date": "2024-08-29T10:14:18",
+        "user_name": "George",
+        "reply_to_msg_id": 124,
+        "msg_text": "Shell sucks. Buy Motul",
+        "is_in_family": False
+    },
+    ,
+     {
+        "msg_id": 128,
+        "msg_date": "2024-08-29T10:14:18",
+        "user_name": "Paul",
+        "reply_to_msg_id": 123,
+        "msg_text": "VW sucks. Buy Toyota car, and you will not need to change oil at all",
+        "is_in_family": True
+    }
+    ]
+`
+topic_name might be: "recommendation for choosing of motor oil for VW".
+"topic_summary_eng" might be:  """as an motor oil for VS   recommended Shell and  Motul. 
+But somebody recommends to have Toyota car instead of VW""".
+And  new family members message IDs should be:  [124, 127,]
+123 and 128 should not be included in the new family list as they already have "is_in_family": True, and 126 - cause it is of-topic.
