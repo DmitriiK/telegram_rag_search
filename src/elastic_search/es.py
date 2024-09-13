@@ -44,7 +44,7 @@ def index_docs(docs: Iterable[Dict], index_name, recreate_index=True):
 def simple_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None, min_score: float = 0.7):   
     if not output_fields:
         ind_flds = cfg.read_index_settings(index_name)['mappings']['properties']
-        output_fields = [f for f in ind_flds if ind_flds[f]['type']!='dense_vector']
+        output_fields = [f for f in ind_flds if ind_flds[f]['type'] != 'dense_vector']
     search_query = {
                     "query": {
                         "match": {
@@ -84,7 +84,7 @@ def knn_vector_search(search_term: str, search_field: str, index_name: str, outp
     if not output_fields:
         ind_flds = cfg.read_index_settings(index_name)['mappings']['properties']
         output_fields = [f for f in ind_flds
-                    if ind_flds[f]['type']!='dense_vector']
+                         if ind_flds[f]['type']!='dense_vector']
     search_query = {
         "knn": knn,
         "_source": output_fields

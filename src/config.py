@@ -13,7 +13,7 @@ chat_desciption = 'Life or russian relocants in Antalya'
 es_url = 'http://localhost:9200'
 elastic_search_index_config_path = "src/elastic_search/index_settings.yml"
 
-messages_dump_path = r"/Users/dklmn/Documents/data/telega/result.json"
+messages_dump_path = "/Users/dklmn/Documents/data/telega/result.json"
 topics_path = 'output/llm_output/topics.json' 
 
 index_name_topics = 'telegram-topics'

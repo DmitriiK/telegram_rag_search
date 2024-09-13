@@ -4,6 +4,7 @@ import logging
 from tqdm import tqdm
 
 import src.config as cfg
+from src.data_classes import TelegaMessage
 from src.telegram_messages_index import TelegaMessageIndex
 from src.read_telega_dump import telega_dump_parse_essential
 import src.elastic_search.es as es
@@ -35,5 +36,11 @@ class RaguDuDu:
 
     def rag_by_messages(self, tags: str, question: str = None) -> str:
         search_field = 'msg_text'
-        ret = es.simple_search(search_term=tags, index_name=cfg.index_name_messages, search_field=search_field)
-        return ret
+        ed_lst = es.simple_search(search_term=tags, index_name=cfg.index_name_messages, search_field=search_field)
+        msgs = [TelegaMessage(**md[1]) for md in ed_lst]
+        topic_msgs_all = []
+        for msg in msgs:
+            tms = self.telegram_index.get_potential_topic(msg.msg_id)
+            tms = [x for x in tms if x.msgs_id not in [x.msg_id for x in topic_msgs_all]]
+            topic_msgs_all.append(tms)
+        return topic_msgs_all

@@ -7,8 +7,7 @@ telegram-messages:
       msg_id: 
         type: keyword
       chat_id: 
-        type: keyword
-      
+        type: keyword      
       reply_to_msg_id:
         type: integer
       msg_text:

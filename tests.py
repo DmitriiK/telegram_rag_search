@@ -62,7 +62,7 @@ class TestTelega(TestCase):
 
     def test_family_adding(self):
         self.set_up_tmi()
-        mi = self.telegram_index 
+        mi = self.telegram_index
         topic_starting_message = 190963  # santehnik
         # 189845 # 186989 # rent prices 187347 # taxi in Antalia, 189845 how to feed pets
         msgs_to_feed = mi.get_potential_topic(topic_starting_message) 
