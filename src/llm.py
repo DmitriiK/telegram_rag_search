@@ -2,10 +2,8 @@ from dotenv import load_dotenv
 from typing import List
 import logging
 from openai import OpenAI
-
 import src.config as cfg
 from src.data_classes import TelegaMessage, convert_to_json_list
-import  src.elastic_search.es  as es
 
 load_dotenv()
 
@@ -30,22 +28,28 @@ def build_rag_prompt(question: str, chat_desciption:str, messages: List[TelegaMe
 
     The data that is provided for you will contain msg_id field for each message. 
     You should output the id-s for the messages, that are relevant to the question and which you use for the answer.
-    The date - where you can try to find additional information to answer the quistion is:
+    The date - where you can try to find additional information to answer the question is:
     ---
     {messages}
+    Example, for messages like this 
+    ---
+        "msg_id": 123;   "msg_text": "What kind of motor oil do you recommend to put in a Volkswagen car?"   
+        "msg_id": 124;   "msg_text": "I prefer Shell oil. But change it every 6 month"
+        "msg_id": 127;    "msg_text": "Shell sucks. Buy Motul"
+        "msg_id": 128;    "msg_text": "VW sucks. Buy Toyota car, and you will not need to change oil at all"
+    --
+    and question: "A have Audi car. What motor oil is better for me?"
+    the result might be:
+    {{
+        answer: "As Audi is part of VW brand, it might be either Shell or Motul."
+        msg_ids: [123,124, 127]
+    }}
+    # note: 128 is no included as it is not relevant for this question
+    --
+    If there are no relevant information inside the messages - just give empty values.
     """
     msg_json = convert_to_json_list(messages)
-    return prompt_template.format(question = question, chat_desciption = chat_desciption, messages=msg_json)
+    return prompt_template.format(question=question, chat_desciption=chat_desciption, messages=msg_json)
 
 
-def rag(question: str) -> str:
-    search_field = 'topic_name_eng_vector'
-    chat_desciption = 'Life or russian relocants in Antalya'
-    ret = es.knn_vector_search(search_term=question,index_name=cfg.index_name_topics, search_field=search_field)
-    if ret:
-        score, doc = ret[0][0], ret[0][1]
-        logging.info(f'got result of knn search {score=}')
-        msgs = es.get_messages_by_id(chat_id =  doc['chat_id'],  msg_ids=doc['msg_ids'])
-        prompt = build_rag_prompt(question, chat_desciption=chat_desciption, messages=msgs)
-        answer = llm(prompt)
-        return answer
+

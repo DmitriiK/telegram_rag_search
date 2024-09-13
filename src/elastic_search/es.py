@@ -8,20 +8,21 @@ import src.config as cfg
 from src.data_classes import TelegaMessage
 
 es_client = Elasticsearch(cfg.es_url) 
-
 # es_client.info()
+
 
 def get_st_model():
     model = SentenceTransformer(cfg.sent_tranformer_model_name)
     return model
 
-def index_json_file(file_path: str, index_name, recreate_index = True):
+
+def index_json_file(file_path: str, index_name, recreate_index=True):
     with open(file_path, 'r', encoding='utf-8') as f:
         docs = json.load(f)
     index_docs(docs, index_name, recreate_index)
 
 
-def index_docs(docs: Iterable[Dict], index_name, recreate_index = True):
+def index_docs(docs: Iterable[Dict], index_name, recreate_index=True):
     ind_set = cfg.read_index_settings(index_name)
     if recreate_index:
         es_client.indices.delete(index=index_name, ignore_unavailable=True)
@@ -40,20 +41,20 @@ def index_docs(docs: Iterable[Dict], index_name, recreate_index = True):
         es_client.index(index=index_name, document=d)
 
 
-def simple_search(search_term: str, search_field:str, index_name: str, output_fields: List[str] = None, min_score: float = 0.7):   
+def simple_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None, min_score: float = 0.7):   
     if not output_fields:
         ind_flds = cfg.read_index_settings(index_name)['mappings']['properties']
         output_fields = [f for f in ind_flds if ind_flds[f]['type']!='dense_vector']
     search_query = {
                     "query": {
                         "match": {
-                        "msg_text": search_term
+                            search_field: search_term
                         }
                     },
                     "_source": output_fields
                     }
 
-    es_results = es_client.search(index=index_name, body=search_query )
+    es_results = es_client.search(index=index_name, body=search_query)
     
     result_docs = []
     
@@ -65,10 +66,7 @@ def simple_search(search_term: str, search_field:str, index_name: str, output_fi
     return result_docs
 
 
-
-
-
-def knn_vector_search(search_term: str, search_field:str, index_name: str, output_fields: List[str] = None, min_score: float = 0.7):
+def knn_vector_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None, min_score: float = 0.7):
     model = get_st_model()
     vector = model.encode(search_term)
     knn = {
@@ -92,7 +90,7 @@ def knn_vector_search(search_term: str, search_field:str, index_name: str, outpu
         "_source": output_fields
     }
 
-    es_results = es_client.search(index=index_name, body=search_query )
+    es_results = es_client.search(index=index_name, body=search_query)
     
     result_docs = []
     
@@ -102,6 +100,7 @@ def knn_vector_search(search_term: str, search_field:str, index_name: str, outpu
             result_docs.append((score, hit['_source']))
 
     return result_docs
+
 
 def get_messages_by_id(chat_id: int, msg_ids: List[int]) -> List[TelegaMessage]:
     size = len(msg_ids)  # To retrieve exactly the number of messages in msg_ids
