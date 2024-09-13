@@ -65,16 +65,9 @@ class TestTelega(TestCase):
     def test_family_adding(self):
         self.set_up_tmi()
         mi = self.telegram_index 
-
-        topic_starting_message = 186989 # rent prices 187347 # taxi in Antalia, 189845 how to feed pets
-        topic_msgs = mi.get_messages_tree(topic_starting_message)
-        assert len(topic_msgs) > 1
-        fc = mi.get_family_candidates(topic_msgs) # calculation of family candidates
-        fe = [m.msg_id for m in topic_msgs] + [m.msg_id for m in fc] # family extended
-        fe.sort()
-        print(fe)
-        msgs_to_feed = [(m, True) for m in topic_msgs] + [(m, False) for m in fc]
-        msgs_to_feed.sort(key = lambda x: x[0].msg_date)
+        topic_starting_message = 190963 # santehnik
+        # 189845 # 186989 # rent prices 187347 # taxi in Antalia, 189845 how to feed pets
+        msgs_to_feed = mi.get_potential_topic(topic_starting_message) 
         print(msgs_to_feed[0:3])
         dls = [msg.to_dict(is_in_family) for  msg, is_in_family in msgs_to_feed]
         json_string = json.dumps(dls, default=date_to_json_serialize,  ensure_ascii=False, indent=4)
@@ -108,7 +101,7 @@ class TestES(TestCase):
 class TestLLM(TestCase):
     def test_rag(self):
         import src.llm as llm
-        ret = llm.rag('How can I feed my cat and how much would it cost?')
+        ret = llm.rag_by_topics('How can I feed my cat and how much would it cost?')
         print (ret)
 
 

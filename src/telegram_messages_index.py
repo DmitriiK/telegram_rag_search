@@ -1,6 +1,7 @@
 
 from typing import List
 from collections import defaultdict
+import logging
 
 import src.config as cfg
 from src.data_classes import TelegaMessage
@@ -19,16 +20,18 @@ class TelegaMessageIndex:
             self.msg_date_ids[msg.msg_date].add(msg.msg_id)
 
     def get_message(self, msg_id: int)->TelegaMessage: 
-        return self.msdg_ids[msg_id]
+        return self.msdg_ids.get(msg_id)
 
     def get_parent_messages(self, msg_id: int) -> List[TelegaMessage]:
         ret_lst = []
         msg = self.msdg_ids.get(msg_id)
-        while msg.reply_to_msg_id:
-            msg =self.get_message(msg.reply_to_msg_id)
+        while msg and msg.reply_to_msg_id:
+            reply_to_msg_id = msg.reply_to_msg_id
+            msg =self.get_message(reply_to_msg_id)
             if not msg:
-                raise Exception(f'inconsistent data in index for reply_to_msg_id: {msg.reply_to_msg_id}')
-            ret_lst.append(msg)
+                logging.warn(f'inconsistent data in index for reply_to_msg_id: {reply_to_msg_id}')
+            else:
+                ret_lst.append(msg)
         return ret_lst  
         
     def get_children_messages(self, msg_id: int) -> List[TelegaMessage]:
@@ -57,6 +60,7 @@ class TelegaMessageIndex:
         family.sort(key=lambda x: x.msg_id)
         return family
     
+    
     def get_family_candidates(self, family: List[TelegaMessage]):
         nm_td  = cfg.near_messages_time_delta
         nm_nm = cfg.near_messages_number_of_messages_delta
@@ -76,6 +80,13 @@ class TelegaMessageIndex:
                     if new_msg not in family_candidates: # need to sort out why it happens
                         family_candidates.append(new_msg)
         return family_candidates
+    
+    def get_potential_topic(self, topic_starting_message: int)-> List[TelegaMessage]:
+            topic_msgs = self.get_messages_tree(topic_starting_message)
+            fc = self.get_family_candidates(topic_msgs) # calculation of family candidates
+            msgs_to_feed = [(m, True) for m in topic_msgs] + [(m, False) for m in fc]
+            msgs_to_feed.sort(key = lambda x: x[0].msg_date)
+            return msgs_to_feed
 
                
 
