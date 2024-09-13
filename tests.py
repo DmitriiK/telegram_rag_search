@@ -10,7 +10,7 @@ from src.telegram_messages_index import TelegaMessageIndex
 from src.read_telega_dump import telega_dump_parse_essential
 from src.elastic_search import es
 import src.config as cfg
-
+import src.llm as llm  
 
 class TestTelega(TestCase):
 
@@ -85,7 +85,7 @@ class TestES(TestCase):
     def test_messages_index(self):
         messages_dump_path = "/Users/dklmn/Documents/data/telega/result.json"
         msgs = telega_dump_parse_essential(dump_path=messages_dump_path)
-        subset = (msg.model_dump() for msg in msgs)
+        subset = [msg.model_dump() for msg in msgs]
         # subset = (x for x in subset if x['msg_date']> datetime(2024,1, 1))
         # encoding = tiktoken.encoding_for_model(cfg.llm_model)
         es.index_docs(docs = subset, index_name=cfg.index_name_messages, recreate_index=True)
@@ -98,11 +98,17 @@ class TestES(TestCase):
         score, doc = ret[0][0], ret[0][1]
         ret = es.get_messages_by_id(chat_id =  doc['chat_id'],  msg_ids=doc['msg_ids'])
 
+ 
 class TestLLM(TestCase):
-    def test_rag(self):
-        import src.llm as llm
+
+    def test_rag_by_topics(self):
         ret = llm.rag_by_topics('How can I feed my cat and how much would it cost?')
         print (ret)
+
+    def test_rag_by_messages(self):
+        ret = llm.rag_by_messages('сантехник')
+        print (ret)
+
 
 
     

@@ -40,6 +40,32 @@ def index_docs(docs: Iterable[Dict], index_name, recreate_index = True):
         es_client.index(index=index_name, document=d)
 
 
+def simple_search(search_term: str, search_field:str, index_name: str, output_fields: List[str] = None, min_score: float = 0.7):   
+    if not output_fields:
+        ind_flds = cfg.read_index_settings(index_name)['mappings']['properties']
+        output_fields = [f for f in ind_flds if ind_flds[f]['type']!='dense_vector']
+    search_query = {
+                    "query": {
+                        "match": {
+                        "msg_text": search_term
+                        }
+                    },
+                    "_source": output_fields
+                    }
+
+    es_results = es_client.search(index=index_name, body=search_query )
+    
+    result_docs = []
+    
+    for hit in es_results['hits']['hits']:
+        score = hit['_score']
+        if score >= min_score:
+            result_docs.append((score, hit['_source']))
+
+    return result_docs
+
+
+
 
 
 def knn_vector_search(search_term: str, search_field:str, index_name: str, output_fields: List[str] = None, min_score: float = 0.7):
@@ -59,11 +85,11 @@ def knn_vector_search(search_term: str, search_field:str, index_name: str, outpu
    
     if not output_fields:
         ind_flds = cfg.read_index_settings(index_name)['mappings']['properties']
-        output_fields = output_fields
+        output_fields = [f for f in ind_flds
+                    if ind_flds[f]['type']!='dense_vector']
     search_query = {
         "knn": knn,
-        "_source": [f for f in ind_flds
-                    if ind_flds[f]['type']!='dense_vector']
+        "_source": output_fields
     }
 
     es_results = es_client.search(index=index_name, body=search_query )
@@ -78,24 +104,27 @@ def knn_vector_search(search_term: str, search_field:str, index_name: str, outpu
     return result_docs
 
 def get_messages_by_id(chat_id: int, msg_ids: List[int]) -> List[TelegaMessage]:
+    size = len(msg_ids)  # To retrieve exactly the number of messages in msg_ids
     query = {
-    "query": {
-        "bool": {
-            "must": [
-                {
-                    "terms": {
-                        "msg_id": msg_ids  # Filter by msg_id values
-                    }
-                },
-                {
-                    "term": {
-                        "chat_id": chat_id  # Filter by specific chat_id
-                    }
+            "query": {
+                "bool": {
+                    "must": [
+                        {
+                            "terms": {
+                                "msg_id": msg_ids  # Filter by msg_id values
+                            }
+                        },
+                        {
+                            "term": {
+                                "chat_id": chat_id  # Filter by specific chat_id
+                            }
+                        }
+                    ]
                 }
-            ]
+            },
+            "size": size  # Specify the number of results to return
         }
-    }
-    }
+
     es_results = es_client.search(index=cfg.index_name_messages, body=query)
 
     tms = [TelegaMessage.model_validate(x['_source']) for x  in es_results['hits']['hits'] ]

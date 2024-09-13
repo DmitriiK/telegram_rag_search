@@ -16,11 +16,11 @@ telegram-messages:
         analyzer: russian
       msg_date:
         type: date
-      # msg_text_vector:
-      #   type: dense_vector
-      #   dims: 768
-      #   index: true
-      #   similarity: cosine
+      msg_text_vector:
+        type: dense_vector
+        dims: 512
+        index: true
+        similarity: cosine
 
 telegram-topics:
   settings:
