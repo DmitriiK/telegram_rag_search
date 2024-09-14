@@ -84,7 +84,7 @@ def knn_vector_search(search_term: str, search_field: str, index_name: str, outp
     if not output_fields:
         ind_flds = cfg.read_index_settings(index_name)['mappings']['properties']
         output_fields = [f for f in ind_flds
-                         if ind_flds[f]['type']!='dense_vector']
+                         if ind_flds[f]['type'] != 'dense_vector']
     search_query = {
         "knn": knn,
         "_source": output_fields

@@ -40,7 +40,7 @@ class RaguDuDu:
         msgs = [TelegaMessage(**md[1]) for md in ed_lst]
         topic_msgs_all = []
         for msg in msgs:
-            tms = self.telegram_index.get_potential_topic(msg.msg_id)
+            tms = self.telegram_index.get_potential_topic(msg.msg_id, max_depth_down=1, max_steps_up=1, take_in_direct_relatives=False)
             tms = [x for x in tms if x.msgs_id not in [x.msg_id for x in topic_msgs_all]]
             topic_msgs_all.append(tms)
         return topic_msgs_all
