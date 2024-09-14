@@ -1,5 +1,5 @@
 
-from typing import List
+from typing import List, Tuple
 from collections import defaultdict
 from math import inf
 import logging
@@ -103,7 +103,7 @@ class TelegaMessageIndex:
         return family_candidates
 
     def get_potential_topic(self, topic_starting_message: int,  max_depth_down: int = inf, max_steps_up: int = inf,
-                            take_in_direct_relatives: bool = False) -> List[TelegaMessage]:
+                            take_in_direct_relatives: bool = False) -> List[Tuple[TelegaMessage, bool]]:
         topic_msgs = self.get_messages_tree(topic_starting_message, max_depth_down, max_steps_up, take_in_direct_relatives)
         fc = self.get_family_candidates(topic_msgs)  # calculation of family candidates
         msgs_to_feed = [(m, True) for m in topic_msgs] + [(m, False) for m in fc]

@@ -107,6 +107,7 @@ class TestLLM(TestCase):
 
     def test_rag_by_messages(self):
         ret = self.rg.rag_by_messages('сантехник Влад')
+        pyclip.copy(ret)
         print(ret)
 
 
