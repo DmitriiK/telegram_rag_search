@@ -63,9 +63,9 @@ class TestTelega(TestCase):
     def test_family_adding(self):
         self.set_up_tmi()
         mi = self.telegram_index
-        topic_starting_message = 190963  # santehnik
-        # 189845 # 186989 # rent prices 187347 # taxi in Antalia, 189845 how to feed pets
-        msgs_to_feed = mi.get_potential_topic(topic_starting_message) 
+        topic_starting_message = 189845  # 
+        # 190963  # santehnik # 186989 # rent prices 187347 # taxi in Antalia, 189845 how to feed pets
+        msgs_to_feed = mi.get_potential_topic(topic_starting_message, max_steps_up=1, max_depth_down=1) 
         print(msgs_to_feed[0:3])
         dls = [msg.to_dict(is_in_family) for msg, is_in_family in msgs_to_feed]
         json_string = json.dumps(dls, default=date_to_json_serialize,  ensure_ascii=False, indent=4)
