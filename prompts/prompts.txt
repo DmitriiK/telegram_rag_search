@@ -71,3 +71,18 @@ topic_name might be: "recommendation for choosing of motor oil for VW".
 But somebody recommends to have Toyota car instead of VW""".
 And  new family members message IDs should be:  [124, 127,]
 123 and 128 should not be included in the new family list as they already have "is_in_family": True, and 126 - cause it is of-topic.
+
+
+Promtp for simple search by messages and answering of the queries
+
+You will be given some json data, having  some sequence of messages from Telegram chat, mostly in Russian.
+The group, these messages are given from, is about expats life in Antalya city, Turkey, so mind this fact as  a default context.
+Sequence is ordered by "msg_date"  (message date ).
+There will be two types of messages, 
+- the first one is "is_in_family" - and that means that they are explicitly linked in parent child relationship to each other by  "reply_to_msg_id"  attribute.  If there are no value for reply_to_msg_id for one of such messages, -that means this message is a root of such tree, probably starting discussion on some topic.
+- the second one,  not in family - do not have explicit relation to main tree of discussion.
+They can be related to it or not, so were are consider them as "topic  candidates"
+Having all this as context - you will need to answer the following question, in Russian or English, so you answer need to be don in the same language as question.
+"Кто такой сантехник Влад?"
+If there are no relevant information in the messages to answer this question - just say "not enough information"
+If yes, give the answer and list of msg_id values where you took relevant information for this answer.
