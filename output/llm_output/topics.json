@@ -1,17 +1,27 @@
 
 [
     {
-        "topic_name": "Рекомендации по кормлению кошек",
-        "topic_name_eng": "Recommendations for feeding cats",
-        "topic_summary": "Дмитрий Калманович задал вопрос о кормлении кошек, вызвав активное обсуждение. Рекомендовано кормить кошек нормированным количеством корма для предотвращения ожирения. Пользователи поделились опытом использования различных кормов, таких как Farmina и Royal Canin, обсуждая их плюсы и минусы.",
-        "topic_summary_eng": "Dmitrii Kalmanovich asked about feeding cats, sparking an active discussion. It was recommended to feed cats a regulated amount of food to prevent obesity. Users shared their experiences with various brands of food, such as Farmina and Royal Canin, discussing their pros and cons.",
-        "topic_tags": ["кошки", "кормление", "корм", "здоровье животных"],
-        "topic_tags_eng": ["cats", "feeding", "food", "pet health"],
-        "msg_ids": [189845, 189875, 189916, 189917, 189918, 189919, 189920, 189922, 189923, 189924, 189926, 189929, 189930, 189933, 189935, 189943, 189944, 189945, 189949, 190343
-                    ,189876, 189877, 189878, 189915, 189927, 189928, 189950, 189951],
+        "topic_name": "Кормление котов и советы по питанию",
+        "topic_name_eng": "Feeding Cats and Nutrition Tips",
+        "topic_summary": "Обсуждение о составе и стоимости кормов для котов, советы по количеству корма и режиму питания. Участники делятся личным опытом и рекомендациями по различным брендам кормов и подходам к кормлению.",
+        "topic_summary_eng": "Discussion about the composition and cost of cat food, advice on the amount of food and feeding schedules. Participants share personal experiences and recommendations on various brands of food and feeding approaches.",
+        "topic_tags": ["корм", "кошки", "питание", "советы", "здоровье"],
+        "topic_tags_eng": ["food", "cats", "nutrition", "advice", "health"],
+        "msg_ids": [
+            189845, 189875, 189873,
+            189916, 189917, 189918,
+            189919, 189920, 189922,
+            189923, 189924, 189926,
+            189940, 190343, 190342,
+            190341, 190762
+        ],
         "questions": [
-            "What are the recommended daily amounts of food for a 5 kg sterilized cat?",
-            "Which cat food brands are preferred by chat members and why?"
+            "What are the recommended brands of cat food mentioned in the discussion?",
+            "How do participants suggest controlling a cat's diet?"
+        ],
+        "answers": [
+            "Participants recommended brands such as Farmina, Royal Canin, and N&D for cat food.",
+            "It is suggested to regulate the amount of food given to cats to prevent obesity and to consider switching to a controlled feeding schedule."
         ]
     }
     ,

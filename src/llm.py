@@ -43,9 +43,9 @@ Ultimately you should output in json format following:
 - topic name eng  (same in English)
 - topic summary (up to 50 words, for long topics may consist from up to 4 sentences in Russian)
 - topic summary eng (same in English)
-- topic tags - list of words for tagging, in Russian
-- topic tags eng - same list but in English
-- relevant  message IDs. - list of "msg_id" for subset of messages "not in family", that, according to your decision, relates to topic 
+- topic tags: list of words for tagging, in Russian
+- topic tags eng: same list but in English
+- msg_ids: list of IDs for relevant for this topic messages, it supposed to contains ids for most of the messages in_family and some of the not in_family. 
 - questions: list of 2 possible questions, in English,  for which the answer can be found 'topic' messages.
 - answers: answers for each of the questions above. The source for that answers should be data from relevant messages, related to the topic
 --
