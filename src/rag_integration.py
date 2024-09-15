@@ -25,6 +25,7 @@ class RaguDuDu:
         prompt = llm.build_summarization_prompt(chat_description=cfg.chat_description, messages=msgs_to_feed)
         logging.info(f'len of prompt {len(prompt)}')
         answer = llm.ask_llm(prompt)
+        answer = answer.replace('```json', '').replace('```', '')
         return answer
 
     def rag_by_topics(self, question: str) -> str:

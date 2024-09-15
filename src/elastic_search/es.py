@@ -27,18 +27,22 @@ def index_docs(docs: Iterable[Dict], index_name, recreate_index=True):
     if recreate_index:
         es_client.indices.delete(index=index_name, ignore_unavailable=True)
         es_client.indices.create(index=index_name, body=ind_set)
-
+    
     ind_flds = ind_set['mappings']['properties']
-    vector_flds = [f for f in ind_flds if ind_flds[f]['type']=='dense_vector']
+    vector_flds = [f for f in ind_flds if ind_flds[f]['type'] == 'dense_vector']
     if vector_flds:
         model = get_st_model()
+    pk_fields = cfg.index_pk_fields.get(index_name)
     for d in tqdm(docs):
         d['chat_id'] = cfg.telegram_group_id
+        doc_id = None
+        if pk_fields:
+            doc_id = ';'.join([str(d[x]) for x in pk_fields])
         for ftv in vector_flds:
-            fld_to_encode = ftv[0: len(ftv)- len ('_vector')] # lets rely on this convention
+            fld_to_encode = ftv[0: len(ftv) - len('_vector')]  # lets rely on this convention
             if fld_to_encode in d:
                 d[ftv] = model.encode(d[fld_to_encode]).tolist()
-        es_client.index(index=index_name, document=d)
+        es_client.index(index=index_name, id=doc_id, document=d)
 
 
 def simple_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None, min_score: float = 2):

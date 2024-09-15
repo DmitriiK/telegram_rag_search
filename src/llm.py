@@ -48,6 +48,8 @@ Ultimately you should output in json format following:
 - msg_ids: list of IDs for relevant for this topic messages, it supposed to contains ids for most of the messages in_family and some of the not in_family. 
 - questions: list of 2 possible questions, in English,  for which the answer can be found 'topic' messages.
 - answers: answers for each of the questions above. The source for that answers should be data from relevant messages, related to the topic
+
+Final output should be pure parsible to dict json, without any additional comments.
 --
 example of usage:
 for set of messages:

@@ -116,7 +116,15 @@ class TestLLM(TestCase):
     def test_summarize_to_topic(self):
         # 190963  # santehnik # 186989 # rent prices 187347 # taxi in Antalia, 189845 how to feed pets
         ret = self.rg.get_topic_summary_by_message(topic_message_id=189845)
+        pyclip.copy(ret)
         print(ret)
+
+    def test_summarize_to_topic_and_write_to_es(self):
+        json_ret = self.rg.get_topic_summary_by_message(topic_message_id=189845)
+        print(json_ret)
+        topic_doc = json.loads(json_ret)
+        es.index_docs(docs=[topic_doc], index_name=cfg.index_name_topics, recreate_index=False)
+
 
 
 
