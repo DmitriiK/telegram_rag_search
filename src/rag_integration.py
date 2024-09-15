@@ -8,7 +8,7 @@ from src.data_classes import TelegaMessage, convert_to_json_list
 from src.telegram_messages_index import TelegaMessageIndex
 from src.read_telega_dump import telega_dump_parse_essential
 import src.elastic_search.es as es
-import src.llm as llm
+import  src.llm as llm
 
 
 class RaguDuDu:
@@ -31,10 +31,10 @@ class RaguDuDu:
             msgs = es.get_messages_by_id(chat_id=doc['chat_id'],  msg_ids=doc['msg_ids'])
             prompt = llm.build_rag_prompt(question, chat_desciption=cfg.chat_desciption, messages=msgs)
             logging.info(prompt)
-            answer = llm(prompt)
+            answer = llm.ask_llm(prompt)
             return answer
 
-    def rag_by_messages(self, tags: str, question: str = None) -> str:
+    def rag_by_messages(self, question: str, tags: str = None) -> str:
         search_field = 'msg_text'
         ed_lst = es.simple_search(search_term=tags, index_name=cfg.index_name_messages, search_field=search_field)
         msgs = [TelegaMessage(**md[1]) for md in ed_lst]
@@ -43,4 +43,8 @@ class RaguDuDu:
             tms = self.telegram_index.get_potential_topic(msg.msg_id, max_depth_down=1, max_steps_up=1, take_in_direct_relatives=False)
             tms = [x[0] for x in tms if x[0].msg_id not in [x.msg_id for x in topic_msgs_all]]
             topic_msgs_all.extend(tms)
-        return convert_to_json_list(topic_msgs_all)
+            prompt = llm.build_rag_prompt(question, chat_desciption=cfg.chat_desciption, messages=topic_msgs_all)
+            logging.info(f'len of prompt {len(prompt)}')
+            answer = llm.ask_llm(prompt)
+            return answer
+    

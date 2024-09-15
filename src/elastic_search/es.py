@@ -41,7 +41,7 @@ def index_docs(docs: Iterable[Dict], index_name, recreate_index=True):
         es_client.index(index=index_name, document=d)
 
 
-def simple_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None, min_score: float = 7):   
+def simple_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None, min_score: float = 2):
     if not output_fields:
         ind_flds = cfg.read_index_settings(index_name)['mappings']['properties']
         output_fields = [f for f in ind_flds if ind_flds[f]['type'] != 'dense_vector']

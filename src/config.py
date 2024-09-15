@@ -21,8 +21,12 @@ index_name_messages = "telegram-messages"
  
 sent_tranformer_model_name = 'distiluse-base-multilingual-cased-v1'
 
-llm_model = "gpt-4o-mini"
+# llm_model, llm_price = "gpt-4o-2024-08-06", (2.5, 10)  # input,output tokens, usd for 1M
 
+llm_model, llm_price = "gpt-4o-mini", (0.15, 0.6)  # input, output tokens, usd for 1M
+
+
+llm_price
 def read_index_settings(index_name):
     with open(elastic_search_index_config_path, 'r') as file:
         data = yaml.safe_load(file)

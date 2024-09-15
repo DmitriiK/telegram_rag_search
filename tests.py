@@ -1,6 +1,8 @@
 from unittest import TestCase
 from datetime import datetime
 import json
+import logging
+
 from tqdm import tqdm
 
 import pyclip
@@ -11,6 +13,8 @@ from src.read_telega_dump import telega_dump_parse_essential
 from src.elastic_search import es
 import src.config as cfg
 from src.rag_integration import RaguDuDu
+
+logging.getLogger().setLevel(logging.INFO)
 
 
 class TestTelega(TestCase):
@@ -89,7 +93,7 @@ class TestES(TestCase):
 
     def test_knn_vector_search(self):
         search_term, search_field = 'Cats feeding', 'topic_name_eng_vector'
-        ret = es.knn_vector_search(search_term=search_term,index_name=cfg.index_name_topics, search_field=search_field)
+        ret = es.knn_vector_search(search_term=search_term,  index_name=cfg.index_name_topics, search_field=search_field)
         assert ret
         score, doc = ret[0][0], ret[0][1]
         print(f'{score=}')
@@ -106,8 +110,7 @@ class TestLLM(TestCase):
         print(ret)
 
     def test_rag_by_messages(self):
-        ret = self.rg.rag_by_messages('сантехник Влад')
-        pyclip.copy(ret)
+        ret = self.rg.rag_by_messages(question='Посоветуйте сантеника в Анталии', tags='сантехник Влад')
         print(ret)
 
 
