@@ -27,7 +27,7 @@ def telega_dump_parse_raw_docs(dump_path: str) -> Iterable[Dict]:
 
 def telega_dump_parse_essential(dump_path: str) -> Iterable[TelegaMessage]:
     raw_docs = telega_dump_parse_raw_docs(dump_path)
-    for raw_msg in raw_docs:
+    for raw_msg in tqdm(raw_docs):
         tm = __extract_message_data(raw_msg)
         yield tm
 

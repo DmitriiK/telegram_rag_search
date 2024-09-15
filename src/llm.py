@@ -11,6 +11,8 @@ client = OpenAI()
 
 
 def ask_llm(prompt, model=cfg.llm_model):
+    if len(prompt) > 100000:
+        raise Exception("Prompt is too big")
     response = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": prompt}]

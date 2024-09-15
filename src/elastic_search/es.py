@@ -6,6 +6,7 @@ from elasticsearch import Elasticsearch
 
 import src.config as cfg
 from src.data_classes import TelegaMessage
+from src.read_telega_dump import telega_dump_parse_essential
 
 es_client = Elasticsearch(cfg.es_url) 
 # es_client.info()
@@ -45,7 +46,16 @@ def index_docs(docs: Iterable[Dict], index_name, recreate_index=True):
         es_client.index(index=index_name, id=doc_id, document=d)
 
 
-def simple_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None, min_score: float = 2):
+def load_messages_from_dump():
+    messages_dump_path = cfg.messages_dump_path
+    msgs = telega_dump_parse_essential(dump_path=messages_dump_path)
+    subset = [msg.model_dump() for msg in msgs]
+    # subset = (x for x in subset if x['msg_date']> datetime(2024,1, 1))
+    # encoding = tiktoken.encoding_for_model(cfg.llm_model)
+    index_docs(docs=subset, index_name=cfg.index_name_messages, recreate_index=True)
+
+
+def simple_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None, min_score: float = 2, size: int = 20):
     if not output_fields:
         ind_flds = cfg.read_index_settings(index_name)['mappings']['properties']
         output_fields = [f for f in ind_flds if ind_flds[f]['type'] != 'dense_vector']
@@ -55,8 +65,10 @@ def simple_search(search_term: str, search_field: str, index_name: str, output_f
                             search_field: search_term
                         }
                     },
-                    "_source": output_fields
-                    }
+                    "_source": output_fields,
+                    "size": size,  # Adjust the number of documents to retrieve
+                    
+                }
 
     es_results = es_client.search(index=index_name, body=search_query)
     
@@ -64,7 +76,7 @@ def simple_search(search_term: str, search_field: str, index_name: str, output_f
     
     for hit in es_results['hits']['hits']:
         score = hit['_score']
-        if score >= min_score:
+        if score and score >= min_score:
             result_docs.append((score, hit['_source']))
 
     return result_docs

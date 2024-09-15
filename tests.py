@@ -3,7 +3,6 @@ from datetime import datetime
 import json
 import logging
 
-from tqdm import tqdm
 
 import pyclip
 
@@ -84,12 +83,7 @@ class TestES(TestCase):
         es.index_json_file(topics_path, cfg.index_name_topics)
 
     def test_messages_index(self):
-        messages_dump_path = cfg.messages_dump_path
-        msgs = telega_dump_parse_essential(dump_path=messages_dump_path)
-        subset = [msg.model_dump() for msg in msgs]
-        # subset = (x for x in subset if x['msg_date']> datetime(2024,1, 1))
-        # encoding = tiktoken.encoding_for_model(cfg.llm_model)
-        es.index_docs(docs=subset, index_name=cfg.index_name_messages, recreate_index=True)
+        es.load_messages_from_dump()
 
     def test_knn_vector_search(self):
         search_term, search_field = 'Cats feeding', 'topic_name_eng_vector'
@@ -99,6 +93,15 @@ class TestES(TestCase):
         print(f'{score=}')
         ret = es.get_messages_by_id(chat_id=doc['chat_id'],  msg_ids=doc['msg_ids'])
 
+    def test_simple_search(self):
+        search_field = 'msg_text'
+        tags = 'кот жрет'
+        srs = es.simple_search(search_term=tags, index_name=cfg.index_name_messages, search_field=search_field, min_score=1)
+        print(f'number of messages found {len(srs)}')
+        srs = [{**d, "score": score} for score, d in srs]
+        srs.sort(key=lambda x: x['msg_id'])
+        print(srs)
+
 
 class TestLLM(TestCase):
 
@@ -106,11 +109,12 @@ class TestLLM(TestCase):
         self.rg = RaguDuDu()
 
     def test_rag_by_topics(self):
-        ret = self.rg.rag_by_topics('How can I feed my cat and how much would it cost?')
+        question = 'I have a Thai cat. How should I feed him? '
+        ret = self.rg.rag_by_topics(question=question)
         print(ret)
 
     def test_rag_by_messages(self):
-        ret = self.rg.rag_by_messages(question='Посоветуйте сантеника в Анталии', tags='сантехник Влад')
+        ret = self.rg.rag_by_messages(question='I have a Thai cat. How should I feed him?', tags='Кот кормить')
         print(ret)
 
     def test_summarize_to_topic(self):
