@@ -79,6 +79,8 @@ class TelegaMessageIndex:
                 in_direct_relatives.extend(rr)
             family.extend(in_direct_relatives)
         family.sort(key=lambda x: x.msg_id)
+        for x in family:
+            x.is_in_family = True
         return family
 
     def get_family_candidates(self, family: List[TelegaMessage]):
@@ -103,17 +105,9 @@ class TelegaMessageIndex:
         return family_candidates
 
     def get_potential_topic(self, topic_starting_message: int,  max_depth_down: int = inf, max_steps_up: int = inf,
-                            take_in_direct_relatives: bool = False) -> List[Tuple[TelegaMessage, bool]]:
+                            take_in_direct_relatives: bool = False) -> List[TelegaMessage]:
         topic_msgs = self.get_messages_tree(topic_starting_message, max_depth_down, max_steps_up, take_in_direct_relatives)
         fc = self.get_family_candidates(topic_msgs)  # calculation of family candidates
-        msgs_to_feed = [(m, True) for m in topic_msgs] + [(m, False) for m in fc]
-        msgs_to_feed.sort(key=lambda x: x[0].msg_date)
-        return msgs_to_feed
-
-               
-
-                                            
-
-
-
-    
+        topic_msgs.extend(fc)
+        topic_msgs.sort(key=lambda x: x.msg_date)
+        return topic_msgs
