@@ -30,10 +30,10 @@ class TestTelega(TestCase):
         self.telegram_index = mi
 
     def test_add_to_index(self):
-        msgs = [TelegaMessage(msg_id=1, reply_to_msg_id=None, msg_date=datetime(2020, 1, 1), msg_text='text 1', user_name ='xx', user_id='ss'),
-                TelegaMessage(msg_id=2, reply_to_msg_id=1, msg_date=datetime(2020, 1, 2), msg_text='text 1', user_name ='xx', user_id='ss'),
-                TelegaMessage(msg_id=3, reply_to_msg_id=1, msg_date=datetime(2020, 1, 2), msg_text='text 1', user_name ='xx', user_id='ss'),
-                TelegaMessage(msg_id=2, reply_to_msg_id=1, msg_date=datetime(2020, 1, 2), msg_text='text new', user_name ='xx', user_id='ss'),
+        msgs = [TelegaMessage(msg_id=1, reply_to_msg_id=None, msg_date=datetime(2020, 1, 1), msg_text='text 1', user_name='xx', user_id='ss'),
+                TelegaMessage(msg_id=2, reply_to_msg_id=1, msg_date=datetime(2020, 1, 2), msg_text='text 1', user_name='xx', user_id='ss'),
+                TelegaMessage(msg_id=3, reply_to_msg_id=1, msg_date=datetime(2020, 1, 2), msg_text='text 1', user_name='xx', user_id='ss'),
+                TelegaMessage(msg_id=2, reply_to_msg_id=1, msg_date=datetime(2020, 1, 2), msg_text='text new', user_name='xx', user_id='ss'),
                 ]
         mi = TelegaMessageIndex()
         for msg in msgs:
@@ -124,12 +124,3 @@ class TestLLM(TestCase):
         print(json_ret)
         topic_doc = json.loads(json_ret)
         es.index_docs(docs=[topic_doc], index_name=cfg.index_name_topics, recreate_index=False)
-
-
-
-
-    
-
-
-
-
