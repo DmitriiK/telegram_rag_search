@@ -1,6 +1,9 @@
 # LLM-Based RAG Search Over Telegram Messages
 
 ## Overview
+![image](https://github.com/user-attachments/assets/89ebf96e-bc44-4a99-a7ee-c0126ef0d62b)
+
+
 This repository implements functionalities for retrieving and processing Telegram messages, specifically focusing on using Large Language Models (LLMs) for Retrieval-Augmented Generation (RAG) search functionalities. It enables users to parse and visualize topics discussed in Telegram chats and find relevant information based on queries using Elastic Search.
 
 ## RAG based search over Telegram Messages
