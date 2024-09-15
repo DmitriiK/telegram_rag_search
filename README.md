@@ -5,7 +5,7 @@ This repository implements functionalities for retrieving and processing Telegra
 
 ## RAG based search over Telegram Messages
 Features:
-- retrieving of Telegram messages from exported data or directrly though Telegram API
+- retrieving of Telegram messages from exported data or directly though Telegram API
 - Creation of  an in-memory index of Telegram messages.
 - Building of "Topic tree" from these messages, using LLM
 - Visualize topic trees from messages using graph representations.
@@ -19,20 +19,22 @@ or by playing around with [tests](tests.py).
 ### Technologies been used
 - Elastic Search for search over text data
 - Open AI for summarization of the messages
-- SentenceTranformer for calculation of RAG embeddings
-- graphviz  Digraph for vizualization of graphs (Discussion tree)
+- SentenceTranformer for calculation of RAG embedding-s
+- graphviz  Digraph for visualization of graphs (Discussion tree)
+- Docker for launching of Elastic Search
   
 ### Implementation details
-Unfortunatly, I could not find any SentenceTransformer model, that might work reliably create vector embeddings  with russian text.
-You can take a look at  [Cousine similarity comparison notebook](cousine_similarity.ipynb), where I tryid to compare different models for calculations of vector embeddings.
+Unfortunatly, I could not find any SentenceTransformer model, that might work reliably create vector embedding  with Russian text.
+You can take a look at  [Cousine similarity comparison notebook](cousine_similarity.ipynb), where I tried to compare different models for calculations of vector embedding.
 So, for search over messages I'm using simple ES search.
 For semantic search I'm using another approach. I'm grouping the messages into topics. As as first level of this grouping I use explicit links of the messages to each other, building discussion tree, that looks like this.
 ![image](https://github.com/user-attachments/assets/8206dc68-1971-47d5-b849-e3d29c6cf907)
-But as not of the messages are linked to each other explicitely, I have to extend this list by adding ajustent messages and feed this to LLM to sort out who is relevant and to create document with topic summary,both in russian and in english. This document is pushed to ES, where it can be used for vector search by English fields later.
+But as not of the messages are linked to each other explicitly, I have to extend this list by adding adjacent messages and feed this to LLM to sort out who is relevant and to create document with topic summary,both in Russian and in English. This document is pushed to ES, where it can be used for vector search by English fields later.
 
 ### Not implemented yet, but in plans
 - Add evaluation of RAG search
-- Make from this telegram bot, or\and make Streamlit applicstion as UI.
+- Make from this telegram bot, or\and make Streamlit application as UI. 
+- create ETL for pulling the new messages from the chat and pushing the documents to ES index
 - 
 
 
