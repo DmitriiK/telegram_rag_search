@@ -1,5 +1,6 @@
 import logging
 from tqdm import tqdm
+import json
 
 import src.config as cfg
 from src.data_classes import TelegaMessage
@@ -54,4 +55,34 @@ class RaguDuDu:
         logging.info(f'len of prompt {len(prompt)} for {len(topic_msgs_all)} messages')
         answer = llm.ask_llm(prompt)
         return answer
-    
+
+
+def translate_messages(msgs, max_tokens_count: int = 16000):
+    def output_chunk(chunk_messages):
+        json_str = json.dumps(chunk_messages, indent=4, ensure_ascii=False) 
+
+        # put breakpoint her to copy result to llm interface manually  
+        print(f'chunk is ready for msgs: {chunk_min_msg_id}-{msg.msg_id}, {chunk_tokens_count=}') 
+        prompt = llm.build_translation_prompt(json_str)
+        ret_llm = llm.ask_llm(prompt=prompt)
+        # ret_llm = llm.get_pure_json_from_llm_result(ret_llm)
+        out_fn = f'output/llm_output/messages{chunk_min_msg_id}-{msg.msg_id}.json'
+        with open(out_fn, "w") as outfile:
+            outfile.write(ret_llm)
+            print(f'data written to {out_fn}')
+    chunk_messages, chunk_tokens_count, chunk_min_msg_id = [], 0, None
+    letters_per_token = 2  # &?
+    for msg in msgs:
+        if not chunk_min_msg_id:
+            chunk_min_msg_id = msg.msg_id
+        msg_dic = {'msg_id': msg.msg_id, 'user_name': msg.user_name, 'msg_text': msg.msg_text}
+        if msg.reply_to_msg_id:
+            msg_dic['reply_to_msg_id'] = msg.reply_to_msg_id
+        apr_tokens_count = len(str(msg_dic))/letters_per_token  # approximate tokens count
+        if (chunk_tokens_count + apr_tokens_count) > max_tokens_count:
+            output_chunk(chunk_messages)
+            chunk_messages, chunk_tokens_count, chunk_min_msg_id = [], 0, None
+        chunk_messages.append(msg_dic)
+        chunk_tokens_count += apr_tokens_count
+    if chunk_messages:   
+        output_chunk(chunk_messages)

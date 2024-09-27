@@ -1,6 +1,8 @@
 from dotenv import load_dotenv
 from typing import List
 import logging
+import json
+
 from openai import OpenAI
 import src.config as cfg
 from src.data_classes import TelegaMessage, convert_to_json_list
@@ -21,6 +23,11 @@ def ask_llm(prompt, model=cfg.llm_model):
     amount_spend = (response.usage.prompt_tokens * cfg.llm_price[0] + response.usage.completion_tokens * cfg.llm_price[1])/1000000
     logging.info(f'amount_spend {amount_spend:.5f} USD')
     return response.choices[0].message.content
+
+
+def get_pure_json_from_llm_result(llr_ret:  str):
+    llr_ret = llr_ret.replace('```json', '').replace('```', '')
+    return json.dumps(json.loads(llr_ret), indent=4,  ensure_ascii=False)
 
 
 def build_summarization_prompt(messages: List[TelegaMessage], chat_description: str = '') -> str:
@@ -176,5 +183,20 @@ for set of messages:
     msg_json = convert_to_json_list(messages)
     return prompt_template.format(question=question, chat_description=chat_description, messages=msg_json)
 
+
+def build_translation_prompt(msgs_json: str) -> str:
+    prompt_template = """
+You will be given json dump of messages from Telegram chat in Russian.
+Need to translate it to English.
+Please mind "reply_to_msg_id" field,  it points to another message, been posted earlier,  
+as specifies that the current message is a reply to another one.
+Return pure json, without any explanations,  with same structure, but with msg_id and msg_text fields only.
+
+The messages, that you need to translate are:
+```json
+    {messages}
+```
+    """
+    return prompt_template.format( messages=msgs_json)
 
 
