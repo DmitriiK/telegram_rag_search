@@ -58,7 +58,7 @@ class RaguDuDu:
         return answer
 
 
-def translate_messages(msgs: Iterable[TelegaMessage], max_tokens_count: int = 16000, overlapping_msgs_cnt: int = 0):
+def translate_messages(msgs: Iterable[TelegaMessage], out_dir:str,  max_tokens_count: int = 16000, overlapping_msgs_cnt: int = 0):
     """_summary_
 
     Args:
@@ -73,7 +73,7 @@ def translate_messages(msgs: Iterable[TelegaMessage], max_tokens_count: int = 16
         prompt = llm.build_translation_prompt(json_str)
         ret_llm = llm.ask_llm(prompt=prompt)
         ret_llm = ret_llm.replace('```json', '').replace('```', '')
-        out_fn = f'output/llm_output/messages{chunk_min_msg_id}-{chunk_max_msg_id}.json'
+        out_fn = f'{out_dir}/messages{chunk_min_msg_id}-{chunk_max_msg_id}.json'
         with open(out_fn, "w") as outfile:
             outfile.write(ret_llm)
             print(f'data written to {out_fn}')
@@ -81,7 +81,7 @@ def translate_messages(msgs: Iterable[TelegaMessage], max_tokens_count: int = 16
     chunk_msgs, chunk_symbols_count = [], 0
     letters_per_token = 2  # &?
     for msg in msgs:
-        #  todo - thinks about replyto 
+        #  todo - think about replyto to keep context for translation
         msg_dic = {'msg_id': msg.msg_id, 'user_name': msg.user_name, 'msg_text': msg.msg_text}
         if msg.reply_to_msg_id:
             msg_dic['reply_to_msg_id'] = msg.reply_to_msg_id

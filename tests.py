@@ -75,6 +75,22 @@ class TestTelega(TestCase):
         print(f'len str ={len(json_string)}')
         pyclip.copy(json_string)  # copy to clipboard for feeding to LLM
 
+    def test_merge_translation(self):
+        import os
+        import json
+        import glob
+
+        merged_data = []
+        search_folder = 'output/llm_output'
+
+        for filename in glob.glob(os.path.join(search_folder, 'messages*.json')):
+            with open(filename, 'r') as file:
+                data = json.load(file)
+                merged_data.extend(data)
+
+        with open('merged_data.json', 'w') as outfile:
+            json.dump(merged_data, outfile)
+                
 
 class TestES(TestCase):
 
@@ -135,4 +151,4 @@ class TestLLM(TestCase):
         msgs = telega_dump_parse_essential(dump_path=dump_path) # return iterator, not list
         max_tokens_count = 8000 * 1.5
         # gpt-4o mini; mulitpying to approx coef to be sure we can fit to context window and does not exeed number of max output tokens  
-        translate_messages(msgs, max_tokens_count=max_tokens_count, overlapping_msgs_cnt=2)
+        translate_messages(msgs,"output/llm_output", max_tokens_count=max_tokens_count, overlapping_msgs_cnt=2)
