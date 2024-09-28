@@ -10,9 +10,11 @@ from src.data_classes import TelegaMessage, convert_to_json_list
 load_dotenv()
 
 client = OpenAI()
+TOTAL_SPEND = 0 # spend USD for input output tokens
 
 
 def ask_llm(prompt, model=cfg.llm_model):
+    global TOTAL_SPEND
     if len(prompt) > 100000:
         raise Exception("Prompt is too big")
     response = client.chat.completions.create(
@@ -21,7 +23,8 @@ def ask_llm(prompt, model=cfg.llm_model):
     )
     logging.info(f'number of prompt_tokens: {response.usage.prompt_tokens}; completion tokens: {response.usage.completion_tokens}')
     amount_spend = (response.usage.prompt_tokens * cfg.llm_price[0] + response.usage.completion_tokens * cfg.llm_price[1])/1000000
-    logging.info(f'amount_spend {amount_spend:.5f} USD')
+    TOTAL_SPEND += amount_spend
+    logging.info(f'amount_spend total:{TOTAL_SPEND:.5f}, last: {amount_spend:.5f} USD')
     return response.choices[0].message.content
 
 

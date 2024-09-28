@@ -1,5 +1,6 @@
 import logging
 from tqdm import tqdm
+from typing import Iterable, List
 import json
 
 import src.config as cfg
@@ -57,32 +58,38 @@ class RaguDuDu:
         return answer
 
 
-def translate_messages(msgs, max_tokens_count: int = 16000):
-    def output_chunk(chunk_messages):
-        json_str = json.dumps(chunk_messages, indent=4, ensure_ascii=False) 
+def translate_messages(msgs: Iterable[TelegaMessage], max_tokens_count: int = 16000, overlapping_msgs_cnt: int = 0):
+    """_summary_
 
-        # put breakpoint her to copy result to llm interface manually  
-        print(f'chunk is ready for msgs: {chunk_min_msg_id}-{msg.msg_id}, {chunk_tokens_count=}') 
+    Args:
+        msgs (List[TelegaMessage]): telegram msgs l
+        max_tokens_count (int, optional): Tokens per chunk. Defaults to 16000.
+        overlapping_msgs_cnt (int, optional): number of overlapping msgs in the chunk. Defaults to 0.
+    """
+    def output_chunk(chunk_messages: List[TelegaMessageIndex]):
+        json_str = json.dumps(chunk_messages, indent=4, ensure_ascii=False) 
+        chunk_min_msg_id, chunk_max_msg_id = chunk_messages[0]["msg_id"], chunk_messages[-1]["msg_id"] 
+        print(f'chunk is ready for {len(chunk_messages)} msgs: {chunk_min_msg_id}-{chunk_max_msg_id}, {chunk_symbols_count=}') 
         prompt = llm.build_translation_prompt(json_str)
         ret_llm = llm.ask_llm(prompt=prompt)
-        # ret_llm = llm.get_pure_json_from_llm_result(ret_llm)
-        out_fn = f'output/llm_output/messages{chunk_min_msg_id}-{msg.msg_id}.json'
+        ret_llm = ret_llm.replace('```json', '').replace('```', '')
+        out_fn = f'output/llm_output/messages{chunk_min_msg_id}-{chunk_max_msg_id}.json'
         with open(out_fn, "w") as outfile:
             outfile.write(ret_llm)
             print(f'data written to {out_fn}')
-    chunk_messages, chunk_tokens_count, chunk_min_msg_id = [], 0, None
+        
+    chunk_msgs, chunk_symbols_count = [], 0
     letters_per_token = 2  # &?
     for msg in msgs:
-        if not chunk_min_msg_id:
-            chunk_min_msg_id = msg.msg_id
+        #  todo - thinks about replyto 
         msg_dic = {'msg_id': msg.msg_id, 'user_name': msg.user_name, 'msg_text': msg.msg_text}
         if msg.reply_to_msg_id:
             msg_dic['reply_to_msg_id'] = msg.reply_to_msg_id
-        apr_tokens_count = len(str(msg_dic))/letters_per_token  # approximate tokens count
-        if (chunk_tokens_count + apr_tokens_count) > max_tokens_count:
-            output_chunk(chunk_messages)
-            chunk_messages, chunk_tokens_count, chunk_min_msg_id = [], 0, None
-        chunk_messages.append(msg_dic)
-        chunk_tokens_count += apr_tokens_count
-    if chunk_messages:   
-        output_chunk(chunk_messages)
+        msg_symbols_count = len(str(msg_dic))
+        if (chunk_symbols_count + msg_symbols_count) / letters_per_token > max_tokens_count:  # approximate tokens count
+            output_chunk(chunk_msgs)
+            chunk_msgs = chunk_msgs[-overlapping_msgs_cnt:]
+        chunk_msgs.append(msg_dic)
+        chunk_symbols_count = len(str(chunk_msgs))
+    if len(chunk_msgs) > overlapping_msgs_cnt:   
+        output_chunk(chunk_msgs)

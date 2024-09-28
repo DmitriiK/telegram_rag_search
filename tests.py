@@ -133,6 +133,6 @@ class TestLLM(TestCase):
         from src.rag_integration import translate_messages
         dump_path = cfg.messages_dump_path
         msgs = telega_dump_parse_essential(dump_path=dump_path) # return iterator, not list
-        max_tokens_count = 8000 * 1.5  
+        max_tokens_count = 8000 * 1.5
         # gpt-4o mini; mulitpying to approx coef to be sure we can fit to context window and does not exeed number of max output tokens  
-        translate_messages(msgs, max_tokens_count)
+        translate_messages(msgs, max_tokens_count=max_tokens_count, overlapping_msgs_cnt=2)
