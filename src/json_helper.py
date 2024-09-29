@@ -32,10 +32,10 @@ def merge_chunks(search_folder: str):
             data = json.loads(json_str)
             #data = json.load(file)
             cnt = 0
-            for tr_msg in tqdm(data): #  translated messages
+            for tr_msg in data:
                 cnt += 1
                 msg_id = tr_msg['msg_id']
-                if msg_id in msg_ids: # we did ovelapping chuks of messages
+                if msg_id in msg_ids:  # we did ovelapping chuks of messages
                     break
                 msg_ids.add(msg_id)
                 same_msg = msgs_d.get(msg_id)
@@ -45,6 +45,7 @@ def merge_chunks(search_folder: str):
                 if same_msg.reply_to_msg_id:
                     tr_msg['reply_to_msg_id'] = same_msg.reply_to_msg_id
                 tr_msg['user_id'] = same_msg.user_id
+                tr_msg['msg_date'] = same_msg.msg_date
                 merged_data.append(tr_msg)
             
     merged_data.sort(key=lambda x: int(x['msg_id']))

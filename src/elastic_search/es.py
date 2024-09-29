@@ -54,6 +54,11 @@ def load_messages_from_dump():
     # encoding = tiktoken.encoding_for_model(cfg.llm_model)
     index_docs(docs=subset, index_name=cfg.index_name_messages, recreate_index=True)
 
+def load_from_json_to_es(json_file_path: str, es_index_name: str):
+    with open(json_file_path, 'r') as f:
+        docs = json.load(f)
+    index_docs(docs, index_name=es_index_name, recreate_index=True)
+
 
 def simple_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None, min_score: float = 2, size: int = 20):
     if not output_fields:

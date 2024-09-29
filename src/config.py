@@ -18,8 +18,11 @@ topics_path = 'output/llm_output/topics.json'
 
 index_name_topics = 'telegram-topics'
 index_name_messages = "telegram-messages"
+index_name_messages_eng = "telegram-messages-eng"
 index_pk_fields = {index_name_topics: ['chat_id', 'topic_name'],
-                   index_name_messages: ['chat_id', 'msg_id']}  # logical PKs for doc fields
+                   index_name_messages: ['chat_id', 'msg_id'],
+                   index_name_messages_eng: ['chat_id', 'msg_id'],                  
+                   }  # logical PKs for doc fields
 
 
 sent_tranformer_model_name = 'distiluse-base-multilingual-cased-v1'

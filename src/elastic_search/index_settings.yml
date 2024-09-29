@@ -15,11 +15,30 @@ telegram-messages:
         analyzer: russian
       msg_date:
         type: date
-      # msg_text_vector:
-      #  type: dense_vector
-      #  dims: 512
-      #  index: true
-      #  similarity: cosine
+
+
+telegram-messages-eng:
+  settings:
+    number_of_shards: 1
+    number_of_replicas: 0
+  mappings:
+    properties:
+      msg_id: 
+        type: keyword
+      chat_id: 
+        type: keyword      
+      reply_to_msg_id:
+        type: integer
+      msg_text:
+        type: text
+        analyzer: russian
+      msg_date:
+        type: date
+      msg_text_vector:
+        type: dense_vector
+        dims: 512
+        index: true
+        similarity: cosine
 
 telegram-topics:
   settings:

@@ -6,7 +6,7 @@ import logging
 
 import pyclip
 
-from src.data_classes import TelegaMessage,  date_to_json_serialize
+from src.data_classes import TelegaMessage, date_to_json_serialize
 from src.telegram_messages_index import TelegaMessageIndex
 from src.read_telega_dump import telega_dump_parse_essential
 from src.elastic_search import es
@@ -93,6 +93,10 @@ class TestTelega(TestCase):
                 
 
 class TestES(TestCase):
+
+    def test_messages_eng_index(self):
+        doc_file = "output/llm_output/merged_messages.json"
+        es.index_json_file(doc_file, cfg.index_name_messages_eng)
 
     def test_topics_index(self):
         topics_path = cfg.topics_path
