@@ -113,6 +113,16 @@ class TestES(TestCase):
         print(f'{score=}')
         ret = es.get_messages_by_id(chat_id=doc['chat_id'],  msg_ids=doc['msg_ids'])
 
+    def test_knn_vector_search_messages_eng(self):
+        search_term, search_field = 'refrigerator repair', 'msg_text_vector'
+        ret = es.knn_vector_search(search_term=search_term,  index_name=cfg.index_name_messages_eng, search_field=search_field, number_of_docs=5)
+        assert ret
+        for score, doc in ret:    
+            print(f'{score=}')
+            ret = es.get_messages_by_id(chat_id=doc['chat_id'],  msg_ids=[doc['msg_id']])
+            print(doc)
+            print(ret)
+
     def test_simple_search(self):
         search_field = 'msg_text'
         tags = 'кот жрет'
