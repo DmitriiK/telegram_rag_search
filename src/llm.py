@@ -119,6 +119,7 @@ The messages, that you need to summirize into one topic are:
 def build_rag_prompt(question: str, chat_description:  str, messages: List[TelegaMessage]):
     prompt_template = """
     You will be given some data. That data is a sequence of messages from chat from some messager.
+    It can be in English or Russian language.
     This sequnce will be given in json format.
     This chat is devoted to {chat_description}.
 
@@ -128,6 +129,7 @@ def build_rag_prompt(question: str, chat_description:  str, messages: List[Teleg
 
     You output should be some summarization text, answering the question,  maybe several sentences, if there is enough information to tell about,
     and the id-s for the messages, that are relevant to the question and which you use for the answer.
+    Use English language for the output.
     Final result should be just pure json with attributes described above, "answer", "msg_ids"
     If there are no relevant information inside the messages - just give empty values for both attributes
 ______

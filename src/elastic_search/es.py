@@ -87,7 +87,8 @@ def simple_search(search_term: str, search_field: str, index_name: str, output_f
     return result_docs
 
 
-def knn_vector_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None, min_score: float = 0.7, number_of_docs: int = 5):
+def knn_vector_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None,
+                      min_score: float = 0.7, number_of_docs: int = 5):
     model = get_st_model()
     vector = model.encode(search_term)
     knn = {

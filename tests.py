@@ -143,8 +143,12 @@ class TestLLM(TestCase):
         ret = self.rg.rag_by_topics(question=question)
         print(ret)
 
-    def test_rag_by_messages(self):
-        ret = self.rg.rag_by_messages(question='I have a Thai cat. How should I feed him?', tags='Кот кормить')
+    def test_rag_by_simple_search(self):
+        ret = self.rg.rag_by_simple_search(question='I have a Thai cat. How should I feed him?', tags='Кот кормить')
+        print(ret)
+
+    def test_rag_by_dense_vector_search(self):
+        ret = self.rg.rag_by_dense_vector_search(question='Where I can repair my refrigerator')
         print(ret)
 
     def test_summarize_to_topic(self):
@@ -165,4 +169,4 @@ class TestLLM(TestCase):
         msgs = telega_dump_parse_essential(dump_path=dump_path) # return iterator, not list
         max_tokens_count = 8000 * 1.5
         # gpt-4o mini; mulitpying to approx coef to be sure we can fit to context window and does not exeed number of max output tokens  
-        translate_messages(msgs,"output/llm_output", max_tokens_count=max_tokens_count, overlapping_msgs_cnt=2)
+        translate_messages(msgs, "output/llm_output", max_tokens_count=max_tokens_count, overlapping_msgs_cnt=2)

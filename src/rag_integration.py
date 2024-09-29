@@ -42,14 +42,43 @@ class RaguDuDu:
             answer = llm.ask_llm(prompt)
             return answer
 
-    def rag_by_messages(self, question: str, tags: str = None) -> str:
+    def rag_by_simple_search(self, question: str, tags: str) -> str:
+        """rag_by_simple_search (non semantic search, just by words comparison by letters)
+
+        Args:
+            question (str): question to RAG systme
+            tags (str): as semantic search is pretty bad for Russian texts, have to search by tags first using tags
+
+        Returns:
+            str: answer to question using search results as context
+        """
         search_field = 'msg_text'
         ed_lst = es.simple_search(search_term=tags, index_name=cfg.index_name_messages, search_field=search_field, size=30, min_score=5)
         logging.info(f'got {len(ed_lst)} documents from ES')
-        msgs = [TelegaMessage(**md[1]) for md in ed_lst]
+        #  msgs = [TelegaMessage(**md[1]) for md in ed_lst]
+        msg_ids = [md[1]['msg_id'] for md in ed_lst]
+        return self.rag_by_messages(question=question, msg_ids=msg_ids)
+    
+    def rag_by_dense_vector_search(self, question: str) -> str:
+        """ RAG by semantic search using dense vector index for english translation for the messages
+
+        Args:
+            question (str): _description_
+
+        Returns:
+            str: answer to question using search results as context
+        """
+        search_field = 'msg_text_vector'
+        ed_lst = es.knn_vector_search(search_term=question, index_name=cfg.index_name_messages_eng, search_field=search_field,
+                                      number_of_docs=5, min_score=0.5)
+        logging.info(f'got {len(ed_lst)} documents from ES')
+        msg_ids = [md[1]['msg_id'] for md in ed_lst]
+        return self.rag_by_messages(question=question, msg_ids=msg_ids)
+    
+    def rag_by_messages(self, question: str, msg_ids: List[int]) -> str:
         topic_msgs_all = []
-        for msg in msgs:
-            tms = self.telegram_index.get_potential_topic(msg.msg_id, max_depth_down=1, max_steps_up=1, take_in_direct_relatives=False)
+        for msg_id in msg_ids:
+            tms = self.telegram_index.get_potential_topic(msg_id, max_depth_down=1, max_steps_up=1, take_in_direct_relatives=False)
             tms = [x for x in tms if x.msg_id not in [x.msg_id for x in topic_msgs_all]]
             topic_msgs_all.extend(tms)
         prompt = llm.build_rag_prompt(question, chat_description=cfg.chat_description, messages=topic_msgs_all)
@@ -58,7 +87,7 @@ class RaguDuDu:
         return answer
 
 
-def translate_messages(msgs: Iterable[TelegaMessage], out_dir:str,  max_tokens_count: int = 16000, overlapping_msgs_cnt: int = 0):
+def translate_messages(msgs: Iterable[TelegaMessage], out_dir: str,  max_tokens_count: int = 16000, overlapping_msgs_cnt: int = 0):
     """_summary_
 
     Args:
