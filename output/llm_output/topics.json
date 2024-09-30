@@ -1,22 +1,22 @@
 [
     {
-        "topic_name": "Опыт прохождения медикал-чекапа в Кепезе",
-        "topic_name_eng": "Experience of medical check-up in Kepez",
-        "topic_summary": "Разговоры о прохождении медикал-чекапа в Кепезе. Участники обсуждают, в какое время лучше приезжать, чтобы избежать очередей. Утром сообщается о часовых очередях, но позже чекапы проходят быстрее. Рекомендуют приходить после обеда для избежания ожиданий.",
-        "topic_summary_eng": "Discussions about undergoing a medical check-up in Kepez. Participants discuss the best time to arrive to avoid queues. Morning sees hour-long waits, but later check-ups go faster. It's recommended to come after lunch to avoid waiting.",
+        "topic_name": "Медицинский чекап и очереди",
+        "topic_name_eng": "Medical Checkup and Queues",
+        "topic_summary": "Обсуждение опыта прохождения медосмотрa. Речь идет о времени ожидания в очереди, лучшем времени для прохождения процедуры и впечатлениях. Участники делятся, что утром может быть прохладнее, и что очереди зависят от дня недели.",
+        "topic_summary_eng": "Discussion on the experience of going through a medical checkup. It covers waiting times, the best time for the procedure, and personal impressions. Participants note that mornings can be cooler and queues vary depending on the day of the week.",
         "topic_tags": [
-            "медикал-чекап",
-            "Кепез",
-            "очереди",
+            "медосмотр",
+            "очередь",
             "время",
-            "опыт"
+            "опыт",
+            "прохождение"
         ],
         "topic_tags_eng": [
-            "medical check-up",
-            "Kepez",
-            "queues",
+            "checkup",
+            "queue",
             "time",
-            "experience"
+            "experience",
+            "procedure"
         ],
         "msg_ids": [
             186659,
@@ -39,36 +39,31 @@
             187968,
             187969
         ],
-        "question": "What is the best time to undergo a medical check-up in Kepez to avoid long queues?",
+        "question": "What is the best time to go for a medical checkup to avoid long queues?",
+        "answer": "Going after lunch might be advisable as it seems there are generally fewer people, and the process is quicker.",
         "answer_message_ids": [
             187958,
-            187965,
-            187966,
-            187969
+            187962
         ]
     },
     {
-        "topic_name": "Продление ВНЖ и использование страхования SGK для детей",
-        "topic_name_eng": "Extension of residence permits and use of SGK insurance for children",
-        "topic_summary": "Обсуждение того, как продлить вид на жительство (ВНЖ) в Турции и необходимость использования страховки SGK для детей. Некоторые участники обсуждения делятся своим опытом использования альтернативной страховки. Также поднимается вопрос, можно ли оформить SGK только на ребенка.",
-        "topic_summary_eng": "Discussion on how to extend residence permits in Turkey and the necessity of using SGK insurance for children. Some participants share their experience with alternative insurance. The question of whether SGK can be arranged only for the child is also raised.",
+        "topic_name": "Продление ВНЖ и роль страхования SGK",
+        "topic_name_eng": "Renewal of residence permit and SGK insurance role",
+        "topic_summary": "Обсуждение условий продления вида на жительство (ВНЖ) и необходимости прилипания к SGK как страхованию для этого. Возможно продление и на основании других страховок. Рассмотрение необходимости медицинского осмотра и деталей процессуальных условий как для взрослых, так и для детей.",
+        "topic_summary_eng": "Discussion of the conditions for the renewal of a residence permit and the need to be attached to SGK insurance for this. It is possible to renew based on other insurances. Consideration of the need for a medical examination and procedural details for both adults and children.",
         "topic_tags": [
             "ВНЖ",
             "SGK",
             "страхование",
-            "Турция",
             "продление",
-            "дети",
-            "альтернативы"
+            "медицинский осмотр"
         ],
         "topic_tags_eng": [
             "residence permit",
             "SGK",
             "insurance",
-            "Turkey",
-            "extension",
-            "children",
-            "alternatives"
+            "renewal",
+            "medical examination"
         ],
         "msg_ids": [
             188347,
@@ -91,36 +86,37 @@
             188410,
             188411
         ],
-        "question": "What is necessary for extending a child's residence permit in Turkey regarding insurance?",
+        "question": "Is SGK insurance mandatory for the renewal of a residence permit for dependents?",
+        "answer": "SGK is not mandatory for the renewal of a residence permit; other insurance may be acceptable too. However, SGK might be recommended for dependents to ensure broader coverage and to satisfy procedural preferences.",
         "answer_message_ids": [
             188350,
-            188351,
-            188354,
-            188361
+            188408,
+            188411
         ]
     },
     {
-        "topic_name": "Обсуждение выбора автомобилей и переездов",
-        "topic_name_eng": "Discussion of car choices and relocations",
-        "topic_summary": "Основное обсуждение было связано с возможностями приобретения автомобилей как в прошлом, так и в текущем времени. Рассматривались вопросы стоимости, удобства, а также траты на дорогу и бензин. Также затрагивалось отношение участников к необходимости ездить в офис регулярно.",
-        "topic_summary_eng": "The main discussion revolved around the possibilities of acquiring cars both in the past and current times. Questions about cost, convenience, and expenses related to commuting and fuel were considered. Participants also discussed their attitudes towards regularly commuting to the office.",
+        "topic_name": "Проблемы транспорта и работа в офисе",
+        "topic_name_eng": "Transportation issues and office work",
+        "topic_summary": "Основная дискуссия касалась стоимости автомобилей и времени на дорогу в офис. В 2024 году новые автомобили стоили дорого, и приходилось тратить много времени на дорогу на работу и обратно. Некоторые участники обсуждения относились негативно к требованию ездить каждый день в офис.",
+        "topic_summary_eng": "The discussion mainly revolved around the cost of vehicles and commuting time to the office. In 2024, new cars were expensive, and commuting took a lot of time. Some participants expressed negative views on being required to commute to the office every day.",
         "topic_tags": [
+            "транспорт",
             "автомобили",
-            "выбор",
-            "стоимость",
-            "переезды",
-            "транспорт"
+            "офисная работа",
+            "коммьют",
+            "Анталья"
         ],
         "topic_tags_eng": [
+            "transportation",
             "cars",
-            "choice",
-            "cost",
-            "relocations",
-            "transport"
+            "office work",
+            "commute",
+            "Antalya"
         ],
         "msg_ids": [
             192255,
             192256,
+            192259,
             192346,
             192349,
             192353,
@@ -135,37 +131,34 @@
             192384,
             192385,
             192395,
-            192396,
             192427,
             192431
         ],
-        "question": "What are the concerns related to commuting and car choices?",
+        "question": "What are the challenges of commuting to the office from Antalya?",
+        "answer": "The challenges include high vehicle costs and long commuting times. Traveling to the office can take several hours daily, and this is exacerbated by high fuel prices.",
         "answer_message_ids": [
-            192255,
-            192256,
             192346,
-            192349,
             192358
         ]
     },
     {
-        "topic_name": "Прописка неродственников в арендуемую квартиру",
-        "topic_name_eng": "Registration of non-relatives in rented apartment",
-        "topic_summary": "Обсуждается возможность прописки человека, не указанного в договоре аренды, в арендованную квартиру. Разрешена прописка родственников, но при этом требуется согласие всех прописанных, а также предъявление документов о родстве. Примером является опыт с родителями.",
-        "topic_summary_eng": "The discussion focuses on the possibility of registering a person not listed in the rental contract in a rented apartment. Registration of relatives is allowed, requiring consent from all registered members and documents proving kinship. An example is the experience with parents.",
+        "topic_name": "Прописка иностранцев в арендуемом жилье",
+        "topic_name_eng": "Registration of foreigners in rented housing",
+        "topic_summary": "Обсуждается возможность прописки в арендуемом жилье тех, кто не включен в договор аренды. Родственников можно прописать, предъявив документы о родстве. Не родственников сложно, особенно иностранцев. Есть упоминания о необходимости согласия жильцов и собственника.",
+        "topic_summary_eng": "Discussion about the possibility of registering people not included in the rental agreement. Relatives can be registered by providing proof of kinship. It's challenging for non-relatives, especially foreigners. Mention of needing consent from current tenants and the landlord.",
         "topic_tags": [
             "прописка",
+            "иностранцы",
             "аренда",
-            "неродственники",
-            "родственное отношение",
-            "договор"
+            "документы",
+            "согласие"
         ],
         "topic_tags_eng": [
             "registration",
+            "foreigners",
             "rental",
-            "non-relatives",
-            "kinship",
-            "contract"
+            "documents",
+            "consent"
         ],
         "msg_ids": [
             183632,
@@ -176,7 +169,6 @@
             183641,
             183642,
             183652,
-            183653,
             183658,
             183659,
             183660,
@@ -187,30 +179,33 @@
             183669,
             183671
         ],
-        "question": "Is it possible to register a non-relative in a rental apartment in Turkey?",
+        "question": "Is it possible to register a non-relative foreigner in rented accommodation?",
+        "answer": "It is generally difficult to register non-relatives, especially foreigners, in rented accommodation without being in the rental agreement. Proof of relationship is required for relatives. Sometimes the presence of current tenants and landlord approval is necessary.",
         "answer_msg_ids": [
-            183637,
-            183658
+            183632,
+            183633,
+            183652,
+            183665
         ]
     },
     {
-        "topic_name": "Бюрократия и идиоты на местах в Турции",
-        "topic_name_eng": "Bureaucracy and incompetence in Turkey",
-        "topic_summary": "В Турции сталкиваются с местной бюрократией, которая требует печатей на документах. Участники обсуждают, что отдельных сотрудников на местах не изменить, и советуют просить законные обоснования требований. Проблему можно решить, обратившись к старшему или сменив день посещения.",
-        "topic_summary_eng": "In Turkey, people face local bureaucracy requiring stamps on documents. Participants discuss that it's hard to change certain employees' behavior, and advise asking for legal justifications. Issues can be resolved by contacting a superior or choosing another day for the visit.",
+        "topic_name": "Бюрократия и получение справки о несудимости",
+        "topic_name_eng": "Bureaucracy and obtaining a criminal record certificate",
+        "topic_summary": "Обсуждается, как в бюрократической системе могут быть странные требования, такие как печать на справке о несудимости от физического лица. Участники обсуждают, что законы в Анталии вроде бы действуют, но встречаются идиоты на местах, которые усложняют процесс. Были предложения показать закон или обратиться к старшему.",
+        "topic_summary_eng": "The discussion revolves around how strange requirements, like a stamp on a criminal record certificate from an individual, can exist in a bureaucratic system. Participants mention that laws in Antalya seem to work, but there are troublesome people who complicate the process. It was suggested to show the law or escalate the issue to a higher authority.",
         "topic_tags": [
             "бюрократия",
-            "печати",
-            "Турция",
-            "документы",
-            "сотрудники"
+            "турция",
+            "справка о несудимости",
+            "организация",
+            "закон"
         ],
         "topic_tags_eng": [
             "bureaucracy",
-            "stamps",
             "Turkey",
-            "documents",
-            "employees"
+            "criminal record certificate",
+            "organization",
+            "law"
         ],
         "msg_ids": [
             183784,
@@ -232,32 +227,32 @@
             183802,
             183803
         ],
-        "question": "How can you handle issues with unreasonable document requirements in Turkey?",
+        "question": "What can be done when strange requirements complicate getting a criminal record certificate?",
+        "answer": "Participants suggest asking to see the law on which the request is based or appealing to a higher authority. In Turkey, challenging unreasonable demands can be difficult, but not impossible.",
         "answer_message_ids": [
             183787,
-            183790,
-            183799,
-            183791
+            183788,
+            183790
         ]
     },
     {
-        "topic_name": "Фотосъемка и полеты шарами на рассвете",
-        "topic_name_eng": "Photography and balloon flights at dawn",
-        "topic_summary": "Участники обсуждают места для фотосессий и наблюдения за полетом воздушных шаров на рассвете. Рекомендуется приехать за полчаса до рассвета, чтобы занять лучшие места. Поднимаются вопросы погоды и экипировки во время ожидания полетов.",
-        "topic_summary_eng": "Participants discuss spots for photo sessions and observing balloon flights at dawn. It's recommended to arrive half an hour before sunrise to get the best spots. Weather conditions and suitable clothing during the wait are also discussed.",
+        "topic_name": "Романтические поездки и фото в Каппадокии",
+        "topic_name_eng": "Romantic Trips and Photos in Cappadocia",
+        "topic_summary": "Участники обсуждают лучшие места для романтических фотосессий в Каппадокии. Рекомендуют посещение различных точек вдоль маршрутов. Чтобы сделать уникальные снимки, советуют приезжать рано утром, когда восходят шары, или оставаться до заката.",
+        "topic_summary_eng": "Participants discuss the best places for romantic photo sessions in Cappadocia. They recommend visiting different spots along routes. To capture unique photos, they advise arriving early in the morning when the balloons rise or staying until sunset.",
         "topic_tags": [
+            "Каппадокия",
             "фотосессия",
-            "воздушные шары",
-            "рассвет",
-            "путешествия",
-            "Каппадокия"
+            "поездка",
+            "шары",
+            "рассвет"
         ],
         "topic_tags_eng": [
+            "Cappadocia",
             "photo session",
+            "trip",
             "balloons",
-            "dawn",
-            "travel",
-            "Cappadocia"
+            "sunrise"
         ],
         "msg_ids": [
             184130,
@@ -265,47 +260,44 @@
             184134,
             184152,
             184154,
-            184173,
-            184174,
             184186,
             184215,
             184218,
+            184225,
             184227,
             184231,
             184235,
             184239,
             184266
         ],
-        "question": "What is the best time to arrive for watching the balloons at dawn to get good photo shots?",
+        "question": "What is the best time for a romantic photo session in Cappadocia?",
+        "answer": "The best time for a romantic photo session in Cappadocia is early morning. Arriving at least 30 minutes before sunrise is recommended to watch the balloons rise and capture beautiful morning light. Consider staying two mornings to ensure good weather.",
         "answer_message_ids": [
             184134,
-            184215,
-            184218,
-            184266
+            184152,
+            184215
         ]
     },
     {
-        "topic_name": "Перемещение и местоположение русских в Турции",
-        "topic_name_eng": "Relocation and location of Russians in Turkey",
-        "topic_summary": "В обсуждении участвуют рассуждения о смене местоположения, включая упоминание Алматы, Испании и района Дешемеалты. Присутствуют беспокойства о налогах, ценах и запретах, что вызывает желание переехать ради снижения затрат и удобства.",
-        "topic_summary_eng": "The discussion includes deliberations on changing locations, mentioning Almaty, Spain, and Deshemealty district. Concerns about taxes, prices, and restrictions prompt desires for relocation to reduce expenses and increase convenience.",
+        "topic_name": "Обсуждение переездов и жизни в Турции",
+        "topic_name_eng": "Discussion on Relocation and Life in Turkey",
+        "topic_summary": "Обсуждается текущая ситуация в Турции среди участников чата, включая планы по переезду, рост цен и налогов. Вопросы о возможностях миграции, предпочтительных локациях и связанных с этим сложностях.",
+        "topic_summary_eng": "The discussion focuses on the current situation in Turkey among chat participants, including relocation plans, rising prices, and taxes. Questions about migration possibilities, preferable locations, and related challenges are discussed.",
         "topic_tags": [
             "переезд",
-            "локация",
-            "налоги",
-            "затраты",
-            "удобство",
             "Турция",
-            "Алматы"
+            "жизнь",
+            "налоги",
+            "локация",
+            "планы"
         ],
         "topic_tags_eng": [
             "relocation",
-            "location",
-            "taxes",
-            "expenses",
-            "convenience",
             "Turkey",
-            "Almaty"
+            "life",
+            "taxes",
+            "location",
+            "plans"
         ],
         "msg_ids": [
             185322,
@@ -320,40 +312,38 @@
             185343,
             185344,
             185345,
+            185346,
             185347,
             185348,
             185349,
             185350,
             185511
         ],
-        "question": "What are some reasons for considering relocation among Russians in Turkey?",
+        "question": "What are the challenges people face when relocating in Turkey?",
+        "answer": "Challenges include rising taxes, high costs, legal restrictions, and the complexities of finding suitable locations. These are concerns for many considering relocation within Turkey.",
         "answer_message_ids": [
             185345,
             185349
         ]
     },
     {
-        "topic_name": "Поиск квартир за пределами известных сайтов",
-        "topic_name_eng": "Searching for apartments beyond known sites",
-        "topic_summary": "Обсуждение началось с вопроса о том, где искать квартиры кроме платформ Сахибинден и Хепсиемлак. Участники поделились своими наблюдениями и мнением, что многие предложения не доходят до сайтов, так как арендаторы предпочитают другие каналы. Были подняты темы комиссии, новых законов и возможности торга.",
-        "topic_summary_eng": "The discussion started with a question about where to search for apartments besides Sahibinden and Hepsiemlak platforms. Participants shared their observations and opinions that many listings do not appear on these sites as landlords prefer other channels. Topics of commission, new laws, and bargaining were discussed.",
+        "topic_name": "Поиски квартир в Анталии",
+        "topic_name_eng": "Searching for Apartments in Antalya",
+        "topic_summary": "Обсуждение включает в себя опыт поиска квартир в Анталии, включая проблемы на платформах, таких как Sahi̇bi̇nden и препятствия, возникающие из-за сезона и других факторов. Участники обсуждают, куда можут исчезать квартиры, и ссылки на агентов, которые могут иметь собственные базы данных.",
+        "topic_summary_eng": "The discussion involves experiences of apartment searching in Antalya, including challenges on platforms like Sahi̇bi̇nden and obstacles due to the season and other factors. Participants discuss where the apartments might be vanishing and mention agents who may have their own databases.",
         "topic_tags": [
-            "недвижимость",
             "квартиры",
-            "аренда",
-            "поиск",
-            "площадка",
-            "Турция",
-            "цены"
+            "Анталия",
+            "поиски",
+            "риэлторы",
+            "объявления"
         ],
         "topic_tags_eng": [
-            "real estate",
             "apartments",
-            "rent",
+            "Antalya",
             "search",
-            "platform",
-            "Turkey",
-            "prices"
+            "realtors",
+            "ads"
         ],
         "msg_ids": [
             186146,
@@ -374,40 +364,41 @@
             186444,
             186446
         ],
-        "question": "Where to search for apartments beyond sites like Sahibinden?",
+        "question": "Where might available apartments be listed outside of popular sites like Sahi̇bi̇nden?",
+        "answer": "Apartments might be listed with individual agents who don't post on mainstream platforms like Sahi̇bi̇nden. Agents may also have private databases, and some listings may be completed before they are ever posted.",
         "answer_message_ids": [
-            186152,
             186159,
-            186165
+            186166,
+            186441,
+            186443,
+            186444
         ]
     },
     {
-        "topic_name": "Тарифы на такси в Анталье и маршруты",
-        "topic_name_eng": "Taxi rates in Antalya and routes",
-        "topic_summary": "Обсуждение изменений цен на такси в Анталье и варианты маршрутов. Рассмотрение времени и стоимости поездки из разных районов до аэропорта при изменении условий на дорогах. Обсуждение влияния дорожных условий на тарифы и оптимальные маршруты.",
-        "topic_summary_eng": "Discussion of taxi fare changes in Antalya and route options. Consideration of time and cost of travel from different areas to the airport as road conditions change. Discussion of the impact of road conditions on fares and optimal routes.",
+        "topic_name": "Такси и маршруты в Анталии",
+        "topic_name_eng": "Taxis and Routes in Antalya",
+        "topic_summary": "Обсуждение стоимости и маршрутов такси в Анталии. Описание расчетов стоимости поездок. Обсуждение преимуществ различных маршрутов, включая затраты времени и расстояние. Указывается на увеличение цен на такси.",
+        "topic_summary_eng": "Discussion on taxi costs and routes in Antalya. Describing calculations of trip costs. Discussion on the advantages of different routes, including time and distance considerations. Mentions taxi fare increases.",
         "topic_tags": [
-            "такси",
-            "Анталья",
-            "маршруты",
-            "цены",
-            "дороги",
-            "тарифы",
-            "поездка"
+            "Такси",
+            "Маршруты",
+            "Анталия",
+            "Цены",
+            "Поездка",
+            "Расстояние"
         ],
         "topic_tags_eng": [
-            "taxi",
+            "Taxi",
+            "Routes",
             "Antalya",
-            "routes",
-            "prices",
-            "roads",
-            "fares",
-            "trip"
+            "Prices",
+            "Trip",
+            "Distance"
         ],
         "msg_ids": [
+            188528,
             188530,
             188531,
-            188532,
             188533,
             188534,
             188535,
@@ -424,31 +415,33 @@
             188548,
             188570
         ],
-        "question": "How do taxi fares in Antalya change based on different routes and conditions?",
+        "question": "How does the taxi fare calculation in Antalya depend on route and time?",
+        "answer": "The taxi fare in Antalya is calculated based on both distance in kilometers and time spent in minutes. Discussions indicate a preference for routes based on time efficiency rather than simply distance. The rates for 2024 are mentioned with examples illustrating calculations.",
         "answer_message_ids": [
+            188528,
             188530,
-            188537,
-            188543
+            188531,
+            188535
         ]
     },
     {
-        "topic_name": "проблемы жизни в Турции: блокировки и цены",
-        "topic_name_eng": "problems of life in Turkey: blocks and prices",
-        "topic_summary": "Обсуждаются текущие проблемы жизни в Турции, включая высокие цены, налоги на импорт и блокировки интернет-сервисов. Некоторые участники предлагают терпеть, другие говорят о более сложных временах впереди. Также упоминается влияние этих факторов на приколы и шутки, связанные с Гарри Поттером.",
-        "topic_summary_eng": "Current problems of life in Turkey, including high prices, import taxes, and internet service blocks, are discussed. Some participants suggest enduring, while others mention tougher times ahead. References to Harry Potter add humor to the discussion.",
+        "topic_name": "цены, блокировки и перспективы переезда",
+        "topic_name_eng": "prices, blockades and relocation prospects",
+        "topic_summary": "Обсуждение текущих проблем с ценами, налогами на импорт и блокировками в Турции. Пользователи обсуждают перспективы улучшения и необходимость поиска нового места жительства.",
+        "topic_summary_eng": "Discussion about current issues with prices, import taxes, and blockades in Turkey. Users discuss improvement prospects and the need to find a new place to live.",
         "topic_tags": [
             "цены",
             "блокировки",
-            "жизнь в Турции",
-            "импорт",
-            "Гарри Поттер"
+            "переезд",
+            "Турция",
+            "налоги"
         ],
         "topic_tags_eng": [
             "prices",
-            "blocks",
-            "life in Turkey",
-            "import",
-            "Harry Potter"
+            "blockades",
+            "relocation",
+            "Turkey",
+            "taxes"
         ],
         "msg_ids": [
             185092,
@@ -457,7 +450,6 @@
             185096,
             185097,
             185099,
-            185101,
             185102,
             185103,
             185104,
@@ -468,7 +460,8 @@
             185110,
             185182
         ],
-        "question": "What challenges are foreigners facing in Turkey?",
+        "question": "What are the current issues people face in Turkey, prompting discussion about relocation?",
+        "answer": "Current issues in Turkey include rising prices, import taxes, and internet blockades, leading many to consider relocating.",
         "answer_message_ids": [
             185092,
             185096,
@@ -476,23 +469,23 @@
         ]
     },
     {
-        "topic_name": "Проблема с интернет-контрактом и платежами",
-        "topic_name_eng": "Internet contract issues and payments",
-        "topic_summary": "Проблема в резком увеличении стоимости интернета после окончания контракта. Обсуждаются варианты платы и возможные ошибки в счетах. Некоторые предлагают проверять счета через личный кабинет и запрашивать скриншоты.",
-        "topic_summary_eng": "The issue involves a sudden increase in internet costs after the contract ends. Different payment options and potential billing errors are discussed. Some users suggest checking bills online and requesting screenshots.",
+        "topic_name": "Стоимость и тарифы на интернет в Анталии",
+        "topic_name_eng": "Cost and rates for internet in Antalya",
+        "topic_summary": "Обсуждается стоимость и тарифы на интернет в Анталии. Ситуации, когда цена на интернет возрастает после окончания контракта. Также предлагаются советы по проверке и выяснению ситуации с интернет счетами.",
+        "topic_summary_eng": "The discussion revolves around internet costs and rates in Antalya. Situations where the cost rises after the contract ends are mentioned. Advice on how to check and resolve issues with internet bills is also provided.",
         "topic_tags": [
             "интернет",
+            "Анталия",
+            "тарифы",
             "контракт",
-            "платежи",
-            "стоимость",
-            "счет"
+            "стоимость"
         ],
         "topic_tags_eng": [
             "internet",
+            "Antalya",
+            "rates",
             "contract",
-            "payments",
-            "cost",
-            "bill"
+            "cost"
         ],
         "msg_ids": [
             185203,
@@ -512,31 +505,33 @@
             185246,
             185247
         ],
-        "question": "Why did the internet bill suddenly increase after the contract ended?",
+        "question": "What steps can be taken if internet costs increase unexpectedly after a contract ends?",
+        "answer": "One approach is to check the bill through the landlord or utility website, request a verification code via SMS, and enter the account online to review the charges. It’s advised to verify details with the provider, as charges may rise due to additional services post-contract.",
         "answer_message_ids": [
-            185203,
+            185208,
             185209,
+            185217,
             185246
         ]
     },
     {
-        "topic_name": "Медосмотр в Пынарбаши и результаты анализов",
-        "topic_name_eng": "Medical check-up in Pynarbashi and test results",
-        "topic_summary": "Обсуждение касается медосмотра в Пынарбаши. Люди спрашивают о процедуре, включая флюорографию и анализ крови. Озадачивает, что результаты не отображаются в системе, что вызывает сомнения в качестве медосмотра.",
-        "topic_summary_eng": "The discussion is about medical check-up in Pynarbashi. People ask about the procedure, including fluorography and blood tests. It is puzzling that the results are not displayed in the system, raising doubts about the quality of the check-up.",
+        "topic_name": "Медицинский осмотр в Пынарбаши",
+        "topic_name_eng": "Medical Examination in Pynarbasi",
+        "topic_summary": "Вопрос о медосмотре в Пынарбаши вызывает недоумение из-за своей формальности. Участники обсуждают, как быстро и формально проходят проверки, включая анализы крови и флюорографию. Удивляет, что результаты не регистрируются в официальных базах, а сами обследования часто состоят только ради галочки.",
+        "topic_summary_eng": "The topic of medical examinations in Pynarbasi causes bewilderment due to its formality. Participants discuss how quickly and formally the checks are conducted, including blood tests and fluorography. It is surprising that the results are not recorded in official databases and the examinations are often just for show.",
         "topic_tags": [
             "медосмотр",
-            "анализы",
-            "флюорография",
             "Пынарбаши",
-            "качество"
+            "формальность",
+            "анализы",
+            "флюорография"
         ],
         "topic_tags_eng": [
-            "medical check-up",
+            "medical examination",
+            "Pynarbasi",
+            "formality",
             "tests",
-            "fluorography",
-            "Pynarbashi",
-            "quality"
+            "fluorography"
         ],
         "msg_ids": [
             188007,
@@ -556,31 +551,31 @@
             188207,
             188208
         ],
-        "question": "Do the test results from medical check-ups in Turkey immediately appear in the system?",
-        "answer_message_ids": [
+        "question": "How formal are medical examinations in Pynarbasi and are they recorded in official databases?",
+        "answer": "Medical examinations in Pynarbasi are considered very formal and often done just for the sake of it. Participants noted that test results like blood tests and fluorography are surprisingly not recorded in official databases, questioning the overall value of these examinations.",
+        "answer_msg_ids": [
             188035,
-            188037,
             188040
         ]
     },
     {
-        "topic_name": "Трансферы из аэропорта Анталии до отеля",
-        "topic_name_eng": "Transfers from Antalya airport to hotel",
-        "topic_summary": "Обсуждается трансфер из Санкт-Петербурга в Анталию и поиск автомобиля для перемещения. Участники делятся контактами сервисов трансфера, числами цен и условиями поездки. Обсуждаются удобства, такие как детские кресла и русскоговорящие водители.",
-        "topic_summary_eng": "The discussion revolves around the transfer from Saint Petersburg to Antalya and finding a suitable vehicle for the journey. Participants share contacts of transfer services, pricing information, and travel conditions. Amenities like child seats and Russian-speaking drivers are also discussed.",
+        "topic_name": "Трансферные услуги в Анталии и Санкт-Петербурге",
+        "topic_name_eng": "Transfer services in Antalya and Saint Petersburg",
+        "topic_summary": "Участники обсуждают услуги трансфера в Санкт-Петербурге и Анталии, упоминая различные компании и их стоимость. Сообщения затрагивают опыт использования услуг трансфера на большие машины, стоимость поездок, а также отзывы о комфорте и удобстве.",
+        "topic_summary_eng": "Participants discuss transfer services in Saint Petersburg and Antalya, mentioning various companies and their costs. The messages talk about experiences using transfer services for larger vehicles, pricing of trips, and reviews on comfort and convenience.",
         "topic_tags": [
             "трансфер",
             "Анталия",
-            "перевозка",
-            "машина",
-            "цена"
+            "Санкт-Петербург",
+            "такси",
+            "поездка"
         ],
         "topic_tags_eng": [
             "transfer",
             "Antalya",
-            "transportation",
-            "car",
-            "price"
+            "Saint Petersburg",
+            "taxi",
+            "trip"
         ],
         "msg_ids": [
             188443,
@@ -588,9 +583,9 @@
             188446,
             188454,
             188456,
+            188458,
             188459,
             188460,
-            188461,
             188476,
             188477,
             188511,
@@ -600,83 +595,83 @@
             188517,
             188525
         ],
-        "question": "What is a reliable transfer service from Antalya airport to a hotel?",
+        "question": "What transfer service is recommended for trips from the airport in Antalya?",
+        "answer": "Several transfer services are recommended by discussion participants, including 'Tюрпан' and 'gettransfer.com', praised for their reliability and comfort. It's noted that prices may vary between services.",
         "answer_message_ids": [
             188445,
+            188446,
             188454,
-            188458,
             188459,
             188511
         ]
     },
     {
-        "topic_name": "Прописка по ворк пермиту и разрешение для супруги",
-        "topic_name_eng": "Registration with work permit and spouse permission",
-        "topic_summary": "Обсуждаются возможности прописки в закрытом районе по ворк пермиту. Разрешение возможно, если раньше уже был прописан. Неясно, это является везением или реальной возможностью. Продление ворк пермита возможно на 2 года.",
-        "topic_summary_eng": "The discussion covers the possibility of residence registration in a closed area with a work permit. Permission is possible if previously registered. It's unclear if it's by luck or a real possibility. Work permits can be extended for 2 years.",
+        "topic_name": "Возможность прописки по ворк пермиту и туристическим визам",
+        "topic_name_eng": "Possibility of registration with work permit and touristic visas",
+        "topic_summary": "Обсуждается, можно ли прописаться в закрытом районе по ворк пермиту и как это повлияет на возможность получения гражданства. Пользователи делятся опытом продления ворк пермитов и обсуждают, какие визы подходят для семьи. Также обсуждается момент, когда можно получить новый ворк пермит или семейную визу.",
+        "topic_summary_eng": "Discussion about whether it is possible to register in restricted areas with a work permit and how it affects citizenship eligibility. Users share experiences on extending work permits and discuss which visas are suitable for families. There's also talk about when one can obtain a new work permit or family visa.",
         "topic_tags": [
-            "прописка",
             "ворк пермит",
-            "разрешение",
-            "супруга",
-            "резиденция"
+            "прописка",
+            "гражданство",
+            "семейные визы",
+            "продление виз"
         ],
         "topic_tags_eng": [
-            "registration",
             "work permit",
-            "permission",
-            "spouse",
-            "residence"
+            "registration",
+            "citizenship",
+            "family visas",
+            "visa extension"
         ],
         "msg_ids": [
             188990,
             188991,
-            188992,
             188993,
             188994,
-            188995,
             189003,
-            189004,
             191288,
             191289,
             191295,
-            191297,
             191299,
-            191302,
             191300,
             191301,
+            191302,
             191303,
             191306,
             191307,
-            191308
+            191308,
+            191323
         ],
-        "question": "Can you register in a closed district with a work permit?",
+        "question": "Is it possible to register in a closed area with a work permit?",
+        "answer": "No, it is not possible to register in a closed area with a work permit unless previously registered there. Some users report successful registration, but these cases might be isolated.",
         "answer_message_ids": [
             188991,
-            188990,
             189003
         ]
     },
     {
-        "topic_name": "Определение среднего класса в России",
-        "topic_name_eng": "Definition of middle class in Russia",
-        "topic_summary": "Обсуждается определение среднего класса в России. Пользователи делятся мнениями о доходах, необходимых для принадлежности к среднему классу. Некоторые считают, что это около 500-600 тысяч рублей в месяц, а другие полагают, что уже около миллиона. Есть сравнение с определением среднего класса в США.",
-        "topic_summary_eng": "The discussion is about defining the middle class in Russia. Participants share opinions on the income necessary to be considered middle class. Some believe it to be around 500-600 thousand rubles per month, while others think it has reached about a million. There's a comparison with the US middle class definition.",
+        "topic_name": "Определение среднего класса и его доходы",
+        "topic_name_eng": "Definition of middle class and its income",
+        "topic_summary": "Обсуждение о том, что такое средний класс и какие у него доходы. Рассматриваются различные мнения об уровне доходов, который определяет средний класс в разных странах. Участники говорят о необходимости стремиться к более высоким классам и обсуждают, как соотносится это понятием с США.",
+        "topic_summary_eng": "Discussion on what constitutes the middle class and their income levels. Various opinions are shared on the income needed to be considered middle class in different countries. Participants talk about the need to strive for higher classes and how it compares to the concept in the USA.",
         "topic_tags": [
             "средний класс",
-            "доход",
-            "Россия",
+            "доходы",
             "экономика",
-            "жизнь",
-            "определение"
+            "уровень жизни",
+            "классы",
+            "США",
+            "финансы"
         ],
         "topic_tags_eng": [
             "middle class",
             "income",
-            "Russia",
             "economy",
-            "life",
-            "definition"
+            "standard of living",
+            "classes",
+            "USA",
+            "finance"
         ],
         "msg_ids": [
             189215,
@@ -696,31 +691,34 @@
             189384,
             189385
         ],
-        "question": "What income level defines the middle class in Russia?",
-        "answer_message_ids": [
-            189220,
+        "question": "What defines a middle-class family in terms of income and lifestyle in Russia and other countries?",
+        "answer": "A middle-class family is perceived differently across regions. In Russia, opinions vary from having an income starting at 500k to 1 million rubles a month. Comparisons are made to the USA, where being middle class is when a family can pay off a mortgage for a comfortable home within 5-10 years.",
+        "answer_msg_ids": [
             189221,
+            189220,
             189225
         ]
     },
     {
-        "topic_name": "Этимология слов и их происхождение",
-        "topic_name_eng": "Etymology of Words and Their Origins",
-        "topic_summary": "Обсуждение происхождения различных слов и выражений, включая 'бардак' и 'дурак'. Участники обсуждают вероятное тюркское происхождение некоторых слов, их значение и влияние монгол-татарского нашествия. Также затрагивается исторический контекст изменений в языке и влияние заимствованных слов.",
-        "topic_summary_eng": "Discussion on the origin of various words and phrases, including 'bardak' and 'durak'. Participants discuss the likely Turkic origin of certain words, their meaning, and the influence of the Mongol-Tatar invasion. The historical context of language changes and the influence of borrowed words are also touched upon.",
+        "topic_name": "Тюркское происхождение и заимствования в русском",
+        "topic_name_eng": "Turkish origin and borrowings in Russian",
+        "topic_summary": "Обсуждение происхождения слов \"бардак\" и \"дурак\" и их возможных тюркских корней. Участники обсуждают влияние монголо-татарского ига на русский язык. Некоторые выражения подвергаются сомнению, упоминается народная этимология и склонность к упрощениям.",
+        "topic_summary_eng": "Discussion about the origin of the words \"bardak\" and \"durak\" and their possible Turkish roots. Participants discuss the influence of the Mongol-Tatar yoke on the Russian language. Some expressions are questioned, folk etymology, and the tendency towards simplifications are mentioned.",
         "topic_tags": [
+            "тюркское происхождение",
+            "заимствования",
             "этимология",
-            "происхождение слов",
-            "историческое влияние",
-            "тюркский язык",
-            "монгол-татарское нашествие"
+            "русский язык",
+            "монголо-татарское иго",
+            "народная этимология"
         ],
         "topic_tags_eng": [
+            "Turkish origin",
+            "borrowings",
             "etymology",
-            "word origins",
-            "historical influence",
-            "Turkic language",
-            "Mongol-Tatar invasion"
+            "Russian language",
+            "Mongol-Tatar yoke",
+            "folk etymology"
         ],
         "msg_ids": [
             190869,
@@ -733,40 +731,39 @@
             190888,
             190889,
             190890,
-            190891,
             190892,
             190896,
             190899,
             190902,
             190906
         ],
-        "question": "What is the origin of the word 'bardak'?",
+        "question": "What is the potential Turkish influence on certain Russian words?",
+        "answer": "Some Russian words like \"bardak\" and \"durak\" are believed to have Turkish roots due to historical influences such as the Mongol-Tatar yoke. However, their exact origin is debated with folk etymology contributing to misunderstandings.",
         "answer_message_ids": [
-            190869,
             190887,
+            190888,
+            190890,
             190892
         ]
     },
     {
-        "topic_name": "Коммерческий импорт и местное производство в Турции",
-        "topic_name_eng": "Commercial Import and Local Production in Turkey",
-        "topic_summary": "В обсуждении поднимается вопрос о ставках на коммерческий импорт и их влияние на местное производство в Турции, особое внимание уделяется продукции фирмы Karaca. Обсуждается покупка и использование местных и импортных товаров, как например кофеварки и кофе различных марок.",
-        "topic_summary_eng": "The discussion highlights the impact of commercial import duties on local production in Turkey, with particular focus on Karaca products. The purchase and use of local and imported goods such as coffee machines and various coffee brands are also discussed.",
+        "topic_name": "Тарифы на коммерческий импорт и местное производство",
+        "topic_name_eng": "Commercial import tariffs and local production",
+        "topic_summary": "Обсуждается влияние тарифов на коммерческий импорт и индивидуальные заказы. Участники отмечают высокие тарифы и их влияние на турецкое производство электроники. Упоминается местное производство, и как стоимость продукции разнится в зависимости от партии.",
+        "topic_summary_eng": "Discussion about the impact of tariffs on commercial import and individual orders. Participants note high tariffs and their impact on Turkish electronics production. Local production is mentioned, and how prices vary depending on the batch size.",
         "topic_tags": [
             "коммерческий импорт",
+            "тарифы",
+            "электроника",
             "местное производство",
-            "Турция",
-            "ставки",
-            "кофе",
-            "товары"
+            "Turkey"
         ],
         "topic_tags_eng": [
             "commercial import",
+            "tariffs",
+            "electronics",
             "local production",
-            "Turkey",
-            "duties",
-            "coffee",
-            "goods"
+            "Turkey"
         ],
         "msg_ids": [
             184485,
@@ -779,36 +776,37 @@
             184515,
             184621,
             184624,
-            184625,
             184634,
             184635,
             184639
         ],
-        "question": "What impact do commercial import duties have on local production in Turkey?",
+        "question": "What is the impact of rising commercial import tariffs on local electronics production in Turkey?",
+        "answer": "If commercial import tariffs rise, Turkish electronics producers might be severely impacted as they already face high costs. Many consumers find imported items cheaper even with high tariffs.",
         "answer_message_ids": [
-            184485,
-            184486,
-            184487
+            184487,
+            184639
         ]
     },
     {
-        "topic_name": "Рост цен и инфляция в Турции последние 25 лет",
-        "topic_name_eng": "Price increase and inflation in Turkey for the last 25 years",
-        "topic_summary": "Обсуждается рост цен и политические факторы управления экономикой в Турции за последние десятилетия. Упоминается деноминация лиры, инфляция и обеднение населения. Также приводятся мнения о отъезде квалифицированных специалистов из страны.",
-        "topic_summary_eng": "The discussion revolves around the price rise and economic management in Turkey over the recent decades. Topics include the lira denomination, inflation, and the impoverishment of the population. Opinions on skilled workforce leaving the country are also mentioned.",
+        "topic_name": "История инфляции и экономики Турции",
+        "topic_name_eng": "History of Inflation and Economy in Turkey",
+        "topic_summary": "Обсуждаются исторические изменения в экономике и инфляции Турции. Участники обсуждают рост цен за последние 25 лет и их влияние на благосостояние населения. Деноминация и инфляция остаются частыми явлениями, что вызывает беспокойство среди жителей и многие находят выход в эмиграции.",
+        "topic_summary_eng": "The discussion revolves around the historical changes in Turkey's economy and inflation. Participants discuss price increases over the past 25 years and their impact on residents' welfare. Denomination and inflation are recurring phenomena, sparking concerns among citizens, leading many to consider emigration.",
         "topic_tags": [
             "инфляция",
+            "экономика",
+            "Турция",
             "цены",
-            "Экономика Турции",
-            "лири",
-            "иммиграция"
+            "деноминация",
+            "миграция"
         ],
         "topic_tags_eng": [
             "inflation",
+            "economy",
+            "Turkey",
             "prices",
-            "Turkey economy",
-            "lira",
-            "immigration"
+            "denomination",
+            "migration"
         ],
         "msg_ids": [
             185701,
@@ -827,34 +825,34 @@
             185729,
             185730
         ],
-        "question": "What are the causes and effects of Turkey's financial situation and demographic changes over recent decades?",
-        "answer_message_ids": [
+        "question": "What has been the impact of inflation on Turkey's economy over the past 25 years?",
+        "answer": "Inflation in Turkey has been significant over the past 25 years, with recurrent price increases and denominations. Recently, prices have surged 3-4 times within 2-3 years, causing economic hardship and leading many, including highly skilled individuals, to emigrate.",
+        "answer_msg_ids": [
             185721,
+            185722,
             185724,
             185725,
-            185726,
-            185729,
             185730
         ]
     },
     {
-        "topic_name": "Музейные карты для иностранцев с ВНЖ",
-        "topic_name_eng": "Museum cards for foreigners with residence permits",
-        "topic_summary": "Иностранцам с ВНЖ в Турции снова доступны музейные карты стоимостью 500 TL, которые действительны в течение года. Обсуждается возможность покупки карт с различными документами и действующие музейные объекты. Также рассматривается повышение цен за посещение некоторых мест и альтернатива для местных жителей.",
-        "topic_summary_eng": "Foreigners with residence permits in Turkey can again purchase museum cards costing 500 TL, valid for a year. Discussions include purchasing cards with various documents and which museums they apply to. There is a discussion on increasing admission prices at some sites and alternatives for locals.",
+        "topic_name": "Музейные карты для иностранцев в Турции",
+        "topic_name_eng": "Museum cards for foreigners in Turkey",
+        "topic_summary": "В Турции снова стали доступны музейные карты для иностранцев с ВНЖ. Карта стоит 500 TL и действительна год. Их можно купить только в музейных кассах. Обсуждается, можно ли воспользоваться картой с другими документами, и где именно они действуют.",
+        "topic_summary_eng": "Museum cards for foreigners with residence permits in Turkey are available again. The card costs 500 TL and is valid for a year. They can be bought only at museum ticket offices. There is a discussion about whether the card can be used with other documents, and where exactly they are valid.",
         "topic_tags": [
             "музейные карты",
-            "иностранцы в Турции",
-            "туристические объекты",
+            "иностранцы",
+            "Турция",
             "ВНЖ",
-            "цены"
+            "музеи"
         ],
         "topic_tags_eng": [
             "museum cards",
-            "foreigners in Turkey",
-            "tourist sites",
+            "foreigners",
+            "Turkey",
             "residence permit",
-            "prices"
+            "museums"
         ],
         "msg_ids": [
             185904,
@@ -873,30 +871,34 @@
             186069,
             186074
         ],
-        "question": "What are the requirements for obtaining a museum card as a foreigner in Turkey?",
+        "question": "Can foreigners with residence permits in Turkey use museum cards and what are the conditions?",
+        "answer": "Foreigners with residence permits in Turkey can now purchase museum cards for 500 TL valid for one year. The card can be bought at museum ticket offices and is supposed to require a foreign identification number beginning with 99*. Some discussions imply that these cards may allow access similar to previous ones, such as those used in the Phaselis location.",
         "answer_message_ids": [
+            185904,
+            185910,
+            185911,
             185912,
             185926
         ]
     },
     {
-        "topic_name": "Поездки с младенцами на самолетах",
-        "topic_name_eng": "Traveling with infants on airplanes",
-        "topic_summary": "Обсуждение удобств и проблем, связанных с поездками на самолётах с детьми. Включает вопросы о посадочных местах, удобствах для младенцев и как лучше справляться с плачем детей во время полёта. Обсуждаются как рекомендации, так и личные истории участников.",
-        "topic_summary_eng": "Discussion about conveniences and challenges related to traveling with children on airplanes. Includes questions about seating, amenities for infants, and ways to handle crying children. Participants share recommendations and personal stories.",
+        "topic_name": "Авиаперелеты с детьми и места в самолете",
+        "topic_name_eng": "Air travel with children and seats on the plane",
+        "topic_summary": "Обсуждение опыта путешествий с детьми, в том числе удобство и неудобство мест в самолете. Упоминаются особенности полетов с детьми до года, советы по выбору мест и документам для въезда. Часто обсуждаются вопросы, связанные с колясками и младенцами.",
+        "topic_summary_eng": "Discussion about traveling with children, including the comfort and inconvenience of seats on the plane. Features of flying with children under one year old are mentioned, as well as advice on seat selection and entry documents. Issues related to strollers and infants are frequently discussed.",
         "topic_tags": [
+            "авиаперелеты",
+            "дети",
             "самолёт",
-            "младенец",
-            "полет",
-            "удобства",
-            "дети"
+            "коляски",
+            "места"
         ],
         "topic_tags_eng": [
-            "airplane",
-            "infant",
-            "flight",
-            "amenities",
-            "children"
+            "air travel",
+            "children",
+            "plane",
+            "strollers",
+            "seats"
         ],
         "msg_ids": [
             187543,
@@ -913,33 +915,37 @@
             187562,
             187564,
             187565,
-            188268
+            187268
         ],
-        "question": "What challenges and conveniences do travelers face with infants on airplanes?",
-        "answer_message_ids": [
-            187547,
+        "question": "What are the pros and cons of seating arrangements in planes when traveling with children?",
+        "answer": "The first row offers more legroom but has a higher chance of being near a crying baby. Although crying children are common, parents have found that young babies often sleep quietly. However, traveling alone with a baby can be challenging.",
+        "answer_msg_ids": [
             187549,
-            187555
+            187551,
+            187556,
+            188268
         ]
     },
     {
-        "topic_name": "Налоги на автомобили в Турции",
-        "topic_name_eng": "Car Taxes in Turkey",
-        "topic_summary": "Обсуждаются налоги на автомобили в Турции, в частности виды машин, которые облагаются налогом, как изменяется ставка в зависимости от мощности и класса авто. Обсуждены преимущества покупки электромобилей, таких как Tesla, и минимальные ставки для пикапов и микроавтобусов.",
-        "topic_summary_eng": "Discussing car taxes in Turkey, specifically the types of cars taxed and how rates vary based on power and class. The benefits of buying electric vehicles like Tesla and minimal rates for pickups and minibuses are discussed.",
+        "topic_name": "Налоги на автомобили и транспортные услуги в Турции",
+        "topic_name_eng": "Car taxes and transportation services in Turkey",
+        "topic_summary": "Обсуждаются высокие налоги на премиальные автомобили в Турции. Покупка Tesla экономически выгодна из-за минимальных налогов. Также упоминаются выгодные трансферные службы между городами и аэропортами с подробностями об услугах.",
+        "topic_summary_eng": "The discussion revolves around high taxes on premium cars in Turkey. Buying a Tesla is economically advantageous due to minimal taxes. Also mentioned are beneficial transfer services between cities and airports with service details.",
         "topic_tags": [
             "налоги",
             "автомобили",
             "Турция",
-            "электромобили",
-            "Тесла"
+            "Тесла",
+            "трансфер",
+            "премиум"
         ],
         "topic_tags_eng": [
             "taxes",
             "cars",
             "Turkey",
-            "electric vehicles",
-            "Tesla"
+            "Tesla",
+            "transfer",
+            "premium"
         ],
         "msg_ids": [
             188423,
@@ -950,45 +956,46 @@
             188449,
             188451,
             188454,
-            188455,
+            188456,
             188457,
             188458,
             188459,
+            188460,
             188462,
             188463,
             188467,
             188468,
             188469,
-            188470,
             188473,
             188474,
             188476
         ],
-        "question": "What are the car tax differences for luxury versus commercial vehicles in Turkey?",
-        "answer_message_ids": [
+        "question": "What makes buying a Tesla advantageous in Turkey?",
+        "answer": "Tesla benefits from minimal taxes as commercial vehicles pay lower rates. This results in a lower overall price, making it an economically advantageous choice.",
+        "answer_msg_ids": [
             188447,
-            188449,
-            188457
+            188448,
+            188462
         ]
     },
     {
-        "topic_name": "Уровень жизни: сравнение расходов и доходов",
-        "topic_name_eng": "Living standard: comparing expenses and incomes",
-        "topic_summary": "Обсуждение касается расходов и доходов в разных частях Европы и Турции. Участники делятся своим опытом относительно комфорта жизни с различными уровнями дохода, а также обсуждают различия в ценах на аренду и обучение в Испании и Турции.",
-        "topic_summary_eng": "The discussion revolves around expenses and incomes in different parts of Europe and Turkey. Participants share their experiences regarding living comfortably with various income levels and discuss differences in rental and schooling costs in Spain and Turkey.",
+        "topic_name": "Жизнь в Европе: расходы и впечатления",
+        "topic_name_eng": "Living in Europe: Expenses and Impressions",
+        "topic_summary": "Дискуссия о жизни в Европе и связанных с ней расходах. Участники обмениваются опытом жизни в разных странах, обсуждая расходы на жилье, образование и общую стоимость жизни. Важно отметить, что воспринимаемая комфортность жизни зависит от личного опыта и ожиданий.",
+        "topic_summary_eng": "Discussion about living in Europe and related expenses. Participants share their experiences of living in different countries, discussing housing, education, and the overall cost of living. It is important to note that perceived comfort of living depends on personal experiences and expectations.",
         "topic_tags": [
-            "жизненный уровень",
-            "доходы",
+            "жизнь в Европе",
             "расходы",
-            "аренда",
-            "образование"
+            "образование",
+            "жилье",
+            "впечатления"
         ],
         "topic_tags_eng": [
-            "living standard",
-            "incomes",
+            "living in Europe",
             "expenses",
-            "rent",
-            "education"
+            "education",
+            "housing",
+            "impressions"
         ],
         "msg_ids": [
             189237,
@@ -1006,32 +1013,32 @@
             189277,
             189281
         ],
-        "question": "What are the expenses for a family living in Valencia compared to Barcelona?",
+        "question": "What are the perceived differences in living expenses in Europe according to personal experiences?",
+        "answer": "Living expenses in Europe vary greatly based on personal experiences. Some find 3-4k euros sufficient for a comfortable life while others struggle to meet their needs. Personal circumstances and expectations heavily influence these perceptions.",
         "answer_message_ids": [
-            189272,
-            189273,
-            189274,
-            189275
+            189246,
+            189247,
+            189259
         ]
     },
     {
-        "topic_name": "обсуждение налогов и растаможка посылок",
-        "topic_name_eng": "discussion about taxes and customs clearance of parcels",
-        "topic_summary": "Пользователи обсуждают проблемы с растаможкой посылок и связанные с этим налоги. Затрагиваются ставки налогов, условия растаможки и высокие расходы. Также упоминается брокерская плата.",
-        "topic_summary_eng": "Users discuss issues with customs clearance of parcels and related taxes. They discuss tax rates, customs conditions, and high expenses. Broker fees are also mentioned.",
+        "topic_name": "Проблемы с налогообложением посылок в Турции",
+        "topic_name_eng": "Issues with Parcel Taxation in Turkey",
+        "topic_summary": "Обсуждаются сложности с налогами и таможней для посылок. Высокие налоги и услуги брокера могут стоить до 500 долларов. Многие сталкиваются с необходимостью растаможки и большими затратами.",
+        "topic_summary_eng": "Complexities with taxes and customs for parcels are discussed. High taxes and broker fees may cost up to $500. Many face the necessity of customs clearance and high expenses.",
         "topic_tags": [
             "налоги",
-            "растаможка",
             "посылки",
-            "брокеры",
-            "расходы"
+            "растаможка",
+            "брокер",
+            "Турция"
         ],
         "topic_tags_eng": [
             "taxes",
-            "customs",
             "parcels",
-            "brokers",
-            "expenses"
+            "customs clearance",
+            "broker",
+            "Turkey"
         ],
         "msg_ids": [
             189533,
@@ -1043,39 +1050,38 @@
             189557,
             189559,
             189562,
-            189565,
             189566,
             189588,
             189589,
             189590,
             189591
         ],
-        "question": "What are the tax rates and expenses associated with customs clearance of parcels?",
+        "question": "What are the costs and challenges associated with parcel taxation in Turkey?",
+        "answer": "Taxes and broker fees for parcels can amount to $300-$500 if the parcel value exceeds €30. Additional complications include customs clearance requirements and significant associated costs.",
         "answer_message_ids": [
             189541,
-            189546,
-            189559,
-            189562
+            189557,
+            189559
         ]
     },
     {
-        "topic_name": "Кормление стерилизованных котов",
-        "topic_name_eng": "Feeding sterilized cats",
-        "topic_summary": "Обсуждается кормление стерилизованных котов. Рекомендуется соблюдать норму кормления в 70-90 грамм в сутки для кота весом 5 кг. Необходимо чередовать сухой корм с влажным и следовать рекомендациям производителя. Также важно консультироваться с ветеринаром.",
-        "topic_summary_eng": "The discussion focuses on feeding sterilized cats. It is recommended to adhere to the feeding norm of 70-90 grams per day for a 5 kg cat. It's essential to alternate dry food with wet food and follow the manufacturer's recommendations. Consultation with a veterinarian is also important.",
+        "topic_name": "Рацион питания для кастрированных котов",
+        "topic_name_eng": "Diet for neutered cats",
+        "topic_summary": "Обсуждается оптимальный режим питания для кастрированных котов. Рекомендуется кормить по норме, чтобы избежать ожирения, и комбинировать сухой корм с влажным. Некоторые ветеринары советуют давать влажный корм раз в две недели. Есть разные мнения о составе кормов, таких как Роял Канин, и возможных альтернативах.",
+        "topic_summary_eng": "The discussion concerns the optimal feeding regime for neutered cats. It is recommended to feed according to norms to avoid obesity, combining dry food with wet food. Some veterinarians advise giving wet food every two weeks. There are differing opinions on the composition of feeds such as Royal Canin and possible alternatives.",
         "topic_tags": [
-            "кормление",
-            "коты",
+            "кот",
+            "питание",
             "стерилизация",
-            "рекомендации",
-            "корм"
+            "сухой корм",
+            "ожирение"
         ],
         "topic_tags_eng": [
+            "cat",
             "feeding",
-            "cats",
             "sterilization",
-            "recommendations",
-            "food"
+            "dry food",
+            "obesity"
         ],
         "msg_ids": [
             189876,
@@ -1094,31 +1100,34 @@
             190349,
             190366
         ],
-        "question": "What is the recommended daily food portion for a sterilized 5 kg cat?",
+        "question": "How should a neutered cat be fed to maintain a healthy weight?",
+        "answer": "Feed the cat according to the recommended daily portion to prevent obesity. It's suggested to combine dry food with wet food, provided a few times a week. Follow product instructions and consult with a veterinarian for more personalized advice.",
         "answer_message_ids": [
             189877,
-            189906
+            189878,
+            189879,
+            189880
         ]
     },
     {
-        "topic_name": "Распаковка доставленных товаров на видео для возврата",
-        "topic_name_eng": "Unboxing delivered goods on video for return",
-        "topic_summary": "Разговор в чате касался необходимости снимать распаковку доставки на видео для защиты от возврата некачественного товара. Участники делились опытом возврата товаров, обсуждали разницу в опыте с проблемами при заказе и советами по улучшению процесса покупки.",
-        "topic_summary_eng": "The chat discussion was about the importance of recording delivery unboxing on video to safeguard against returning defective products. Participants shared experiences with returning items, discussed differing issues with orders, and offered advice to improve the purchasing process.",
+        "topic_name": "Контроль качества и возвраты на маркетплейсах",
+        "topic_name_eng": "Quality Control and Returns on Marketplaces",
+        "topic_summary": "Пользователи обсуждают необходимость фиксирования распаковки покупок на видео для защиты при возращении товаров. Они делятся опытом возврата товаров на трендике с трудностями и способами решения, включая съемку распаковок и менеджмент через банки. Упоминается проблема выбора надежных продавцов.",
+        "topic_summary_eng": "Users discuss the need to record unboxing purchases on video to protect when returning items. Experiences with returns on Trendyol are shared, addressing the challenges and solutions, including recording unboxing and banking disputes. Choosing reliable sellers is mentioned as an issue.",
         "topic_tags": [
+            "возвраты",
+            "маркетплейсы",
             "распаковка",
-            "возврат",
-            "видео",
-            "заказ",
-            "доставка",
+            "онлайн-покупки",
+            "качество",
             "продавцы"
         ],
         "topic_tags_eng": [
+            "returns",
+            "marketplaces",
             "unboxing",
-            "return",
-            "video",
-            "order",
-            "delivery",
+            "online shopping",
+            "quality",
             "sellers"
         ],
         "msg_ids": [
@@ -1138,30 +1147,33 @@
             190279,
             190280
         ],
-        "question": "What are the advantages of recording unboxing videos for deliveries?",
-        "answer_message_ids": [
+        "question": "What is a good strategy for managing returns and ensuring product quality on online marketplaces?",
+        "answer": "Recording the unboxing of purchases on video is advised to protect oneself when returning items. Users share their experiences with returns, advocating for detailed documentation to facilitate bank disputes if necessary. Trustworthy seller selection remains a challenge.",
+        "answer_msg_ids": [
+            190215,
             190223,
-            190231
+            190226,
+            190234
         ]
     },
     {
-        "topic_name": "Обязательство поездок в офис и гибридная работа",
-        "topic_name_eng": "Office Commute Obligations and Hybrid Work",
-        "topic_summary": "В чате обсуждалась тема обязательных поездок в офис и перспектива гибридной работы. Участники выражают обеспокоенность из-за возможных изменений в политике компании и задаются вопросами о необходимых условиях и альтернативных вариантах, таких как работа из дома или организация трансфера.",
-        "topic_summary_eng": "The chat discussed the topic of mandatory office commutes and the possibility of hybrid work. Participants expressed concern over potential changes in company policy and questioned necessary conditions and alternatives, such as remote work or arranged transport.",
+        "topic_name": "Обсуждение гибридного режима работы и офиса",
+        "topic_name_eng": "Discussion on hybrid work mode and office",
+        "topic_summary": "Обсуждается возможность обязательного посещения офиса и организация трансфера. Участники высказываются о нежелании ездить в офис далеко и высказывают опасения по поводу гибридного режима работы. Некоторые приводят свои аргументы, почему они против, в то время как другие указывают на то, что обязалово не планируется.",
+        "topic_summary_eng": "The possibility of mandatory office attendance and transfer organization is discussed. Participants express unwillingness to travel far to the office and share concerns about hybrid work mode. Some present arguments against it, while others point out that mandatory attendance is not planned.",
         "topic_tags": [
+            "гибрид",
             "офис",
-            "гибридная работа",
-            "поездки",
-            "обязательства",
-            "релокация"
+            "работа",
+            "трансфер",
+            "обязаловка"
         ],
         "topic_tags_eng": [
+            "hybrid",
             "office",
-            "hybrid work",
-            "commutes",
-            "obligations",
-            "relocation"
+            "work",
+            "transfer",
+            "mandatory"
         ],
         "msg_ids": [
             192283,
@@ -1180,30 +1192,32 @@
             192303,
             192317
         ],
-        "question": "Are there any mandatory requirements for commuting to the office?",
-        "answer_message_ids": [
-            192289,
+        "question": "Is there a plan to make office attendance compulsory in the hybrid work model?",
+        "answer": "No compulsory attendance is planned. Some participants mention that mandatory office attendance is not planned, based on discussions in the chat.",
+        "answer_msg_ids": [
             192303
         ]
     },
     {
-        "topic_name": "анонс медобследования и работа по пятницам",
-        "topic_name_eng": "medical examination announcement and work on Fridays",
-        "topic_summary": "На собрании был сделан анонс о медобследовании в Анталье, которое пройдет теперь только для сотрудников, не связанных с СГК. Обсуждалась также практика сделок по пятницам, особенно вечером, что вызывало много отзывов.",
-        "topic_summary_eng": "An announcement was made regarding a medical examination in Antalya, now held only for employees not associated with SGC. The practice of deals on Fridays, especially in the evening, was also discussed, which generated many comments.",
+        "topic_name": "Анонс медобследования в Анталье в пятницу",
+        "topic_name_eng": "Announcement of medical examination in Antalya on Friday",
+        "topic_summary": "В чате обсуждается анонс медицинского обследования в Анталье, который запланирован на пятницу. Участники обсуждают важность таких анонсов и их целесообразность в пятницу вечером. Упоминается выбор местного банка и значения даты.",
+        "topic_summary_eng": "The chat discusses the announcement of a medical examination in Antalya planned for Friday. Participants debate the importance and rationale of announcements on Friday evenings. There is mention of a local bank choice and the significance of the date.",
         "topic_tags": [
-            "анонс",
             "медобследование",
+            "Анталья",
+            "анонс",
             "пятница",
-            "IT",
-            "Анталья"
+            "банк",
+            "актуальные события"
         ],
         "topic_tags_eng": [
-            "announcement",
             "medical examination",
+            "Antalya",
+            "announcement",
             "Friday",
-            "IT",
-            "Antalya"
+            "bank",
+            "current events"
         ],
         "msg_ids": [
             183759,
@@ -1221,32 +1235,33 @@
             184337,
             184341
         ],
-        "question": "What is the discussion about changes in IT work practices on Fridays?",
+        "question": "Why are announcements scheduled on Fridays in Antalya?",
+        "answer": "Announcements are often scheduled on Fridays in Antalya to avoid discussions during working hours. This way, people can't discuss them in the office, leading to less potential confusion.",
         "answer_message_ids": [
-            183805,
-            183806,
             183807,
-            183810
+            183805
         ]
     },
     {
-        "topic_name": "Повышение тарифов на воду и потребление",
-        "topic_name_eng": "Increase in water tariffs and consumption",
-        "topic_summary": "Обсуждается изменение тарифов на воду. Участники обсуждают свои счета, указывая на повышение цен. Некоторые замечают разницу в стоимости по сравнению с прошлыми месяцами и с гражданскими тарифами. Ситуация кажется непоследовательной для некоторых участников.",
-        "topic_summary_eng": "Discussion about changes in water tariffs. Participants discuss their bills, noting price increases. Some notice price differences compared to previous months and citizen tariffs. The situation seems inconsistent for some participants.",
+        "topic_name": "Повышение тарифов на воду в Анталии",
+        "topic_name_eng": "Increase of water tariffs in Antalya",
+        "topic_summary": "Обсуждение повышения тарифов на воду в Анталии. Ранее шесть кубов стоили 10 лир, теперь 60. У некоторых пользователей тарифы остались прежними, что может быть связано с датой фактуры и статусом владельца воды.",
+        "topic_summary_eng": "Discussion of water tariff increase in Antalya. Previously, six cubic meters cost 10 lira, now it's 60. Some users still have old tariffs, possibly related to the invoice date and ownership status.",
         "topic_tags": [
             "тарифы",
             "вода",
-            "цены",
+            "Анталия",
+            "повышение",
             "потребление",
-            "квитанции"
+            "рессчёт"
         ],
         "topic_tags_eng": [
             "tariffs",
             "water",
-            "prices",
+            "Antalya",
+            "increase",
             "consumption",
-            "bills"
+            "recalculation"
         ],
         "msg_ids": [
             183870,
@@ -1264,33 +1279,32 @@
             183894,
             183895
         ],
-        "question": "What are the consequences of the recent water tariff increase?",
+        "question": "How has the water tariff changed recently?",
+        "answer": "The water tariff has increased significantly. Previously, the first six cubic meters cost 10 lira, but now it's 60 lira. Some users have not been affected by this increase yet, possibly due to their invoice dates or ownership status.",
         "answer_message_ids": [
-            183870,
             183876,
-            183877,
-            183878,
-            183880
+            183884,
+            183886
         ]
     },
     {
-        "topic_name": "Причины блокировки Roblox в Турции",
-        "topic_name_eng": "Reasons for Roblox Block in Turkey",
-        "topic_summary": "В Турции блокировка Roblox вызвала вопросы. Основные причины: подозрение во вредоносном использовании взрослыми и политическая пропаганда. В обсуждении предполагали, что она связана с недавними событиями, например, ребёнком, который не проявил уважение к Эрдогану.",
-        "topic_summary_eng": "The Roblox block in Turkey raised questions. Main reasons: suspicion of malicious use by adults and political propaganda. The discussion speculated about its connection to recent events, like a child showing disrespect to Erdogan.",
+        "topic_name": "Блокировка Roblox в Турции",
+        "topic_name_eng": "Blocking of Roblox in Turkey",
+        "topic_summary": "В Турции блокировали доступ к игре Roblox, причины которой остаются неясными, но высказаны предположения о вредоносном использовании и политической пропаганде. Обсуждаются культурные особенности и реакция общества на подобные запреты.",
+        "topic_summary_eng": "Access to Roblox in Turkey was blocked, with unclear reasons but speculations about malicious use and political propaganda. Discussions include cultural peculiarities and society's reactions to such bans.",
         "topic_tags": [
             "Roblox",
-            "блокировка",
             "Турция",
-            "политика",
-            "пропаганда"
+            "блокировка",
+            "культура",
+            "общественная реакция"
         ],
         "topic_tags_eng": [
             "Roblox",
-            "block",
             "Turkey",
-            "politics",
-            "propaganda"
+            "blocking",
+            "culture",
+            "societal reaction"
         ],
         "msg_ids": [
             185136,
@@ -1302,7 +1316,6 @@
             185144,
             185149,
             185153,
-            185155,
             185160,
             185162,
             185167,
@@ -1311,32 +1324,32 @@
             185176
         ],
         "question": "Why was Roblox blocked in Turkey?",
+        "answer": "Roblox was blocked possibly due to concerns over adult misuse and political propaganda. Turkish news outlets mentioned inappropriate interactions with minors and creation of politically charged virtual worlds.",
         "answer_message_ids": [
             185136,
-            185139,
-            185140
+            185139
         ]
     },
     {
-        "topic_name": "Процедура легализации справки в Турции",
-        "topic_name_eng": "Procedure for document legalization in Turkey",
-        "topic_summary": "Обсуждение процесса получения и легализации справки в Турции. Включает этапы перевода, заверения нотариусом и легализации в каймакамлыке. Также говорится о расходах на каждую процедуру и необходимости дополнительных действий.",
-        "topic_summary_eng": "Discussion of the process of obtaining and legalizing a document in Turkey. Includes stages of translation, notarization, and legalization in Kaymakamlık. Mentioned are costs for each procedure and the necessity of additional actions.",
+        "topic_name": "Легализация и заверение документов в Анталии",
+        "topic_name_eng": "Legalization and notarization of documents in Antalya",
+        "topic_summary": "Обсуждается процесс легализации и нотариального заверения справки в Анталии. Участники делятся опытом процедур в консульстве, необходимости легализации, стоимости услуг и местных аналогов апостиля в Каймакамлыке. Поднимаются вопросы о стоимости и необходимости различных этапов легализации.",
+        "topic_summary_eng": "The discussion focuses on the process of legalization and notarization of certificates in Antalya. Participants share experiences regarding consular procedures, the necessity of legalization, service costs, and local equivalents of apostille in Kaymakamlık. Questions about costs and the necessity of various legalization steps are raised.",
         "topic_tags": [
+            "документы",
             "легализация",
-            "турция",
-            "справка",
-            "каймакамлык",
-            "нотариус",
-            "перевод"
+            "заверение",
+            "Анталия",
+            "консульство",
+            "Каймакамлык"
         ],
         "topic_tags_eng": [
+            "documents",
             "legalization",
-            "Turkey",
-            "document",
-            "Kaymakamlık",
-            "notary",
-            "translation"
+            "notarization",
+            "Antalya",
+            "consulate",
+            "Kaymakamlık"
         ],
         "msg_ids": [
             186638,
@@ -1354,30 +1367,34 @@
             186689,
             186690
         ],
-        "question": "What are the steps involved in legalizing a document in Turkey?",
+        "question": "What is the procedure for legalization and notarization of a document in Antalya?",
+        "answer": "The main procedure involves obtaining the document at the consulate, translating and notarizing it locally, and then getting it sealed by Kaymakamlık. An additional consular legalization step is sometimes skipped, but everything still remains in compliance.",
         "answer_message_ids": [
             186690,
-            186687
+            186687,
+            186666
         ]
     },
     {
         "topic_name": "Поиск мастера для ремонта посудомойки",
-        "topic_name_eng": "Finding a technician for dishwasher repair",
-        "topic_summary": "Обсуждается необходимость найти мастера для ремонта посудомойки. Участники обсуждения предлагают различных специалистов и рекомендуют конкретные услуги. Также упоминается Виталик, который уже оказывал подобные услуги.",
-        "topic_summary_eng": "The discussion revolves around finding a technician for dishwasher repair. Participants suggest various specialists and recommend specific services. Vitalik, who has previously provided similar services, is also mentioned.",
+        "topic_name_eng": "Finding a repairman for dishwasher",
+        "topic_summary": "Екатерина ищет мастера для починки посудомойки. Виктория рекомендует Ахмета, а T4 советует обратиться в сервис, если проблема серьёзная. В результате, был приглашён Виталик, который успешно починил посудомойку, но у него есть спорная репутация.",
+        "topic_summary_eng": "Ekaterina is looking for a repairman for her dishwasher. Viktoria recommends Ahmet, while T4 advises a service for serious issues. Vitalik was eventually invited and successfully repaired the dishwasher, despite having a mixed reputation.",
         "topic_tags": [
             "ремонт",
             "посудомойка",
             "мастер",
-            "техник",
-            "Виталик"
+            "Виталик",
+            "Ахмет",
+            "обсуждение"
         ],
         "topic_tags_eng": [
             "repair",
             "dishwasher",
-            "technician",
-            "master",
-            "Vitalik"
+            "repairman",
+            "Vitalik",
+            "Ahmet",
+            "discussion"
         ],
         "msg_ids": [
             188593,
@@ -1397,32 +1414,31 @@
             188707,
             188712
         ],
-        "question": "Who is recommended for dishwasher repair services?",
+        "question": "Who successfully repaired the dishwasher for Ekaterina?",
+        "answer": "Vitalik successfully repaired the dishwasher, despite having mixed reviews from others.",
         "answer_message_ids": [
-            188685,
-            188686
+            188686,
+            188691
         ]
     },
     {
-        "topic_name": "Покупка и аренда жилья в Германии для иностранцев",
-        "topic_name_eng": "Buying and Renting Housing in Germany for Foreigners",
-        "topic_summary": "Обсуждение затрагивает покупку и аренду жилья в Германии, акцентируя внимание на различиях в процентных ставках по ипотеке для граждан Германии и иностранцев. Участники делятся мнениями о том, стоит ли покупать жилье или арендовать, учитывая финансовые аспекты и карьерные перспективы.",
-        "topic_summary_eng": "The discussion touches on buying and renting housing in Germany, focusing on differences in mortgage interest rates for German citizens and foreigners. Participants share their opinions on whether to buy or rent housing considering financial aspects and career prospects.",
+        "topic_name": "Покупка и аренда жилья в Германии",
+        "topic_name_eng": "Buying and Renting Real Estate in Germany",
+        "topic_summary": "Обсуждается возможность покупки и аренды жилья в Германии. Пользователи отмечают, что покупка квартир частыми гражданами крайне редка. Однако, у граждан Германии есть значительные льготы, такие как низкие проценты по ипотеке. Также обсуждаются плюсы и минусы ипотеки и аренды.",
+        "topic_summary_eng": "The discussion focuses on the possibility of buying and renting real estate in Germany. Users note that real estate purchase by citizens is extremely rare. However, German citizens enjoy significant benefits such as low mortgage interest rates. Pros and cons of mortgages and renting are discussed.",
         "topic_tags": [
             "недвижимость",
-            "Германия",
-            "ипотека",
+            "покупка квартиры",
             "аренда",
-            "финансы",
-            "гражданство"
+            "ипотека",
+            "Германия"
         ],
         "topic_tags_eng": [
             "real estate",
-            "Germany",
+            "buying apartment",
+            "renting",
             "mortgage",
-            "rent",
-            "finances",
-            "citizenship"
+            "Germany"
         ],
         "msg_ids": [
             191508,
@@ -1440,32 +1456,33 @@
             191675,
             191677
         ],
-        "question": "What is the interest rate for a mortgage in Germany for citizens compared to foreigners?",
+        "question": "What are the advantages of buying property in Germany for its citizens?",
+        "answer": "Citizens of Germany benefit from low mortgage rates, which can make buying property more advantageous than renting. For example, mortgage payments can be lower than rental payments, making property ownership more accessible.",
         "answer_message_ids": [
             191669,
-            191670
+            191674
         ]
     },
     {
-        "topic_name": "Проблемы с оплатой и подписками Яндекса",
-        "topic_name_eng": "Issues with Yandex payments and subscriptions",
-        "topic_summary": "У пользователей возникают проблемы с подписками Яндекса, списаниями и оплатой в лирах. Некоторые отмечают проблемы с поддержкой и баги при оформлении или отмене подписки. Обсуждаются нюансы перехода на оплату турецкой картой и использование VPN для решения проблем.",
-        "topic_summary_eng": "Users face issues with Yandex subscriptions, deductions, and payments in lira. Some note support issues and bugs during subscription setup or cancellation. The discussion includes details on switching to Turkish card payments and using VPNs to resolve issues.",
+        "topic_name": "Проблемы с подписками и платежами в Яндекс",
+        "topic_name_eng": "Issues with subscriptions and payments in Yandex",
+        "topic_summary": "Пользователи обсуждают трудности с продлением подписки и оплатой Яндекс плюс. Некоторые жалуются на списания в рублях вместо лир и привязку к российскому аккаунту. Решение проблемы требует помощи поддержки и использования VPN. Вопросы о нестабильной работе сервиса и доступе с турецких IP тоже подняты.",
+        "topic_summary_eng": "Users discuss difficulties with renewing subscriptions and payments for Yandex Plus. Some complain about charges in rubles instead of lira and being tied to a Russian account. Resolving these issues requires support assistance and using a VPN. Questions about the service's instability and access from Turkish IPs are also raised.",
         "topic_tags": [
             "Яндекс",
-            "оплата",
             "подписка",
-            "лиры",
+            "оплата",
             "VPN",
-            "проблемы"
+            "рубли",
+            "лиры"
         ],
         "topic_tags_eng": [
             "Yandex",
-            "payment",
             "subscription",
-            "lira",
+            "payment",
             "VPN",
-            "issues"
+            "rubles",
+            "lira"
         ],
         "msg_ids": [
             191667,
@@ -1481,38 +1498,36 @@
             191694,
             191695,
             191696,
-            191697
+            191697,
+            191676,
+            191698
         ],
-        "question": "What payment issues are related to Yandex subscriptions in Turkey?",
-        "answer_message_ids": [
-            191691,
+        "question": "What issues are users facing with Yandex subscriptions while living abroad?",
+        "answer": "Users are experiencing problems with renewing Yandex Plus subscriptions and payments while living abroad. The issues include charges being made in rubles instead of local currency, with services reverting to Russian settings. These problems often require the use of a VPN to resolve.",
+        "answer_msg_ids": [
             191693,
-            191695,
-            191696
+            191697,
+            191698
         ]
     },
     {
-        "topic_name": "Установка телевизора и выбор мастера",
-        "topic_name_eng": "TV installation and choosing a specialist",
-        "topic_summary": "Обсуждение установки телевизора, поиски мастера, чтобы избежать повреждений. Обсуждались проблемы с проводкой, использование профессионалов и возможность независимой установки.",
-        "topic_summary_eng": "Discussion about TV installation and finding a specialist to avoid damages. Issues with wiring, hiring professionals, and the possibility of DIY installation were discussed.",
+        "topic_name": "Рекомендации по установке телевизора",
+        "topic_name_eng": "Recommendations for TV installation",
+        "topic_summary": "Участники обсуждают различные способы установки кронштейна для телевизора, делясь опытом и советами. Максим и Виктор рассказывают о своих неудачных попытках с проводкой, а другие пользователи советуют нанимать мастеров из магазинов, таких как Vestel, или использовать специальные инструменты, как детектор проводки.",
+        "topic_summary_eng": "Participants discuss various methods for mounting a TV bracket, sharing experiences and advice. Maksim and Viktor talk about their unsuccessful attempts with wiring, while others suggest hiring masters from stores like Vestel or using special tools like a wire detector.",
         "topic_tags": [
-            "телевизор",
             "установка",
-            "мастер",
-            "повесить",
+            "телевизор",
             "кронштейн",
-            "проводка",
-            "специалист"
+            "мастер",
+            "проводка"
         ],
         "topic_tags_eng": [
-            "TV",
             "installation",
-            "specialist",
-            "mount",
+            "TV",
             "bracket",
-            "wiring",
-            "professional"
+            "master",
+            "wiring"
         ],
         "msg_ids": [
             191934,
@@ -1530,34 +1545,30 @@
             191967,
             191970
         ],
-        "question": "What are the challenges and recommendations for installing a TV in a new home?",
-        "answer_msg_ids": [
-            191934,
-            191938,
-            191940,
-            191946,
-            191962,
-            191964
+        "question": "What tool can help avoid drilling into wiring during TV installation?",
+        "answer": "A wire detector can help identify the location of electrical wires, preventing accidental drilling into them while installing a TV bracket.",
+        "answer_message_ids": [
+            191947
         ]
     },
     {
-        "topic_name": "Новые условия медицинской страховки",
-        "topic_name_eng": "New Conditions for Health Insurance",
-        "topic_summary": "Обсуждение связано с новыми условиями страхования для DMS, включая различия в планах. Ранее доступные планы могли быть более дорогими, такими как 'вип', которые теперь заменены более простыми вариантами. Участники делятся опытом хождения по страховым планам и обращением в клиники. Также обсуждаются трудности и ошибки при использовании страховок.",
-        "topic_summary_eng": "The discussion is about new insurance conditions for DMS, including differences in plans. Previously available plans might have been more expensive such as 'vip', now replaced with simpler options. Participants share experiences of using insurance plans and visiting clinics. Challenges and errors when using insurance policies are also discussed.",
+        "topic_name": "Обсуждение новых медицинских страховок в Анталье",
+        "topic_name_eng": "Discussion on new medical insurances in Antalya",
+        "topic_summary": "Обсуждается новый страховой план, известный как демир, и его особенности. В новых страховках стоит план А стандарт вместо прежних голд и вип. Некоторые пользователи отметили изменение покрытия в пориенте на данный план. Обсуждаются вопросы, связанные с продлением и стоимостью.",
+        "topic_summary_eng": "A new insurance plan, known as demir, and its features are discussed. New insurances have plan A standard instead of the former gold and VIP. Some users noted a change in coverage related to this plan. Questions related to renewal and costs are also discussed.",
         "topic_tags": [
             "страховка",
-            "DMS",
-            "планы",
-            "врачи",
-            "трудности"
+            "демир",
+            "план А",
+            "покрытие",
+            "Анталья"
         ],
         "topic_tags_eng": [
             "insurance",
-            "DMS",
-            "plans",
-            "doctors",
-            "challenges"
+            "demir",
+            "plan A",
+            "coverage",
+            "Antalya"
         ],
         "msg_ids": [
             192022,
@@ -1575,33 +1586,32 @@
             192040,
             192042
         ],
-        "question": "What are the new conditions for health insurance, and how do they affect plan coverage?",
-        "answer_message_ids": [
-            192022,
-            192023,
-            192025,
-            192034,
-            192035
+        "question": "What changes occurred in the new insurance plans in Antalya?",
+        "answer": "The new insurance plans, known as demir, now feature a standard plan A instead of the previous gold and VIP plans. Coverage percentages seem to be affected by this change.",
+        "answer_msg_ids": [
+            192035,
+            192038,
+            192042
         ]
     },
     {
-        "topic_name": "Работоспособность Instagram без VPN в Турции",
+        "topic_name": "Работа Instagram без VPN в Турции",
         "topic_name_eng": "Instagram functionality without VPN in Turkey",
-        "topic_summary": "Вопрос работоспособности Instagram без использования VPN обсуждается среди пользователей. Некоторые сообщают о нормальной работе сервиса, другие отмечают проблемы, связанные с турецкими телефонами и SIM-картами. Некоторые обсуждают методы блокировки через IMEI и турецких провайдеров.",
-        "topic_summary_eng": "The functionality of Instagram without using a VPN is discussed among users. Some report normal service operation, while others note issues related to Turkish phones and SIM cards. Some discuss blocking methods through IMEI and Turkish providers.",
+        "topic_summary": "Обсуждается работоспособность Instagram в Турции без использования VPN. Некоторые пользователи отмечают, что приложение работает без сбоев, если устройство зарегистрировано как турецкое. Возможны проблемы с блокировками на уровне провайдеров.",
+        "topic_summary_eng": "This discussion centers around the functionality of Instagram in Turkey without using a VPN. Some users note that the app operates smoothly if the device is registered as Turkish. There might be restriction issues at the provider level.",
         "topic_tags": [
             "Instagram",
             "VPN",
             "Турция",
-            "телефон",
-            "блокировка"
+            "блокировка",
+            "провайдеры"
         ],
         "topic_tags_eng": [
             "Instagram",
             "VPN",
             "Turkey",
-            "phone",
-            "blocking"
+            "blocking",
+            "providers"
         ],
         "msg_ids": [
             183990,
@@ -1618,33 +1628,31 @@
             184052,
             184060
         ],
-        "question": "What factors affect Instagram's functionality in Turkey without a VPN?",
+        "question": "Why might Instagram work for some users in Turkey without VPN?",
+        "answer": "Instagram might work for some users in Turkey if their device is registered as Turkish, which may bypass certain provider-level blocks.",
         "answer_message_ids": [
             184042,
-            184045,
-            184046
+            184060
         ]
     },
     {
-        "topic_name": "Улица с проезжающим поездом в Ханое",
-        "topic_name_eng": "Street with passing train in Hanoi",
-        "topic_summary": "Обсуждают улицу в Ханое, где поезд проезжает рядом с террасами, создавая суматоху и уникальные фотографии. Несмотря на опасения насчет безопасности, эта улица стала туристическим аттракционом, хотя не всем нравятся потоки воздуха от поезда.",
-        "topic_summary_eng": "Discussion about a street in Hanoi where a train passes by terraces, creating chaos and unique photos. Despite safety concerns, this street has become a tourist attraction, although not everyone likes the airflow from the train.",
+        "topic_name": "Туристические поезда и их особенности",
+        "topic_name_eng": "Tourist trains and their features",
+        "topic_summary": "В Ханое есть улица, где поезд едет близко к людям, что привлекает много туристов снимать видео. Это вызывает смешанные чувства, включая дискомфорт и коммерческие возможности для местных жителей.",
+        "topic_summary_eng": "In Hanoi, there is a street where a train passes very close to people, attracting many tourists to film videos. This evokes mixed feelings, including discomfort and commercial opportunities for locals.",
         "topic_tags": [
             "поезд",
             "Ханой",
-            "улица",
             "туризм",
             "безопасность",
-            "фотографии"
+            "узкая улица"
         ],
         "topic_tags_eng": [
             "train",
             "Hanoi",
-            "street",
             "tourism",
             "safety",
-            "photos"
+            "narrow street"
         ],
         "msg_ids": [
             183998,
@@ -1661,34 +1669,31 @@
             184016,
             184017
         ],
-        "question": "Why do tourists visit the street in Hanoi where the train passes by?",
+        "question": "What safety concerns arise from tourist trains passing close to people?",
+        "answer": "The proximity of trains to people can lead to discomfort and even potential danger due to air currents pulling them towards the train. Locals have mixed feelings about this situation.",
         "answer_message_ids": [
-            184000,
-            184011
+            184005,
+            184009
         ]
     },
     {
-        "topic_name": "Прием старых купюр в банках",
-        "topic_name_eng": "Acceptance of old banknotes in banks",
-        "topic_summary": "Обсуждение включает опыт пользователей с изменением старых купюр в банках Турции и других странах. Рассказывается о проблемах с купюрами в Турции и советы по их обмену, а также упоминается об опыте обмена купюр в других странах, например, в Грузии и Беларуси.",
-        "topic_summary_eng": "The discussion involves users' experiences with exchanging old banknotes in banks in Turkey and other countries. Issues with banknotes in Turkey and tips for exchange are discussed, and experiences in other countries like Georgia and Belarus are also mentioned.",
+        "topic_name": "Проблемы со старыми купюрами в банках",
+        "topic_name_eng": "Issues with old banknotes in banks",
+        "topic_summary": "В обсуждении рассматриваются случаи выдачи старых купюр банком Зираат и возможности их обмена или сдачи в банках различных стран, включая Россию и Грузию. Участники делятся опытом замены старых купюр на новые в своих банках.",
+        "topic_summary_eng": "The discussion covers the issue of Ziraat Bank issuing old banknotes and the possibilities of exchanging or depositing them in banks in various countries, including Russia and Georgia. Participants share their experiences of exchanging old notes for new ones in their banks.",
         "topic_tags": [
-            "купюры",
             "банки",
-            "обмен",
             "старые купюры",
-            "Турция",
-            "Грузия",
-            "Беларусь"
+            "обмен валют",
+            "банк Зираат",
+            "валюта"
         ],
         "topic_tags_eng": [
-            "banknotes",
             "banks",
-            "exchange",
             "old banknotes",
-            "Turkey",
-            "Georgia",
-            "Belarus"
+            "currency exchange",
+            "Ziraat Bank",
+            "currency"
         ],
         "msg_ids": [
             185482,
@@ -1703,10 +1708,10 @@
             185506,
             185508,
             185510,
-            186511,
             186623
         ],
-        "question": "Where can old banknotes be exchanged without issues?",
+        "question": "How do people deal with old banknotes in different countries?",
+        "answer": "People manage old banknotes by asking for replacements at banks in various countries, such as Belarus and Georgia, where they can be exchanged or deposited without issues.",
         "answer_message_ids": [
             185505,
             185506,
@@ -1714,23 +1719,23 @@
         ]
     },
     {
-        "topic_name": "Доверие и гарантии в релокации",
-        "topic_name_eng": "Trust and Guarantees in Relocation",
-        "topic_summary": "Обсуждение вопросов устных обещаний при релокации. Подчеркивается важность документальных гарантий для принятия решений. Высказаны мнения о том, что даже при благоприятных условиях не все могут быть выполнены. Столкновение мнений об их важности и доверии к озвученным планам.",
-        "topic_summary_eng": "Discussion about verbal promises in relocation. Highlights the importance of documented guarantees for decision-making. Opinions express that even under favorable circumstances, not everything can be completed. Divergent opinions on their importance and trust in stated plans.",
+        "topic_name": "Обещания и реальность в релокации сотрудников",
+        "topic_name_eng": "Promises and Reality in Employee Relocation",
+        "topic_summary": "Обсуждение касается того, что обещания, данные некоторыми компаниями, не всегда выполняются после релокации сотрудников в другие страны. Участники обсуждают, как поступать в таких случаях, и необходимость получения документального подтверждения обещаний. Также затронуты вопросы доверия к устным договоренностям и как изменения в компании могут повлиять на релокационные процессы.",
+        "topic_summary_eng": "The discussion revolves around promises made by some companies that are not always fulfilled after relocating employees to other countries. Participants discuss how to handle such situations and the necessity of obtaining documentary confirmation of promises. The conversation also touches on trust in verbal agreements and how company changes can impact relocation processes.",
         "topic_tags": [
             "релокация",
             "обещания",
             "гарантии",
-            "доверие",
-            "юрискции"
+            "компания",
+            "устные договоренности"
         ],
         "topic_tags_eng": [
             "relocation",
             "promises",
             "guarantees",
-            "trust",
-            "jurisdictions"
+            "company",
+            "verbal agreements"
         ],
         "msg_ids": [
             186488,
@@ -1739,42 +1744,37 @@
             186492,
             186493,
             186495,
-            186496,
             186497,
             186504,
             186537,
             186538,
-            186541,
             186551
         ],
-        "question": "What should be done if verbal promises in relocation are not fulfilled?",
-        "answer_msg_ids": [
+        "question": "What steps should be taken if promises made during employee relocation are not fulfilled?",
+        "answer": "If promises made during employee relocation are not fulfilled, it's important to obtain guarantees in a document format which can be enforced legally. Without such documentation, consider that these obligations may not be enforceable.",
+        "answer_message_ids": [
             186491,
-            186538
+            186495
         ]
     },
     {
-        "topic_name": "Поиск аренды квартиры в Анталии",
-        "topic_name_eng": "Searching for apartment rental in Antalya",
-        "topic_summary": "В обсуждении затрагивается поиск аренды квартир в Анталии. Участники обсуждают разные платформы и способы, в том числе Facebook и риелторов. Обсуждается надёжность и ценовые различия.",
-        "topic_summary_eng": "The discussion covers searching for apartment rentals in Antalya. Participants discuss various platforms and methods, including Facebook and realtors. They talk about reliability and price differences.",
+        "topic_name": "Поиск аренды квартиры в Анталии через интернет",
+        "topic_name_eng": "Searching for apartment rental in Antalya online",
+        "topic_summary": "Пользователи обсуждают варианты поиска аренды квартиры в Анталии. Варианты включают сайты как Сахибинден и Хепсиемлак, а также группы в Facebook и Telegram. Риелторы предлагают более дорогие варианты. Некоторые участники предпочитают искать самостоятельно.",
+        "topic_summary_eng": "Users discuss options for finding apartment rentals in Antalya. Options include websites like Sahibinden and Hepsiemlak, as well as groups on Facebook and Telegram. Realtors offer more expensive options. Some participants prefer searching themselves.",
         "topic_tags": [
             "аренда",
-            "квартира",
             "Анталия",
-            "поиск",
+            "квартира",
             "риелтор",
-            "цены",
-            "платформы"
+            "интернет"
         ],
         "topic_tags_eng": [
             "rental",
-            "apartment",
             "Antalya",
-            "search",
+            "apartment",
             "realtor",
-            "prices",
-            "platforms"
+            "online"
         ],
         "msg_ids": [
             186509,
@@ -1789,9 +1789,12 @@
             186521,
             186525,
             186535,
+            186536,
+            186597,
             186596
         ],
-        "question": "What are some alternative platforms to search for apartments in Antalya?",
+        "question": "What are the suggested platforms for searching apartment rentals in Antalya?",
+        "answer": "Suggested platforms include websites like Sahibinden and Hepsiemlak, groups on Facebook such as 'Russians in Antalya', and Telegram channels.",
         "answer_message_ids": [
             186509,
             186512,
@@ -1799,23 +1802,23 @@
         ]
     },
     {
-        "topic_name": "Альтернативы Папара для верификации",
-        "topic_name_eng": "Alternatives to Papara for verification",
-        "topic_summary": "Обсуждаются различные методы верификации и использования финансовых приложений без Папары. Выясняется, что женитьба может помочь с верификацией, но можно попробовать и другие сервисы как Ininal или Ozan. Также обсуждается необходимость регулярного использования Ozan для избегания потери средств, и приводятся советы по подписке для минимального удержания средств.",
-        "topic_summary_eng": "The discussion revolves around different methods of verification and using financial applications without Papara. It's suggested that marriage might help with verification, but other services like Ininal or Ozan can also be explored. The need to regularly use Ozan to avoid losing money is discussed, along with subscription advice to minimize holding fees.",
+        "topic_name": "Способы верификации для Papara и альтернативы",
+        "topic_name_eng": "Verification methods for Papara and alternatives",
+        "topic_summary": "Обсуждаются способы верификации Papara и аналогов. Упоминаются Ininal и Ozan, которые могут быть использованы вместо Papara. Также обсуждается верификация через различные документы и учетные записи.",
+        "topic_summary_eng": "Discussion about verification methods for Papara and its alternatives. Ininal and Ozan are mentioned as possible alternatives. Verification through different documents and accounts is also discussed.",
         "topic_tags": [
+            "Papara",
             "верификация",
-            "Папара",
+            "альтернативы",
             "Ininal",
-            "Ozan",
-            "финансовые приложения"
+            "Ozan"
         ],
         "topic_tags_eng": [
-            "verification",
             "Papara",
+            "verification",
+            "alternatives",
             "Ininal",
-            "Ozan",
-            "financial apps"
+            "Ozan"
         ],
         "msg_ids": [
             187131,
@@ -1832,32 +1835,34 @@
             191273,
             191274
         ],
-        "question": "What alternatives are there to Papara for verification purposes?",
-        "answer_message_ids": [
-            187131,
+        "question": "What alternative verification methods exist for Papara users?",
+        "answer": "Ininal allows verification via passport, and Ozan offers verification with a work permit. Both options are seen as potential alternatives to Papara.",
+        "answer_msg_ids": [
             187223,
-            187248,
-            191264
+            191264,
+            191273
         ]
     },
     {
-        "topic_name": "Арест Павла Дурова в Париже",
-        "topic_name_eng": "Arrest of Pavel Durov in Paris",
-        "topic_summary": "Обсуждается арест Павла Дурова во Франции и возможные политические причины этого. Некоторые считают, что это связано с попыткой контролировать Telegram. Также упоминаются другие исторические примеры репрессий.",
-        "topic_summary_eng": "The discussion centers around the arrest of Pavel Durov in France and potential political reasons behind it. Some believe it is an attempt to control Telegram. Other historical examples of repression are also mentioned.",
+        "topic_name": "Арест Павла Дурова и последствия",
+        "topic_name_eng": "The arrest of Pavel Durov and its consequences",
+        "topic_summary": "Обсуждение началось с новости об аресте Павла Дурова в Париже, якобы по обвинениям в тяжёлых преступлениях. Пользователи выражают обеспокоенность свободой слова и предпринимательства. Некоторые считают, что это просто домыслы, а арест может иметь политические мотивы. Упоминается возможность санкций против Telegram и влияние на криптовалюту TON.",
+        "topic_summary_eng": "The discussion began with the news of Pavel Durov's arrest in Paris, allegedly for serious crimes. Users express concern about freedom of speech and entrepreneurship. Some believe it is mere speculation, suggesting a political motive behind the arrest. There's mention of possible sanctions against Telegram and the effect on the TON cryptocurrency.",
         "topic_tags": [
             "арест",
             "Павел Дуров",
-            "просоединство",
-            "Телеграм",
-            "политика"
+            "Telegram",
+            "свобода слова",
+            "политика",
+            "криптовалюта"
         ],
         "topic_tags_eng": [
             "arrest",
             "Pavel Durov",
-            "freedom of speech",
             "Telegram",
-            "politics"
+            "freedom of speech",
+            "politics",
+            "cryptocurrency"
         ],
         "msg_ids": [
             188807,
@@ -1870,36 +1875,35 @@
             188820,
             188821,
             188822,
-            188830,
             188831,
-            188885
+            188830,
+            188815
         ],
-        "question": "What are the potential political reasons behind Pavel Durov's arrest?",
+        "question": "What are the potential political implications of Pavel Durov's arrest in Paris?",
+        "answer": "Pavel Durov's arrest in Paris might be politically motivated. There are concerns about freedom of speech and entrepreneurship. It is speculated that the arrest might be used to initiate EU sanctions against Telegram.",
         "answer_message_ids": [
             188812,
             188814,
-            188817
+            188821
         ]
     },
     {
-        "topic_name": "Стоимость трансфера из аэропорта в Анталии",
-        "topic_name_eng": "Transfer cost from airport in Antalya",
-        "topic_summary": "В обсуждении сравниваются цены на трансфер из аэропорта до различных мест в Анталии и других городах России. Указывается, что стоимость варьируется от 610 до 1000 лир, в зависимости от дистанции. Также обсуждаются методы расчёта этой стоимости.",
-        "topic_summary_eng": "The discussion compares transfer prices from the airport to various places in Antalya and other Russian cities. The cost ranges from 610 to 1000 liras, depending on the distance. Methods for calculating this cost are also discussed.",
+        "topic_name": "Цены на такси в Анталье и сравнении с Москвой",
+        "topic_name_eng": "Taxi prices in Antalya compared to Moscow",
+        "topic_summary": "Обсуждаются цены на такси в Анталье и их сравнение с московскими ценами. Участники делятся своим опытом стоимости трансферов и выражают удивление относительно высоких тарифов в Турции, особенно в районе аэропорта. Также приводятся примеры цен из других городов России.",
+        "topic_summary_eng": "The discussion revolves around taxi prices in Antalya and their comparison with Moscow's prices. Participants share their experiences regarding transfer costs and express surprise about the high rates in Turkey, especially near the airport. Examples from other Russian cities are also mentioned.",
         "topic_tags": [
+            "такси",
             "трансфер",
-            "аэропорт",
-            "Анталия",
-            "стоимость",
-            "транспорт",
+            "Анталья",
+            "Москва",
             "цены"
         ],
         "topic_tags_eng": [
+            "taxi",
             "transfer",
-            "airport",
             "Antalya",
-            "cost",
-            "transport",
+            "Moscow",
             "prices"
         ],
         "msg_ids": [
@@ -1914,33 +1918,38 @@
             190007,
             190008,
             190052,
-            190123
+            190095,
+            190123,
+            189999
         ],
-        "question": "What are the transfer prices from Antalya airport to different areas?",
-        "answer_message_ids": [
+        "question": "What are the differences in taxi prices between Antalya and Moscow?",
+        "answer": "According to users, taxi prices in Antalya are higher compared to Moscow. For instance, a transfer from the airport to Hurma costs 890 lira, nearly twice as much as the comfort class in Moscow. Transfers in both cities cover similar distances, but the costs differ significantly.",
+        "answer_msg_ids": [
             189993,
             189994,
-            189995
+            189996,
+            189998,
+            190006
         ]
     },
     {
-        "topic_name": "Услуги доставки и занятость в Турции",
-        "topic_name_eng": "Delivery services and employment in Turkey",
-        "topic_summary": "Обсуждение различных аспектов скорости и удобства доставки в Турции, включая доставку воды, алкоголя и продуктов. Часто поднимается вопрос количества курьеров как индикатора безработицы и экономической активности. Некоторые участники обсуждают трудности с поиском работы в межсезонье.",
-        "topic_summary_eng": "Discussion about various aspects of delivery speed and convenience in Turkey, including water, alcohol, and grocery delivery. The number of couriers is often mentioned as an indicator of unemployment and economic activity. Some participants discuss difficulties in finding work during the off-season.",
+        "topic_name": "Особенности работы и доставки в Турции",
+        "topic_name_eng": "Features of Work and Delivery in Turkey",
+        "topic_summary": "Обсуждение преимущественно фокусируется на скорости работы курьеров в Турции, временной сезонности работы и особенностях услуг доставки. Приводятся примеры сравнения с другими странами, обсуждается экономическая ситуация и возможности заработка в туристической сфере в несезон.",
+        "topic_summary_eng": "The discussion primarily focuses on the speed of courier services in Turkey, the seasonal nature of jobs, and specific delivery services. There are examples comparing with other countries, discussions on the economic situation, and earning opportunities in the tourist sector off-season.",
         "topic_tags": [
+            "работа",
             "доставка",
-            "курьеры",
-            "экономика",
-            "безработица",
-            "услуги"
+            "Турция",
+            "сезонность",
+            "экономика"
         ],
         "topic_tags_eng": [
+            "work",
             "delivery",
-            "couriers",
-            "economy",
-            "unemployment",
-            "services"
+            "Turkey",
+            "seasonality",
+            "economy"
         ],
         "msg_ids": [
             191081,
@@ -1957,7 +1966,8 @@
             191099,
             191101
         ],
-        "question": "How do people in the tourism industry in Turkey sustain themselves during the off-season?",
+        "question": "What are the alternative income opportunities for hotel staff in Turkey during the off-season?",
+        "answer": "Hotel staff in Turkey during the off-season often engage in different jobs such as working in agriculture or taking up roles like electricians or taxi drivers. Some pursue family businesses, while others switch to entirely different professions.",
         "answer_message_ids": [
             191097,
             191098,
@@ -1966,23 +1976,23 @@
         ]
     },
     {
-        "topic_name": "Переводы денег через Золотую Корону на Ziraat",
-        "topic_name_eng": "Money transfers through Golden Crown to Ziraat",
-        "topic_summary": "Обсуждается опыт использования переводов на IBAN на Ziraat через Золотую Корону. Артем Егоров провел эксперимент, отмечая, что с карты Озона взимается 1% комиссия, а с Яндекс Пея переводы выполняются без комиссии. Некоторые участники отметили задержки при переводах, но в основном они приходят быстро.",
-        "topic_summary_eng": "Discussing the experience of using IBAN transfers to Ziraat through Golden Crown. Artem Yegorov conducted an experiment, noting a 1% commission from Ozon card, while transfers via Yandex Pay are commission-free. Some users mentioned delays, but transfers mostly arrive quickly.",
+        "topic_name": "Переводы на IBAN через Золотую Корону",
+        "topic_name_eng": "Transfers to IBAN via Golden Crown",
+        "topic_summary": "Обсуждаются различные методы перевода денег на счета в Ziraat Bank через Золотую Корону. Проблемы включают комиссии и временные задержки транзакций, зависимость от банковских отделений и бранчей. Плюсы и минусы использования П2П переводов обсуждаются.",
+        "topic_summary_eng": "Discussing different methods of transferring money to Ziraat Bank accounts via Golden Crown. Issues include commissions and transaction delays, dependence on bank branches. Pros and cons of using P2P transfers are discussed.",
         "topic_tags": [
-            "перевод",
             "Золотая Корона",
-            "Ziraat",
-            "комиссия",
-            "финансы"
+            "переводы",
+            "IBAN",
+            "Зираат",
+            "комиссии"
         ],
         "topic_tags_eng": [
-            "transfer",
             "Golden Crown",
+            "transfers",
+            "IBAN",
             "Ziraat",
-            "commission",
-            "finance"
+            "commissions"
         ],
         "msg_ids": [
             191121,
@@ -1999,34 +2009,30 @@
             191198,
             191230
         ],
-        "question": "What is the experience with money transfers to Ziraat through Golden Crown?",
+        "question": "What are the advantages and concerns about using P2P transfers?",
+        "answer": "P2P transfers can be convenient, but they often pose risks such as tax authorities' attention and liquidity issues, as demand may not always match when needed.",
         "answer_message_ids": [
-            191121,
-            191122,
-            191124,
-            191125,
-            191131,
-            191132
+            191124
         ]
     },
     {
-        "topic_name": "Коммуникация по Иш банку и требования",
-        "topic_name_eng": "Communication about İşbank and requirements",
-        "topic_summary": "Планируется коммуникация по Иш банку. Обсуждается удобство работы с Иш банком и ожидания различных требований, направленных работодателем. Банковскую работу часто парализуют на пятницы. Поднимается тема строгого фирменного стиля писем и законных сроков.",
-        "topic_summary_eng": "A communication about İşbank is planned. The discussion revolves around the ease of working with İşbank and the expectations of various employer-imposed requirements. Banking work is often paralyzed on Fridays. There is a mention of the strict corporate style of letters and legal deadlines.",
+        "topic_name": "Коммуникация с Иш банком и требования",
+        "topic_name_eng": "Communication with Ish Bank and requirements",
+        "topic_summary": "Обсуждение планируемой коммуникации с Иш банком. Основное внимание уделено ожиданиям и возможным изменениям в процессе коммуникации. Также обсуждаются сроки и требования, которые выдвигаются сотрудникам в ультимативной форме. Некоторые сообщения выражают недовольство неясностью инструкции и ожиданием данных.",
+        "topic_summary_eng": "Discussion about the planned communication with Ish Bank. The focus is on expectations and potential changes in the communication process. Deadlines and requirements are discussed, often introduced in an ultimatum style. Some messages express dissatisfaction with unclear instructions and data waiting.",
         "topic_tags": [
             "Иш банк",
             "коммуникация",
             "требования",
-            "работа",
-            "медосмотр"
+            "сроки",
+            "инструкции"
         ],
         "topic_tags_eng": [
-            "İşbank",
+            "Ish Bank",
             "communication",
             "requirements",
-            "work",
-            "medical examination"
+            "deadlines",
+            "instructions"
         ],
         "msg_ids": [
             191140,
@@ -2043,32 +2049,34 @@
             191161,
             191162
         ],
-        "question": "What are the main requirements communicated regarding İşbank?",
+        "question": "What are the main points discussed regarding communication with Ish Bank?",
+        "answer": "The main points discussed include the expectation of communication from Ish Bank, and the requirements imposed on employees, often in an ultimatum format. Despite promises for changes, some express skepticism due to previous experiences.",
         "answer_message_ids": [
-            191140,
+            191145,
+            191146,
             191153,
-            191159,
-            191161
+            191154,
+            191155
         ]
     },
     {
-        "topic_name": "Обсуждение различных медицинских страховок",
-        "topic_name_eng": "Discussion of different medical insurances",
-        "topic_summary": "Участники обсуждают различные медицинские страховки, их покрытия и лимиты. Особенное внимание уделяется сравнению страховки для ВНЖ с новой расширенной страховкой. Некоторые замечают, что существенной разницы между ними нет.",
-        "topic_summary_eng": "Participants discuss different medical insurances, their coverages, and limits. Special attention is given to comparing residence permit insurance with the new extended insurance. Some note that there is no significant difference between them.",
+        "topic_name": "Обсуждение медицинских страховок для иностранцев",
+        "topic_name_eng": "Discussion of Medical Insurance for Foreigners",
+        "topic_summary": "Участники обсуждают различные медицинские страховки для иностранцев, учитывая их стоимость, покрытие и варианты. Обсуждается, что некоторые планы изменяются со временем, а также сравниваются страховки для ВНЖ и новые расширенные варианты. Многие замечают отсутствие значительных улучшений в покрытиях.",
+        "topic_summary_eng": "Participants discuss different medical insurance options for foreigners, considering their cost, coverage, and types. Changes in plans over time are noted, and comparisons between residence permit insurances and new extended options are made. Many notice a lack of significant differences in coverages.",
         "topic_tags": [
             "страховка",
-            "медицина",
-            "ВНЖ",
+            "иностранцы",
             "покрытие",
-            "лимиты"
+            "цены",
+            "ВНЖ"
         ],
         "topic_tags_eng": [
             "insurance",
-            "medical",
-            "residence permit",
+            "foreigners",
             "coverage",
-            "limits"
+            "prices",
+            "residence permit"
         ],
         "msg_ids": [
             192074,
@@ -2085,31 +2093,36 @@
             192091,
             192092
         ],
-        "question": "What is the difference in coverage between residence permit insurance and extended insurance?",
+        "question": "What is the difference between residence permit insurance and the new extended insurance plans?",
+        "answer": "The difference mainly lies in the coverage limits. While some participants see little improvement in the insurance coverage, extended plans have historically provided different limits, as mentioned by Vladimir.",
         "answer_message_ids": [
-            192085,
             192089,
-            192091
+            192091,
+            192092
         ]
     },
     {
-        "topic_name": "Обследования и страховки на медицинские услуги",
-        "topic_name_eng": "Examinations and Insurance for Medical Services",
-        "topic_summary": "В обсуждении речь шла о том, как некоторые участники столкнулись с проблемами покрытия медицинских расходов страховкой. Обсуждение включало случаи отказа в покрытии МРТ, способы получения компенсации и личный опыт прохождения лечения, включая массаж и физиотерапию.",
-        "topic_summary_eng": "The discussion was about how some participants faced issues with insurance coverage of medical expenses. The conversation included cases of MRI coverage denial, methods for obtaining compensation, and personal treatment experiences, including massage and physiotherapy.",
+        "topic_name": "Медицинское страхование и рекомендации по лечению",
+        "topic_name_eng": "Medical Insurance and Treatment Recommendations",
+        "topic_summary": "Обсуждаются вопросы медицинского страхования и лечения в Анталье. Появляется жалоба на дороговизну МРТ и диагностику. Страховка может покрывать значительную часть расходов, но не все получают компенсацию. Рекомендации по самостоятельному назначению лекарств и лечении, включая массаж.",
+        "topic_summary_eng": "Discussing medical insurance and treatment in Antalya. Complaints about the high cost of MRI and diagnostics arise. Insurance can cover a significant portion of costs, but not everyone receives compensation. Recommendations for self-prescribing medication and treatment, including massage.",
         "topic_tags": [
-            "страховка",
-            "медицинские услуги",
-            "обследования",
+            "страхование",
+            "лечение",
+            "Анталья",
             "МРТ",
-            "компенсация"
+            "массаж",
+            "медицина",
+            "обследование"
         ],
         "topic_tags_eng": [
             "insurance",
-            "medical services",
-            "examinations",
+            "treatment",
+            "Antalya",
             "MRI",
-            "compensation"
+            "massage",
+            "medicine",
+            "diagnostics"
         ],
         "msg_ids": [
             192108,
@@ -2126,31 +2139,35 @@
             192130,
             192132
         ],
-        "question": "What are the potential solutions if insurance doesn't cover MRI costs?",
+        "question": "Does insurance cover the cost of MRI and what alternative treatments are recommended?",
+        "answer": "Insurance may cover part of the MRI costs, but it is not guaranteed for everyone. Some recommend self-prescribing over-the-counter medications and doing regular massage, which many found helpful.",
         "answer_message_ids": [
             192108,
-            192114,
-            192115
+            192112,
+            192113,
+            192125,
+            192130,
+            192132
         ]
     },
     {
-        "topic_name": "Обсуждение интервью Дудя и неожиданных гостей",
-        "topic_name_eng": "Discussion about Dud's interview and unexpected guests",
-        "topic_summary": "Обсуждение видео с Дудем и его собеседником. Некоторые пользователи не удовлетворены качеством интервью и обсуждают его вместе с другими видео. Также упоминается неожиданный гость и реакция на это событие.",
-        "topic_summary_eng": "Discussion about the video with Dud and his interlocutor. Some users are dissatisfied with the quality of the interview and discuss it along with other videos. An unexpected guest and reactions to this event are also mentioned.",
+        "topic_name": "Интервью с Дудём и его качества",
+        "topic_name_eng": "Interview with Dud and his qualities",
+        "topic_summary": "Обсуждается интервью с Дудем и его подход к собеседнику. Участники делятся мнением, что диалог не получился, и качественное подготовление Дудя не сделало интервью интересным. Также высказываются различные мнения о других интервьюируемых и влиянии Дудя на процесс.",
+        "topic_summary_eng": "The discussion revolves around an interview with Dud and his approach to the interviewee. Participants share that the dialogue did not succeed, and Dud's preparation did not make the interview interesting. Various opinions about other interviewees and Dud's impact on the process are also expressed.",
         "topic_tags": [
-            "интервью",
             "Дудь",
-            "обсуждение",
-            "видео",
-            "гости"
+            "интервью",
+            "журналистика",
+            "собеседники",
+            "качества"
         ],
         "topic_tags_eng": [
-            "interview",
             "Dud",
-            "discussion",
-            "video",
-            "guests"
+            "interview",
+            "journalism",
+            "interviewees",
+            "qualities"
         ],
         "msg_ids": [
             183576,
@@ -2166,32 +2183,34 @@
             183708,
             183710
         ],
-        "question": "What was discussed about Dud's interview and unexpected guests?",
+        "question": "What were the opinions on Dud's recent interview?",
+        "answer": "Participants had mixed feelings about Dud's recent interview. Some felt that the dialogue did not work out, that Dud was too focused on previous statements of the interviewee, and there was no genuine exchange. Others appreciated his preparation and fact presentation.",
         "answer_message_ids": [
             183681,
-            183684,
-            183685
+            183685,
+            183687,
+            183688,
+            183690
         ]
     },
     {
-        "topic_name": "Места для просмотра воздушных шаров на рассвете",
-        "topic_name_eng": "Viewing Spots for Hot Air Balloons at Sunrise",
-        "topic_summary": "Люди обсуждают различные места для наблюдения за воздушными шарами по утрам около Гереме. Участники делятся своими впечатлениями и локациями, откуда можно насладиться видами, включая смотровые площадки и другие места. Некоторые рекомендуют одни места из-за бесплатного доступа рано утром.",
-        "topic_summary_eng": "People discuss various spots for watching hot air balloons in the mornings near Göreme. Participants share their experiences and locations where one can enjoy the views, including viewpoints and other places. Some recommend certain spots due to free access early in the morning.",
+        "topic_name": "Места для наблюдения за воздушными шарами в Гереме",
+        "topic_name_eng": "Locations to watch hot air balloons in Göreme",
+        "topic_summary": "Обсуждаются места для наблюдения за воздушными шарами в Гереме, включая различные смотровые площадки и советы по их посещению. Рассказывается об опыте пользователей, таких как наблюдение с Красной долины и платные площадки, и даются ссылки на некоторые из них.",
+        "topic_summary_eng": "The discussion revolves around locations to observe hot air balloons in Göreme, including various viewpoints and tips for visiting them. It mentions user experiences like viewing from the Red Valley and paid sites, and provides links to some locations.",
         "topic_tags": [
+            "Гереме",
             "воздушные шары",
-            "ресторан",
-            "смотровая площадка",
-            "рассвет",
-            "виды",
-            "Гереме"
+            "смотровые площадки",
+            "наблюдение",
+            "туризм"
         ],
         "topic_tags_eng": [
+            "Göreme",
             "hot air balloons",
-            "viewpoint",
-            "sunrise",
-            "views",
-            "Göreme"
+            "viewpoints",
+            "observation",
+            "tourism"
         ],
         "msg_ids": [
             184094,
@@ -2208,35 +2227,32 @@
             184132,
             184146
         ],
-        "question": "What are some good spots to view hot air balloons near Göreme at sunrise?",
-        "answer_msg_ids": [
+        "question": "Where can one view hot air balloons in Göreme at sunrise without a fee?",
+        "answer": "According to the discussion, one can watch the balloons from the Uchisar Fortress or from the Red Valley. However, for a free experience, it is advised to arrive at viewpoints before 6 a.m.",
+        "answer_message_ids": [
             184097,
             184098,
-            184109,
-            184117,
-            184129,
-            184130,
             184146
         ]
     },
     {
-        "topic_name": "Ошибочное добавление доп. опций в Старбаксе",
-        "topic_name_eng": "Incorrect Addition of Extras in Starbucks",
-        "topic_summary": "В обсуждении пользователи рассказывают о случаях ошибочного добавления дополнительных опций в напитки в Старбаксе. Проблема связана с языковыми недоразумениями во время заказа. Также обсуждается, как правильно заказывать, чтобы избежать недоразумений.",
-        "topic_summary_eng": "Users discuss cases of incorrect addition of extras in drinks at Starbucks. The issue is related to language misunderstandings during ordering. Additionally, they discuss how to order correctly to avoid confusion.",
+        "topic_name": "Проблемы заказа в Старбакс на английском",
+        "topic_name_eng": "Issues with ordering at Starbucks in English",
+        "topic_summary": "Обсуждение о проблемах с заказом капучино медиум в Старбакс на ломаном английском. Проблема могла быть в недопонимании размера или типа обжарки. В обсуждении также поднимается вопрос о маркетинговых тактиках добавления платных опций.",
+        "topic_summary_eng": "Discussion on issues with ordering a medium cappuccino at Starbucks in broken English. The problem might be misunderstanding the size or roast type. There's also a mention of marketing tactics of adding paid options.",
         "topic_tags": [
             "Старбакс",
-            "дополнительные опции",
-            "недоразумения",
-            "великий чек",
-            "кофе"
+            "капучино",
+            "обжарка",
+            "размер",
+            "маркетинг"
         ],
         "topic_tags_eng": [
             "Starbucks",
-            "extras",
-            "misunderstandings",
-            "great check",
-            "coffee"
+            "cappuccino",
+            "roast",
+            "size",
+            "marketing"
         ],
         "msg_ids": [
             184278,
@@ -2252,12 +2268,13 @@
             184292,
             184303
         ],
-        "question": "How can customers avoid misunderstandings when ordering at Starbucks?",
-        "answer_message_ids": [
-            184280,
-            184282,
+        "question": "Why might there be misunderstandings when ordering coffee at Starbucks in a non-native language?",
+        "answer": "Misunderstandings could occur due to differences in language proficiency, leading to confusion about sizes and additional options. Users have suggested that terms like 'medium' might be understood as roast type rather than size, causing unexpected additions.",
+        "answer_msg_ids": [
+            184278,
+            184279,
             184284,
-            184292
+            184285
         ]
     }
 ]

@@ -59,7 +59,8 @@ Ultimately you should output in json format following:
 - topic tags eng: same list but in English
 - msg_ids: list of IDs for relevant for this topic messages, it supposed to contains ids for most of the messages in_family 
   and some of the not "in_family". 
-- question: possible question, in English,  for which the answer can be found in one  or more of 'topic' messages. T
+- question: possible question, in English,  for which the answer can be found in one  or more of 'topic' messages. 
+- answer: anwser to the question above, and the reasoning behind
 - answer message ids: list of id(s) for the messages, that contains answer to the  question above. 
   Thus, that list MUST BE a subset of "msg_ids" List.
 
@@ -100,14 +101,15 @@ for set of messages:
         "msg_date": "2024-08-29T10:14:18",
         "user_name": "Paul",
         "reply_to_msg_id": 123,
-        "msg_text": "VW sucks. Buy Toyota car, and you will not need to change oil at all",
+        "msg_text": "VW sucks. Buy Tesla car, and you will not need to change oil at all",
         "is_in_family": True
 `
 topic_name might be: "recommendation for choosing of motor oil for VW".
 "topic_summary_eng" might be:  
 "as an motor oil for VS   recommended Shell and  Motul. But somebody recommends to have Toyota car instead of VW"".
 msg_ids:  [124, 127, 128]
-question: "What car should one have in order not to choose engine oil?"
+question: "What car should one have in order not to change engine oil?"
+answer: "Tesla. People says not need to change oil for them at all"
 answer_msg_ids: [128]
 # 126 - not included cause it is of-topic.
     _________So, let's play._____
