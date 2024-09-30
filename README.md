@@ -10,7 +10,7 @@ This repository implements functionalities for retrieving and processing Telegra
 Standard search in Telegram some times does not work well as it
  - is not able to use semantic search
  - is not able to do summarization of search results
- - is not considering parent child relation in the chat messages. Thus, if somebody asks "Please recommend plumber in our city?" and it anybody else replies later, when I next time do a search by 'plumber', I'm able to find only the first, topic-starting message, while the information that is interesting for me, the phone of the plumber is somewhere in one of the related child topic messages.
+ - is not considering parent child relations in the chat messages. Thus, if somebody asks "Please recommend plumber in our city?" and it anybody else replies later, when I next time do a search by 'plumber', I'm able to find only the first, topic-starting message, while the information that is interesting for me, the phone of the plumber is somewhere in one of the related child topic messages.
 
 ## RAG based search over Telegram Messages
 Features:
