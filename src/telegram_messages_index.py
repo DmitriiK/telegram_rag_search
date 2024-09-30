@@ -39,7 +39,8 @@ class TelegaMessageIndex:
             reply_to_msg_id = msg.reply_to_msg_id
             msg = self.get_message(reply_to_msg_id)
             if not msg:
-                logging.warning(f'inconsistent data in index for reply_to_msg_id: {reply_to_msg_id}')
+                pass  # todo figure out WTF
+                #  logging.warning(f'inconsistent data in index for reply_to_msg_id: {reply_to_msg_id}')
             else:
                 ret_lst.append(msg)
         return ret_lst
@@ -52,7 +53,8 @@ class TelegaMessageIndex:
             topic_starting_msg_id = msg.reply_to_msg_id
             msg = self.get_message(topic_starting_msg_id)
             if not msg:
-                logging.warning(f'inconsistent data in index for reply_to_msg_id: {topic_starting_msg_id}')
+                pass  # todo figure out WTF
+                #  logging.warning(f'inconsistent data in index for reply_to_msg_id: {topic_starting_msg_id}')
         return topic_starting_msg_id
         
     def get_children_messages(self, msg_id: int, max_depth: int = inf) -> List[TelegaMessage]:

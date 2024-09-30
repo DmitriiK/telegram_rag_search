@@ -1,8 +1,8 @@
-from unittest import TestCase
+from unittest import TestCase, skip
 from datetime import datetime
 import json
 import logging
-
+from tqdm import tqdm
 
 import pyclip
 
@@ -14,6 +14,9 @@ import src.config as cfg
 from src.rag_integration import RaguDuDu
 
 logging.getLogger().setLevel(logging.INFO)
+
+topics_file_path = 'output/llm_output/topics.json'
+topics_file_path_gt = 'output/llm_output/ground_truth.json'
 
 
 class TestTelega(TestCase):
@@ -165,8 +168,35 @@ class TestLLM(TestCase):
             ret = self.rg.get_topic_summary_by_message(topic_message_id=tid)
             tdicts.append(json.loads(ret))    
             pyclip.copy(str(tdicts))
-            with open('output/llm_output/topics.json', 'w') as fl:
+            with open(topics_file_path, 'w') as fl:
                 json.dump(tdicts, fl, ensure_ascii=False, indent=4)
+
+    def test_compare_ground_truth_data(self):
+        with open(topics_file_path, 'r') as f:
+            topics = json.load(f)
+        ground_truth = [dict(topic_name=x['topic_name'],
+                             ts_msg_id=x['msg_ids'][0],
+                             question=x['question'],
+                             answer=x['answer'],
+                            ) for x in topics]
+        for topic in tqdm(ground_truth):
+            question = topic['question']
+            rag_answer = self.rg.rag_by_dense_vector_search(question=question)
+            topic["rag_answer"] = rag_answer
+            with open(topics_file_path_gt, 'w') as fl:
+                json.dump(ground_truth, fl, ensure_ascii=False, indent=4)
+
+    @skip
+    def test_clean_up(self):
+        with open(topics_file_path_gt) as fl:
+            dtd = json.load(fl)
+            for itm in dtd:
+                ra = itm['rag_answer']
+                ra = ra.replace('```json', '').replace('```', '')
+                ra = json.loads(ra)["answer"]
+                itm['rag_answer'] = ra
+        with open(topics_file_path_gt, 'w') as fl:
+            json.dump(dtd, fl, ensure_ascii=False, indent=4)
 
     def test_summarize_to_topic_and_write_to_es(self):
         json_ret = self.rg.get_topic_summary_by_message(topic_message_id=189845)

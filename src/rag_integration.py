@@ -84,6 +84,7 @@ class RaguDuDu:
         prompt = llm.build_rag_prompt(question, chat_description=cfg.chat_description, messages=topic_msgs_all)
         logging.info(f'len of prompt {len(prompt)} for {len(topic_msgs_all)} messages')
         answer = llm.ask_llm(prompt)
+        answer = llm.get_pure_json_from_llm_result(answer)
         return answer
 
 

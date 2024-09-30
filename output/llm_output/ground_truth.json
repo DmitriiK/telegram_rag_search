@@ -1,0 +1,359 @@
+[
+    {
+        "topic_name": "Медицинский чекап и очереди",
+        "ts_msg_id": 186659,
+        "question": "What is the best time to go for a medical checkup to avoid long queues?",
+        "answer": "Going after lunch might be advisable as it seems there are generally fewer people, and the process is quicker.",
+        "rag_answer": "To avoid long queues for a medical checkup, it seems that going early in the morning could be beneficial. According to Konstantin M, a checkup can take about an hour, including the possible queues encountered in the morning, indicating that mornings might still have some waiting time but are manageable. Ekaterina Elm mentioned that on a Tuesday, it took her only about half an hour, implying that perhaps visiting on less busy weekdays or during specific hours could result in shorter waiting times."
+    },
+    {
+        "topic_name": "Продление ВНЖ и роль страхования SGK",
+        "ts_msg_id": 188347,
+        "question": "Is SGK insurance mandatory for the renewal of a residence permit for dependents?",
+        "answer": "SGK is not mandatory for the renewal of a residence permit; other insurance may be acceptable too. However, SGK might be recommended for dependents to ensure broader coverage and to satisfy procedural preferences.",
+        "rag_answer": "SGK insurance is not mandatory for the renewal of a residence permit for dependents, but it is recommended to have it to cover unexpected documentation requests by inspectors. While user Vladimir Osipov mentioned that SGK is not needed for a child's residence permit renewal, it is advisable to have insurance to be on the safe side."
+    },
+    {
+        "topic_name": "Проблемы транспорта и работа в офисе",
+        "ts_msg_id": 192255,
+        "question": "What are the challenges of commuting to the office from Antalya?",
+        "answer": "The challenges include high vehicle costs and long commuting times. Traveling to the office can take several hours daily, and this is exacerbated by high fuel prices.",
+        "rag_answer": "Commuting to the office from Antalya poses several challenges. The public transportation in Antalya is often described as inadequate, with most areas facing issues unless there is a tram service. Specific routes, like the 100 boulevard to Yenner line, are somewhat better, especially from west to east, but north-south routes remain problematic. Having a car is almost essential for convenience, as relying on public transportation can be challenging."
+    },
+    {
+        "topic_name": "Прописка иностранцев в арендуемом жилье",
+        "ts_msg_id": 183632,
+        "question": "Is it possible to register a non-relative foreigner in rented accommodation?",
+        "answer": "It is generally difficult to register non-relatives, especially foreigners, in rented accommodation without being in the rental agreement. Proof of relationship is required for relatives. Sometimes the presence of current tenants and landlord approval is necessary.",
+        "rag_answer": "It seems registering a non-relative foreigner in rented accommodation is challenging unless they are included in the rental agreement. Vladimir Osipov suggests it is likely an unsolvable issue for foreigners if they are not listed in the rental contract. Ekaterina Elm hints that one might need to add them to the agreement for registration. Artjom Lee mentions it's possible for relatives, but for non-relatives, the procedure might be complicated. For non-relatives, it might also require presenting additional documents or proof of residence."
+    },
+    {
+        "topic_name": "Бюрократия и получение справки о несудимости",
+        "ts_msg_id": 183784,
+        "question": "What can be done when strange requirements complicate getting a criminal record certificate?",
+        "answer": "Participants suggest asking to see the law on which the request is based or appealing to a higher authority. In Turkey, challenging unreasonable demands can be difficult, but not impossible.",
+        "rag_answer": "Obtaining a criminal record certificate might involve some challenges based on the discussion. There seems to be a delay, as some users indicated being in a queue to even join the queue for the certificate. Artem Yegorov mentioned that unlike last year when he got an appointment soon after applying, now there is an initial waiting list, and a fee of ten dollars is required. Rustem Agziamov received a slot after about a month, indicating different wait times for different documents might exist. It was also suggested to pay at Ziraat Bankası Özgürlük Bulvarı branch, as per Rustem's experience."
+    },
+    {
+        "topic_name": "Романтические поездки и фото в Каппадокии",
+        "ts_msg_id": 184130,
+        "question": "What is the best time for a romantic photo session in Cappadocia?",
+        "answer": "The best time for a romantic photo session in Cappadocia is early morning. Arriving at least 30 minutes before sunrise is recommended to watch the balloons rise and capture beautiful morning light. Consider staying two mornings to ensure good weather.",
+        "rag_answer": "The best time for a romantic photo session in Cappadocia is recommended to be at sunrise. Although it is difficult to wake up early, arriving at least half an hour before sunrise is worth it. There are many spots along the way to capture diverse views. Additionally, some places like the fortress offer romantic photo opportunities especially during sunrise."
+    },
+    {
+        "topic_name": "Обсуждение переездов и жизни в Турции",
+        "ts_msg_id": 185322,
+        "question": "What are the challenges people face when relocating in Turkey?",
+        "answer": "Challenges include rising taxes, high costs, legal restrictions, and the complexities of finding suitable locations. These are concerns for many considering relocation within Turkey.",
+        "rag_answer": "Challenges people face when relocating to Turkey include navigating complicated and frequently changing visa regulations, as highlighted by Evgenii Kvasiuk (msg_id: 187096). Additionally, there are financial challenges, such as increased living costs compared to other places like Georgia, as mentioned by ANNA ABLAEVA (msg_id: 186046). There are also concerns about currency transactions and legal ramifications, as discussed by Dmitrii Kalmanovich, Marina auto antalya, and Tatyana (msg_ids: 187252, 187256, 187257)."
+    },
+    {
+        "topic_name": "Поиски квартир в Анталии",
+        "ts_msg_id": 186146,
+        "question": "Where might available apartments be listed outside of popular sites like Sahi̇bi̇nden?",
+        "answer": "Apartments might be listed with individual agents who don't post on mainstream platforms like Sahi̇bi̇nden. Agents may also have private databases, and some listings may be completed before they are ever posted.",
+        "rag_answer": "Apartments might be available on Facebook groups like 'Russians in Antalya' or 'Russian speakers in Antalya,' although options there are limited. Utilizing good realtors is considered a reliable approach. Some have also noted that on balconies, there are banners with rental information, so contacting the numbers provided could be beneficial."
+    },
+    {
+        "topic_name": "Такси и маршруты в Анталии",
+        "ts_msg_id": 188528,
+        "question": "How does the taxi fare calculation in Antalya depend on route and time?",
+        "answer": "The taxi fare in Antalya is calculated based on both distance in kilometers and time spent in minutes. Discussions indicate a preference for routes based on time efficiency rather than simply distance. The rates for 2024 are mentioned with examples illustrating calculations.",
+        "rag_answer": "Taxi fare calculation in Antalya depends on both route and potentially the time of travel. From the conversation, it is indicated that the fare might be calculated as kilometers times 25 plus 20 for the starting fee (message 187358). Additionally, in one instance, a taxi fare from the airport to Sarysu was estimated to be over 1000 units (message 187348). While specific times impacting fare calculation weren't mentioned, the difficulties in getting a taxi during certain times, such as public holidays, were highlighted (messages 187355, 187356, 187359). Using apps like Bitaksi or Uber can provide an estimate of the taxi cost, although there have been instances of user dissatisfaction with the services during high-demand times (message 187348)."
+    },
+    {
+        "topic_name": "цены, блокировки и перспективы переезда",
+        "ts_msg_id": 185092,
+        "question": "What are the current issues people face in Turkey, prompting discussion about relocation?",
+        "answer": "Current issues in Turkey include rising prices, import taxes, and internet blockades, leading many to consider relocating.",
+        "rag_answer": "The current issues discussed by people in Turkey related to relocation include economic concerns, such as fluctuating currency rates, which affect the cost of living and the viability of relocation. Additionally, there are challenges with the banking system, especially regarding currency transfers between Russian nationals, which are reportedly complicated by unforeseen fees. Visa requirements and frequently changing regulations are also highlighted as significant problems, affecting the ease of relocation to Turkey."
+    },
+    {
+        "topic_name": "Стоимость и тарифы на интернет в Анталии",
+        "ts_msg_id": 185203,
+        "question": "What steps can be taken if internet costs increase unexpectedly after a contract ends?",
+        "answer": "One approach is to check the bill through the landlord or utility website, request a verification code via SMS, and enter the account online to review the charges. It’s advised to verify details with the provider, as charges may rise due to additional services post-contract.",
+        "rag_answer": "If internet costs increase unexpectedly after a contract ends, several steps can be taken. Firstly, it's helpful to contact the internet provider and inquire about the possibility of negotiating a new contract or finding another plan that better suits your needs. Additionally, as mentioned in the chat, one can consider switching to another provider. For example, when a user switched from TurkTelekom to Turkcell, Turkcell covered the penalty for terminating the previous contract early. It's also advisable to review any potential penalty fees for early termination and check if the new provider offers better rates or promotions. Finally, it might be worth checking the last bill (fatura) to understand the charges better."
+    },
+    {
+        "topic_name": "Медицинский осмотр в Пынарбаши",
+        "ts_msg_id": 188007,
+        "question": "How formal are medical examinations in Pynarbasi and are they recorded in official databases?",
+        "answer": "Medical examinations in Pynarbasi are considered very formal and often done just for the sake of it. Participants noted that test results like blood tests and fluorography are surprisingly not recorded in official databases, questioning the overall value of these examinations.",
+        "rag_answer": "Medical examinations in Pynarbasi are largely informal and seem to be carried out just for appearance's sake, as suggested by user Marina auto antalya. Despite the requirement that all medical interventions and examinations should be recorded in the e-Nabiz system according to Turkish law, it appears no records are currently made for these examinations. Additionally, user Vladimir Osipov noted that doctors often rely on verbal statements from patients, and it is uncertain what the consequences might be if information is withheld. Moreover, AK mentioned that the process is similar to medical examinations required for obtaining driving licenses, suggesting a lack of thoroughness. These conversations indicate that medical examinations may not be consistently recorded in official databases."
+    },
+    {
+        "topic_name": "Трансферные услуги в Анталии и Санкт-Петербурге",
+        "ts_msg_id": 188443,
+        "question": "What transfer service is recommended for trips from the airport in Antalya?",
+        "answer": "Several transfer services are recommended by discussion participants, including 'Tюрпан' and 'gettransfer.com', praised for their reliability and comfort. It's noted that prices may vary between services.",
+        "rag_answer": ""
+    },
+    {
+        "topic_name": "Возможность прописки по ворк пермиту и туристическим визам",
+        "ts_msg_id": 188990,
+        "question": "Is it possible to register in a closed area with a work permit?",
+        "answer": "No, it is not possible to register in a closed area with a work permit unless previously registered there. Some users report successful registration, but these cases might be isolated.",
+        "rag_answer": ""
+    },
+    {
+        "topic_name": "Определение среднего класса и его доходы",
+        "ts_msg_id": 189215,
+        "question": "What defines a middle-class family in terms of income and lifestyle in Russia and other countries?",
+        "answer": "A middle-class family is perceived differently across regions. In Russia, opinions vary from having an income starting at 500k to 1 million rubles a month. Comparisons are made to the USA, where being middle class is when a family can pay off a mortgage for a comfortable home within 5-10 years.",
+        "rag_answer": "The discussion on middle-class income and lifestyle reveals varying perspectives. For Russia, a middle-class family is assumed by some to need an income of around 500k to 1 million rubles per month. It is noted that the term 'middle class' is quite subjective, with different interpretations. Furthermore, being middle class might involve owning a comfortable home and having the means for regular leisure travel, such as vacations to destinations like the Maldives. On the other hand, being middle class in the US might mean being able to pay off a mortgage on a home suitable for a family within a decade. The costs and wages in different countries, such as high rents and taxes in Europe, are also discussed, pointing out that what constitutes a middle-class lifestyle can vary greatly by location."
+    },
+    {
+        "topic_name": "Тюркское происхождение и заимствования в русском",
+        "ts_msg_id": 190869,
+        "question": "What is the potential Turkish influence on certain Russian words?",
+        "answer": "Some Russian words like \"bardak\" and \"durak\" are believed to have Turkish roots due to historical influences such as the Mongol-Tatar yoke. However, their exact origin is debated with folk etymology contributing to misunderstandings.",
+        "rag_answer": "The discussion suggests that there is a noticeable Turkish influence on certain Russian words. For example, the word 'характер' (character) is mentioned as a common Turkish word in Russia (msg_id: 190860). Additionally, references are made to transformations due to Turkish influence, like 'Куру юзюм' to 'изюм' (raisins) in msg_id: 190861. There's a mention of Tatar influence being more significant in some cases (msg_id: 190859), indicating that the Turkish impact might not be as substantial as that of other cultures."
+    },
+    {
+        "topic_name": "Тарифы на коммерческий импорт и местное производство",
+        "ts_msg_id": 184485,
+        "question": "What is the impact of rising commercial import tariffs on local electronics production in Turkey?",
+        "answer": "If commercial import tariffs rise, Turkish electronics producers might be severely impacted as they already face high costs. Many consumers find imported items cheaper even with high tariffs.",
+        "rag_answer": "The discussion suggests that commercial import tariffs have already been relatively high ('У них уже давно они высокие'), and if they increase further, it could negatively impact local electronics producers by making foreign products cheaper in bulk (msg_id: 184486, 184487). This is highlighted by a user expressing concern that Turkish electronics producers could collapse under higher tariffs ('Если ставки на коммерческий импорт поднимутся, \"турецкие производители\" электроники загнутся'). The same user gives an example of buying a locally produced coffee machine at a higher price compared to an international market, but justifying the purchase with convenience (msg_id: 184487)."
+    },
+    {
+        "topic_name": "История инфляции и экономики Турции",
+        "ts_msg_id": 185701,
+        "question": "What has been the impact of inflation on Turkey's economy over the past 25 years?",
+        "answer": "Inflation in Turkey has been significant over the past 25 years, with recurrent price increases and denominations. Recently, prices have surged 3-4 times within 2-3 years, causing economic hardship and leading many, including highly skilled individuals, to emigrate.",
+        "rag_answer": "There is a general sentiment that inflation in Turkey has been negatively impacting the economy. Mentioned were the challenges of purchasing goods from abroad due to the high costs and restrictions. The prices of local goods have increased, with comparisons made between domestic and other international prices. Furthermore, inflation is reportedly raising the cost of living, as noted in discussions about the affordability of cars and basic goods. Despite some hope for economic recovery, there has been evidence of persistent struggles, highlighting the difficulty of managing inflation."
+    },
+    {
+        "topic_name": "Музейные карты для иностранцев в Турции",
+        "ts_msg_id": 185904,
+        "question": "Can foreigners with residence permits in Turkey use museum cards and what are the conditions?",
+        "answer": "Foreigners with residence permits in Turkey can now purchase museum cards for 500 TL valid for one year. The card can be bought at museum ticket offices and is supposed to require a foreign identification number beginning with 99*. Some discussions imply that these cards may allow access similar to previous ones, such as those used in the Phaselis location.",
+        "rag_answer": "Foreigners with residence permits in Turkey can use museum cards. These can be purchased at museum complexes for 500 TL and are valid for one year."
+    },
+    {
+        "topic_name": "Авиаперелеты с детьми и места в самолете",
+        "ts_msg_id": 187543,
+        "question": "What are the pros and cons of seating arrangements in planes when traveling with children?",
+        "answer": "The first row offers more legroom but has a higher chance of being near a crying baby. Although crying children are common, parents have found that young babies often sleep quietly. However, traveling alone with a baby can be challenging.",
+        "rag_answer": "When traveling with children, seating arrangements in planes have both advantages and disadvantages. Seats in the first row can offer extra legroom and the convenience of attaching a bassinet for infants. However, they are often not recommended due to the likelihood of being adjacent to a crying baby. There is a general consensus that crying children can be found throughout the plane, except potentially on early morning and late evening business flights. Additionally, infants often sleep through flights, although four-year-olds might be more prone to crying."
+    },
+    {
+        "topic_name": "Налоги на автомобили и транспортные услуги в Турции",
+        "ts_msg_id": 188423,
+        "question": "What makes buying a Tesla advantageous in Turkey?",
+        "answer": "Tesla benefits from minimal taxes as commercial vehicles pay lower rates. This results in a lower overall price, making it an economically advantageous choice.",
+        "rag_answer": "There are no specific messages directly discussing the advantages of buying a Tesla in Turkey. However, message 191658 humorously suggests someone might have bought a Tesla at a discount. Additionally, message 191659 mentions Tesla possibly having a SIM card slot, indicating that owning such a car might involve extra expenses like IMEI tax, which is a unique factor to consider in Turkey."
+    },
+    {
+        "topic_name": "Жизнь в Европе: расходы и впечатления",
+        "ts_msg_id": 189237,
+        "question": "What are the perceived differences in living expenses in Europe according to personal experiences?",
+        "answer": "Living expenses in Europe vary greatly based on personal experiences. Some find 3-4k euros sufficient for a comfortable life while others struggle to meet their needs. Personal circumstances and expectations heavily influence these perceptions.",
+        "rag_answer": "Living expenses in Europe vary significantly depending on the country. According to user experiences, Germany, France, and Sweden are perceived as expensive, while Spain is considered more affordable. In Tbilisi, Georgia, for instance, rent for a decent apartment can cost between $500 to $1000 per month. Other costs include $450-500 per month for groceries and up to $500 for entertainment and other expenses for a family. Taxes can be a significant factor, with discussions mentioning European tax rates around 30-40%, which is considerably higher compared to some users' experiences in Russia and other countries. Despite higher taxes, some people are willing to bear these costs as a necessary trade-off for living in Europe."
+    },
+    {
+        "topic_name": "Проблемы с налогообложением посылок в Турции",
+        "ts_msg_id": 189533,
+        "question": "What are the costs and challenges associated with parcel taxation in Turkey?",
+        "answer": "Taxes and broker fees for parcels can amount to $300-$500 if the parcel value exceeds €30. Additional complications include customs clearance requirements and significant associated costs.",
+        "rag_answer": "Parcel taxation in Turkey involves a 60% tax on packages priced up to 30 euros, which is included in the total price. For parcels exceeding 30 euros, high custom duties are applicable and a customs broker is required. Additionally, the process can be challenging as obtaining the parcel might be problematic despite the ease of ordering."
+    },
+    {
+        "topic_name": "Рацион питания для кастрированных котов",
+        "ts_msg_id": 189876,
+        "question": "How should a neutered cat be fed to maintain a healthy weight?",
+        "answer": "Feed the cat according to the recommended daily portion to prevent obesity. It's suggested to combine dry food with wet food, provided a few times a week. Follow product instructions and consult with a veterinarian for more personalized advice.",
+        "rag_answer": "To maintain a healthy weight for a neutered cat, it's important to follow a portion-controlled feeding regime, as suggested by Alexander Shuvaev and Ekaterina Frolova. A daily intake of 70-90 grams is recommended for a 5 kg cat. Leaving food out can lead to overeating and weight gain. It's also suggested by Viktor to supplement dry food with some wet food to ensure a balanced diet."
+    },
+    {
+        "topic_name": "Контроль качества и возвраты на маркетплейсах",
+        "ts_msg_id": 190215,
+        "question": "What is a good strategy for managing returns and ensuring product quality on online marketplaces?",
+        "answer": "Recording the unboxing of purchases on video is advised to protect oneself when returning items. Users share their experiences with returns, advocating for detailed documentation to facilitate bank disputes if necessary. Trustworthy seller selection remains a challenge.",
+        "rag_answer": ""
+    },
+    {
+        "topic_name": "Обсуждение гибридного режима работы и офиса",
+        "ts_msg_id": 192283,
+        "question": "Is there a plan to make office attendance compulsory in the hybrid work model?",
+        "answer": "No compulsory attendance is planned. Some participants mention that mandatory office attendance is not planned, based on discussions in the chat.",
+        "rag_answer": "There is currently no concrete information regarding mandatory office attendance in the hybrid work model. There are discussions about showing beautiful office pictures and waiting for the office to open in the fall, as mentioned by user AK. However, there is no explicit mention of compulsory office attendance."
+    },
+    {
+        "topic_name": "Анонс медобследования в Анталье в пятницу",
+        "ts_msg_id": 183759,
+        "question": "Why are announcements scheduled on Fridays in Antalya?",
+        "answer": "Announcements are often scheduled on Fridays in Antalya to avoid discussions during working hours. This way, people can't discuss them in the office, leading to less potential confusion.",
+        "rag_answer": ""
+    },
+    {
+        "topic_name": "Повышение тарифов на воду в Анталии",
+        "ts_msg_id": 183870,
+        "question": "How has the water tariff changed recently?",
+        "answer": "The water tariff has increased significantly. Previously, the first six cubic meters cost 10 lira, but now it's 60 lira. Some users have not been affected by this increase yet, possibly due to their invoice dates or ownership status.",
+        "rag_answer": "Recently, the water tariff has seen various changes. Some users reported a moderate increase, as Tatyana mentioned the difference being merely 16 lira compared to earlier bills for 14 cubic meters (msg_id: 183849). Others noticed a significant increase; for example, one user now has bills of around 200 lira instead of the usual 100 (msg_id: 183850), highlighting the rising cost as consumption brackets affect pricing. Nikita noted that water tariffs rose sharply from July, mentioning a 270 lira bill for 8 cubic meters, which previously was around 380 for 22 cubic meters (msg_id: 188715). Additionally, Marina mentioned that no recalculations are made, but future bills are issued at new rates after re-registration (msg_id: 188716). As the pricing system has changed, if consumption exceeds certain thresholds (like 5 or 10 cubic meters), the cost per cubic meter increases, impacting bills significantly (msg_id: 184819)."
+    },
+    {
+        "topic_name": "Блокировка Roblox в Турции",
+        "ts_msg_id": 185136,
+        "question": "Why was Roblox blocked in Turkey?",
+        "answer": "Roblox was blocked possibly due to concerns over adult misuse and political propaganda. Turkish news outlets mentioned inappropriate interactions with minors and creation of politically charged virtual worlds.",
+        "rag_answer": "Roblox was blocked in Turkey following a decision by the 6th Criminal Court of Adana on August 7, 2024. The blocking was due to concerns about the game's content potentially being harmful to children and adolescents, including worries about inappropriate content affecting their moral and psychological development. However, there appears to be no official statement providing the exact reasons for the block. The issue has caused significant public reaction, including protests against the block."
+    },
+    {
+        "topic_name": "Легализация и заверение документов в Анталии",
+        "ts_msg_id": 186638,
+        "question": "What is the procedure for legalization and notarization of a document in Antalya?",
+        "answer": "The main procedure involves obtaining the document at the consulate, translating and notarizing it locally, and then getting it sealed by Kaymakamlık. An additional consular legalization step is sometimes skipped, but everything still remains in compliance.",
+        "rag_answer": ""
+    },
+    {
+        "topic_name": "Поиск мастера для ремонта посудомойки",
+        "ts_msg_id": 188593,
+        "question": "Who successfully repaired the dishwasher for Ekaterina?",
+        "answer": "Vitalik successfully repaired the dishwasher, despite having mixed reviews from others.",
+        "rag_answer": "Ekaterina mentioned that Vitalik successfully repaired the dishwasher, but also noted that he had disagreements with many others."
+    },
+    {
+        "topic_name": "Покупка и аренда жилья в Германии",
+        "ts_msg_id": 191508,
+        "question": "What are the advantages of buying property in Germany for its citizens?",
+        "answer": "Citizens of Germany benefit from low mortgage rates, which can make buying property more advantageous than renting. For example, mortgage payments can be lower than rental payments, making property ownership more accessible.",
+        "rag_answer": "One advantage of buying property in Germany for its citizens is a very favorable mortgage interest rate, around 3% per annum. This makes it a viable option for German citizens, as they can secure a property on more manageable financial terms as opposed to renting where income is simply spent without building equity. However, it was noted that ownership via mortgage is not absolute until the mortgage is fully paid off. Concerns about job security over the mortgage term were expressed, but the cost comparison with rent makes it advantageous in the long term."
+    },
+    {
+        "topic_name": "Проблемы с подписками и платежами в Яндекс",
+        "ts_msg_id": 191667,
+        "question": "What issues are users facing with Yandex subscriptions while living abroad?",
+        "answer": "Users are experiencing problems with renewing Yandex Plus subscriptions and payments while living abroad. The issues include charges being made in rubles instead of local currency, with services reverting to Russian settings. These problems often require the use of a VPN to resolve.",
+        "rag_answer": "Users face issues with Yandex subscriptions while living abroad such as the inability to purchase subscriptions directly from the store on Android devices, as mentioned by user AK (msg_id: 190699). There are also mentions of using VPNs to access content and changes in VPN policies affecting access to services like KinoPoisk (msg_ids: 190523, 190524, 190528). Additionally, without a subscription, Yandex services like maps or navigators might not function properly in vehicles (msg_id: 190737)."
+    },
+    {
+        "topic_name": "Рекомендации по установке телевизора",
+        "ts_msg_id": 191934,
+        "question": "What tool can help avoid drilling into wiring during TV installation?",
+        "answer": "A wire detector can help identify the location of electrical wires, preventing accidental drilling into them while installing a TV bracket.",
+        "rag_answer": "To avoid drilling into wiring during TV installation, using a wiring detector can be very helpful. User AK mentioned specifically bringing a wiring detector from home, which has proven to be very useful."
+    },
+    {
+        "topic_name": "Обсуждение новых медицинских страховок в Анталье",
+        "ts_msg_id": 192022,
+        "question": "What changes occurred in the new insurance plans in Antalya?",
+        "answer": "The new insurance plans, known as demir, now feature a standard plan A instead of the previous gold and VIP plans. Coverage percentages seem to be affected by this change.",
+        "rag_answer": "In the new insurance plans in Antalya, there have been a few changes. The previously available Gold and VIP plans have been replaced with Plan A Standard. Additionally, a renewal this year, which cost over 600, is valid only until March instead of lasting a full year. There seems to be confusion over automatic rejection of some permits until insurance details are re-verified. Some residents have noticed downgrades in their coverage from VIP to lower levels. The insurance certificate for residence permits (ВНЖ) shows a yearly limit of 5000 TL."
+    },
+    {
+        "topic_name": "Работа Instagram без VPN в Турции",
+        "ts_msg_id": 183990,
+        "question": "Why might Instagram work for some users in Turkey without VPN?",
+        "answer": "Instagram might work for some users in Turkey if their device is registered as Turkish, which may bypass certain provider-level blocks.",
+        "rag_answer": "Instagram might work for some users in Turkey without a VPN because of a few potential reasons. One user mentioned that their Instagram works without a VPN due to 'Turkish randomness', suggesting a possible inconsistency in the blocking process (msg_id: 184040). It's also speculated that if a phone's IMEI is configured to be recognized as Turkish, the Instagram blockage might not apply (msg_ids: 184042, 184048). Additionally, some users reported that it worked due to possibly unintentional provider-level VPN settings (msg_id: 184048). Another reason might be related to the use of Turkish SIM cards (msg_id: 184052). However, this is inconsistent as other users with similar setups still face blocks."
+    },
+    {
+        "topic_name": "Туристические поезда и их особенности",
+        "ts_msg_id": 183998,
+        "question": "What safety concerns arise from tourist trains passing close to people?",
+        "answer": "The proximity of trains to people can lead to discomfort and even potential danger due to air currents pulling them towards the train. Locals have mixed feelings about this situation.",
+        "rag_answer": "Safety concerns regarding tourist trains passing close to people include the risk of being sucked in by air currents as a train passes quickly. This can be particularly unsettling when standing on narrow platforms. Despite tourist attractions where people deliberately position themselves closely to passing trains, it can still feel unpleasant and potentially dangerous."
+    },
+    {
+        "topic_name": "Проблемы со старыми купюрами в банках",
+        "ts_msg_id": 185482,
+        "question": "How do people deal with old banknotes in different countries?",
+        "answer": "People manage old banknotes by asking for replacements at banks in various countries, such as Belarus and Georgia, where they can be exchanged or deposited without issues.",
+        "rag_answer": "In Georgia, exchange offices and banks accept practically all types of old banknotes for exchange, even those with tapes, stamps, signs, and those that are of old issue (msg_id: 185506). Additionally, although there are some issues reported with receiving old banknotes at banks like Ziraat in Turkey, users generally report that these could be exchanged at banks or exchange offices without problems (msg_ids: 185482, 185495, 185498)."
+    },
+    {
+        "topic_name": "Обещания и реальность в релокации сотрудников",
+        "ts_msg_id": 186488,
+        "question": "What steps should be taken if promises made during employee relocation are not fulfilled?",
+        "answer": "If promises made during employee relocation are not fulfilled, it's important to obtain guarantees in a document format which can be enforced legally. Without such documentation, consider that these obligations may not be enforceable.",
+        "rag_answer": ""
+    },
+    {
+        "topic_name": "Поиск аренды квартиры в Анталии через интернет",
+        "ts_msg_id": 186509,
+        "question": "What are the suggested platforms for searching apartment rentals in Antalya?",
+        "answer": "Suggested platforms include websites like Sahibinden and Hepsiemlak, groups on Facebook such as 'Russians in Antalya', and Telegram channels.",
+        "rag_answer": "The suggested platforms for searching apartment rentals in Antalya are Sahibinden and Hepsiemlak, as mentioned by Viktoria. However, some users have expressed dissatisfaction with the options available on these platforms, indicating they could not find a suitable match for their criteria."
+    },
+    {
+        "topic_name": "Способы верификации для Papara и альтернативы",
+        "ts_msg_id": 187131,
+        "question": "What alternative verification methods exist for Papara users?",
+        "answer": "Ininal allows verification via passport, and Ozan offers verification with a work permit. Both options are seen as potential alternatives to Papara.",
+        "rag_answer": "Alternative verification methods for Papara users include creating a new account and verifying it initially with a blue plastic card. Additionally, if someone is married and their spouse has a pink kimlik, they can register under their spouse's name. Users also mentioned Ininal, which allows verification using a passport, and Ozan, which offers different levels of verification but requires activity within four months to prevent loss of funds."
+    },
+    {
+        "topic_name": "Арест Павла Дурова и последствия",
+        "ts_msg_id": 188807,
+        "question": "What are the potential political implications of Pavel Durov's arrest in Paris?",
+        "answer": "Pavel Durov's arrest in Paris might be politically motivated. There are concerns about freedom of speech and entrepreneurship. It is speculated that the arrest might be used to initiate EU sanctions against Telegram.",
+        "rag_answer": "Pavel Durov's arrest in Paris has been linked to potential charges of terrorism, drugs, fraud, money laundering, and crimes against minors. This could carry severe implications, including up to 20 years in prison. Furthermore, Durov was declared persona non grata in France, indicating potential diplomatic tensions. Some speculate that France might use the criminal case as a basis to provoke EU sanctions against Telegram, affecting the app's operations in Europe. However, these remain speculations as current information is limited."
+    },
+    {
+        "topic_name": "Цены на такси в Анталье и сравнении с Москвой",
+        "ts_msg_id": 189993,
+        "question": "What are the differences in taxi prices between Antalya and Moscow?",
+        "answer": "According to users, taxi prices in Antalya are higher compared to Moscow. For instance, a transfer from the airport to Hurma costs 890 lira, nearly twice as much as the comfort class in Moscow. Transfers in both cities cover similar distances, but the costs differ significantly.",
+        "rag_answer": ""
+    },
+    {
+        "topic_name": "Особенности работы и доставки в Турции",
+        "ts_msg_id": 191081,
+        "question": "What are the alternative income opportunities for hotel staff in Turkey during the off-season?",
+        "answer": "Hotel staff in Turkey during the off-season often engage in different jobs such as working in agriculture or taking up roles like electricians or taxi drivers. Some pursue family businesses, while others switch to entirely different professions.",
+        "rag_answer": ""
+    },
+    {
+        "topic_name": "Переводы на IBAN через Золотую Корону",
+        "ts_msg_id": 191121,
+        "question": "What are the advantages and concerns about using P2P transfers?",
+        "answer": "P2P transfers can be convenient, but they often pose risks such as tax authorities' attention and liquidity issues, as demand may not always match when needed.",
+        "rag_answer": "The discussion highlights both advantages and concerns regarding the use of P2P transfers. Some users appreciate P2P for providing 'clean' money with traceable origins, while avoiding direct cash dealings that can be time-consuming. However, concerns include potential problems with tax authorities ('P2P is always a murky story, doesn't want to get tax issues'), and the possibility of there not being enough demand when the user needs it. Additionally, one user mentions preference for exchanges over P2P due to less hassle ('I use exchanges to exchange USD to USDT'), suggesting that exchanges might be a more straightforward option."
+    },
+    {
+        "topic_name": "Коммуникация с Иш банком и требования",
+        "ts_msg_id": 191140,
+        "question": "What are the main points discussed regarding communication with Ish Bank?",
+        "answer": "The main points discussed include the expectation of communication from Ish Bank, and the requirements imposed on employees, often in an ultimatum format. Despite promises for changes, some express skepticism due to previous experiences.",
+        "rag_answer": "The main points discussed regarding communication with Ish Bank include an upcoming communication planned on Ish Bank, as mentioned by user AK. User Artjom Lee raised curiosity about whether it would be a simple announcement or something more detailed. Konstantin M was interested in whether Ish Bank offers any advantages like a better exchange rate for USD to Lira, which Artjom Lee negated. Discussions also touched on the expectation of a more customer-friendly approach, unlike previous communications that have been described as challenging. There was mention of potential excitement around credit card availability and the ability to switch accounts like Deniz Bank. Overall, users expressed interest in understanding the specific benefits and differences between Ish Bank and other banks like Ziraat."
+    },
+    {
+        "topic_name": "Обсуждение медицинских страховок для иностранцев",
+        "ts_msg_id": 192074,
+        "question": "What is the difference between residence permit insurance and the new extended insurance plans?",
+        "answer": "The difference mainly lies in the coverage limits. While some participants see little improvement in the insurance coverage, extended plans have historically provided different limits, as mentioned by Vladimir.",
+        "rag_answer": "The discussion highlights that the coverage between a residence permit insurance and the new extended insurance plans seems to be different. Vladimir Osipov mentions that the coverage for the residence permit and extended insurance always varied, especially in terms of limits (msg_id: 192089). However, Mari points out that when comparing the limits of the residence permit insurance and the new extended plan, she finds no difference (msg_id: 192091). Additionally, Vladimir Osipov states that within the residence permit insurance, there is often an annual limit of 5000 TL (msg_id: 192092)."
+    },
+    {
+        "topic_name": "Медицинское страхование и рекомендации по лечению",
+        "ts_msg_id": 192108,
+        "question": "Does insurance cover the cost of MRI and what alternative treatments are recommended?",
+        "answer": "Insurance may cover part of the MRI costs, but it is not guaranteed for everyone. Some recommend self-prescribing over-the-counter medications and doing regular massage, which many found helpful.",
+        "rag_answer": "Insurance can cover a significant portion of the cost of an MRI. For example, Marina auto antalya mentioned that her MRI cost 5000 TL, with 80% of this covered by insurance, leaving an out-of-pocket expectation of 7-10 thousand TL without coverage. Another user, AK, stated that their MRI was fully covered by Demir insurance. However, the cost without insurance can be significantly higher, as stated by Denise Lebedev that an MRI without insurance could be around 11-12 thousand TL at Medstar. Alternative treatments or strategies were not explicitly mentioned in the messages, but user Olga M discussed issues with insurance not covering neurologist visits and possible actions for disputing this."
+    },
+    {
+        "topic_name": "Интервью с Дудём и его качества",
+        "ts_msg_id": 183576,
+        "question": "What were the opinions on Dud's recent interview?",
+        "answer": "Participants had mixed feelings about Dud's recent interview. Some felt that the dialogue did not work out, that Dud was too focused on previous statements of the interviewee, and there was no genuine exchange. Others appreciated his preparation and fact presentation.",
+        "rag_answer": "Opinions on Dud's recent interview were mixed. Artjom Lee believes Dud improved significantly and was well-prepared, catching inconsistencies. Marina felt that Dud spent too much time trying to get the interviewee to contradict past statements, resulting in a lack of genuine dialogue. She also believes that Dud wasn't genuinely interested in the interviewee's answers, which detracted from the interview for her. Despite this critique, Marina considers Dud to be an excellent interviewer in general.\nAndrei Sidorenko thinks Dud struggled in the interview and compared his performance to a past failure with Kiselev, hinting that Dud can be an unreliable interviewer despite occasional success. Nonetheless, Artjom Lee was surprisingly impressed and had low expectations due to a previous negative experience with another interview."
+    },
+    {
+        "topic_name": "Места для наблюдения за воздушными шарами в Гереме",
+        "ts_msg_id": 184094,
+        "question": "Where can one view hot air balloons in Göreme at sunrise without a fee?",
+        "answer": "According to the discussion, one can watch the balloons from the Uchisar Fortress or from the Red Valley. However, for a free experience, it is advised to arrive at viewpoints before 6 a.m.",
+        "rag_answer": "In Göreme, you can view the hot air balloons at sunrise for free from several locations. A popular spot is the Red Valley, from where many people have observed the balloons. Another potential location is from a rooftop of a hotel or any viewpoint that doesn't charge a fee if you arrive before 6 AM. Additionally, there's the option to hike to the viewpoint from the Second Valley of Love, but good footwear is recommended. Some individuals also mentioned watching from the Uçhisar Castle, where arriving early at 5 AM allows a good view of the balloons as they lift off from Göreme."
+    },
+    {
+        "topic_name": "Проблемы заказа в Старбакс на английском",
+        "ts_msg_id": 184278,
+        "question": "Why might there be misunderstandings when ordering coffee at Starbucks in a non-native language?",
+        "answer": "Misunderstandings could occur due to differences in language proficiency, leading to confusion about sizes and additional options. Users have suggested that terms like 'medium' might be understood as roast type rather than size, causing unexpected additions.",
+        "rag_answer": ""
+    }
+]
