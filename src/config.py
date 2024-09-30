@@ -27,9 +27,9 @@ index_pk_fields = {index_name_topics: ['chat_id', 'topic_name'],
 
 sent_tranformer_model_name = 'distiluse-base-multilingual-cased-v1'
 
-# llm_model, llm_price = "gpt-4o-2024-08-06", (2.5, 10)  # input,output tokens, usd for 1M
+llm_model, llm_price = "gpt-4o-2024-08-06", (2.5, 10)  # input,output tokens, usd for 1M
 
-llm_model, llm_price = "gpt-4o-mini", (0.15, 0.6)  # input, output tokens, usd for 1M
+# llm_model, llm_price = "gpt-4o-mini", (0.15, 0.6)  # input, output tokens, usd for 1M
 
 
 def read_index_settings(index_name):

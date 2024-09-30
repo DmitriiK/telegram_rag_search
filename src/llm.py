@@ -57,16 +57,17 @@ Ultimately you should output in json format following:
 - topic summary eng (same in English)
 - topic tags: list of words for tagging, in Russian
 - topic tags eng: same list but in English
-- msg_ids: list of IDs for relevant for this topic messages, it supposed to contains ids for most of the messages in_family and some of the not in_family. 
-- questions: list of 2 possible questions, in English,  for which the answer can be found 'topic' messages.
-- answers: answers for each of the questions above. The source for that answers should be data from relevant messages, related to the topic
+- msg_ids: list of IDs for relevant for this topic messages, it supposed to contains ids for most of the messages in_family 
+  and some of the not "in_family". 
+- question: possible question, in English,  for which the answer can be found in one  or more of 'topic' messages. T
+- answer message ids: list of id(s) for the messages, that contains answer to the  question above. 
+  Thus, that list MUST BE a subset of "msg_ids" List.
 
 Final output should be pure parsible to dict json, without any additional comments.
 --
 example of usage:
 for set of messages:
 `
-
         "msg_id": 123,
         "msg_date": "2024-08-29T10:14:18",
         "user_name": "Dima",
@@ -105,7 +106,9 @@ for set of messages:
 topic_name might be: "recommendation for choosing of motor oil for VW".
 "topic_summary_eng" might be:  
 "as an motor oil for VS   recommended Shell and  Motul. But somebody recommends to have Toyota car instead of VW"".
-relevant_messages_ids:  [124, 127, 128]
+msg_ids:  [124, 127, 128]
+question: "What car should one have in order not to choose engine oil?"
+answer_msg_ids: [128]
 # 126 - not included cause it is of-topic.
     _________So, let's play._____
 The messages, that you need to summirize into one topic are:

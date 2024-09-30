@@ -79,8 +79,9 @@ class TestTelega(TestCase):
     def test_find_long_topic(self):
         self.set_up_tmi()
         mi = self.telegram_index
-        topics = [t for t in mi.topics.values() if len(t) > 10]
-        print(f'number of topics with lengh>10 {len(topics)}')
+        topics = [(k, len(v)) for k, v in mi.topics.items() if 20 > len(v) > 10]
+        topics.sort(key=lambda x: x[1], reverse=True)
+        print(f'buyuk topics: {[x[0] for x in topics]}')
 
 
 class TestJSONhelper(TestCase):
@@ -158,9 +159,14 @@ class TestLLM(TestCase):
 
     def test_summarize_to_topic(self):
         # 190963  # santehnik # 186989 # rent prices 187347 # taxi in Antalia, 189845 how to feed pets
-        ret = self.rg.get_topic_summary_by_message(topic_message_id=189845)
-        pyclip.copy(ret)
-        print(ret)
+        big_topic_ids = [186659, 188347, 192255, 183632, 183784, 184130, 185322, 186146, 188530, 185092, 185203, 188007, 188443, 188990, 189215, 190869, 184485, 185701, 185904, 187543, 188423, 189237, 189533, 189876, 190215, 192283, 183759, 183870, 185139, 186638, 188593, 191508, 191667, 191934, 192022, 183990, 183998, 185482, 186488, 186509, 187131, 188807, 189993, 191081, 191121, 191140, 192074, 192108, 183576, 184094, 184278, 146145, 185277, 185515, 186163, 186267, 186691, 187347, 187670, 188309, 188606, 189093, 190004, 190161, 190496, 190612, 191780, 191784, 192003, 192198, 183588, 183929, 184387, 184419, 184897, 185125, 185531, 185606, 186108, 186560, 187252, 187324, 187634, 188488, 188834, 189738, 190206, 190468, 190577, 191253, 191342]
+        tdicts = []
+        for tid in big_topic_ids:
+            ret = self.rg.get_topic_summary_by_message(topic_message_id=tid)
+            tdicts.append(json.loads(ret))    
+            pyclip.copy(str(tdicts))
+            with open('output/llm_output/topics.json', 'w') as fl:
+                json.dump(tdicts, fl, ensure_ascii=False, indent=4)
 
     def test_summarize_to_topic_and_write_to_es(self):
         json_ret = self.rg.get_topic_summary_by_message(topic_message_id=189845)
