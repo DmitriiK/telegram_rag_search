@@ -202,6 +202,6 @@ The messages, that you need to translate are:
     {messages}
 ```
     """
-    return prompt_template.format( messages=msgs_json)
+    return prompt_template.format(messages=msgs_json)
 
 
