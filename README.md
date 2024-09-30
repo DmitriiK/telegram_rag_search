@@ -6,6 +6,12 @@
 
 This repository implements functionalities for retrieving and processing Telegram messages, specifically focusing on using Large Language Models (LLMs) for Retrieval-Augmented Generation (RAG) search functionalities. It enables users to parse and visualize topics discussed in Telegram chats and find relevant information based on queries using Elastic Search.
 
+## Problem Description
+Standard search in Telegram some times does not work well as it
+ - is not able to use semantic search
+ - is not able to do summarization of search results
+ - is not considering parent child relations in the chat messages. Thus, if somebody asks "Please recommend plumber in our city?" and it anybody else replies later, when I next time do a search by 'plumber', I'm able to find only the first, topic-starting message, while the information that is interesting for me, the phone of the plumber is somewhere in one of the related child topic messages.
+
 ## RAG based search over Telegram Messages
 Features:
 - retrieving of Telegram messages from exported data or directly though Telegram API
@@ -35,6 +41,9 @@ So, for search over russian messages I'm using simple ES search by tags, so that
 - Also for search I'm using another approach. I'm grouping the messages into topics. As as first level of this grouping I use explicit links of the messages to each other, building discussion tree, that looks like this.
 ![image](https://github.com/user-attachments/assets/8206dc68-1971-47d5-b849-e3d29c6cf907)
 But as not of the messages are linked to each other explicitly, I have to extend this list by adding adjacent messages and feed this to LLM to sort out who is relevant and to create document with topic summary,both in Russian and in English. This document is pushed to ES, where it can be used for vector search by English fields later.
+- to make grouping messages in topics faster I've created kind of self-made in-memory index class [telegram_messages_index](src/telegram_messages_index.py). To understand how it works refer to tests.
+![image](https://github.com/user-attachments/assets/e76e1565-cfcb-4187-8457-eeccedb14e02)
+
 - for configuring of ES indexes I'm using [yml files like this](src/elastic_search/index_settings.yml)
 
 ### Not implemented yet, but in plans
