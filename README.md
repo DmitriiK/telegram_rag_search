@@ -28,13 +28,14 @@ or by playing around with [tests](tests.py).
 - Docker for launching of Elastic Search
   
 ### Implementation details
-Unfortunatly, I could not find any SentenceTransformer model, that might work reliably create vector embedding  with Russian text.
+- Unfortunatly, I could not find any SentenceTransformer model, that might work reliably create vector embedding  with Russian text.
 You can take a look at  [Cousine similarity comparison notebook](cousine_similarity.ipynb), where I tried to compare different models for calculations of vector embedding.
 So, for search over russian messages I'm using simple ES search by tags, so that firstly we are requesting ES by tags, than passing the questions and the doucmements we have recieved from ES to LLM
-For applying of standard RAG schema (dense vector cousine similarity search plus LLM) over russian languages I had to translate these messages to English first and push it to separate index.
-Also c search I'm using another approach. I'm grouping the messages into topics. As as first level of this grouping I use explicit links of the messages to each other, building discussion tree, that looks like this.
+- For applying of standard RAG schema (dense vector cousine similarity search plus LLM) over russian languages I had to translate these messages to English first and push it to separate index.
+- Also for search I'm using another approach. I'm grouping the messages into topics. As as first level of this grouping I use explicit links of the messages to each other, building discussion tree, that looks like this.
 ![image](https://github.com/user-attachments/assets/8206dc68-1971-47d5-b849-e3d29c6cf907)
 But as not of the messages are linked to each other explicitly, I have to extend this list by adding adjacent messages and feed this to LLM to sort out who is relevant and to create document with topic summary,both in Russian and in English. This document is pushed to ES, where it can be used for vector search by English fields later.
+- for configuring of ES indexes I'm using [yml files like this](src/elastic_search/index_settings.yml)
 
 ### Not implemented yet, but in plans
 - Add evaluation of RAG search
