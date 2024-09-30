@@ -1,5 +1,5 @@
 
-from typing import List, Tuple
+from typing import List, Tuple, Dict, Set
 from collections import defaultdict
 from math import inf
 import logging
@@ -13,6 +13,7 @@ class TelegaMessageIndex:
         self.msdg_ids = dict()  # Dict[int, TelegaMessage]
         self.reply_to_msg_ids = defaultdict(set)  # Dict[int, Set[int]] # set of child messages ids
         self.msg_date_ids = defaultdict(set)  # Dict[int, Set[int]] # set of child messages ids
+        self.topics: Dict[int, Set[int]] = dict()
 
     def add_item(self, msg: TelegaMessage):
         if msg.msg_id not in self.msdg_ids:  # i assume no need to clear data if item already in the index 
@@ -20,6 +21,11 @@ class TelegaMessageIndex:
             if msg.reply_to_msg_id:
                 self.reply_to_msg_ids[msg.reply_to_msg_id].add(msg.msg_id)
             self.msg_date_ids[msg.msg_date].add(msg.msg_id)
+            tsmid = self.get_topic_starting_msg_id(msg)
+            if tsmid not in self.topics:
+                self.topics[tsmid] = {msg.msg_id}
+            else:
+                self.topics[tsmid].add(msg.msg_id)
 
     def get_message(self, msg_id: int) -> TelegaMessage:
         return self.msdg_ids.get(msg_id)
@@ -33,10 +39,21 @@ class TelegaMessageIndex:
             reply_to_msg_id = msg.reply_to_msg_id
             msg = self.get_message(reply_to_msg_id)
             if not msg:
-                logging.warn(f'inconsistent data in index for reply_to_msg_id: {reply_to_msg_id}')
+                logging.warning(f'inconsistent data in index for reply_to_msg_id: {reply_to_msg_id}')
             else:
                 ret_lst.append(msg)
         return ret_lst
+    
+    def get_topic_starting_msg_id(self, msg: TelegaMessage, max_steps: int = 1000) -> int:
+        step = 0
+        topic_starting_msg_id = msg.msg_id
+        while msg and msg.reply_to_msg_id and step < max_steps:
+            step += 1
+            topic_starting_msg_id = msg.reply_to_msg_id
+            msg = self.get_message(topic_starting_msg_id)
+            if not msg:
+                logging.warning(f'inconsistent data in index for reply_to_msg_id: {topic_starting_msg_id}')
+        return topic_starting_msg_id
         
     def get_children_messages(self, msg_id: int, max_depth: int = inf) -> List[TelegaMessage]:
         descendants = []

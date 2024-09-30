@@ -59,9 +59,10 @@ class TestTelega(TestCase):
         print([x.msg_id for x in chain])
         assert [x.msg_id for x in chain] == [4, 2]
 
-        chain = mi.get_messages_tree(4)
-        print([x.msg_id for x in chain])
-        assert [x.msg_id for x in chain] == [2, 3, 4, 5, 7]
+        chain = mi.get_messages_tree(4, take_in_direct_relatives=True)
+        ids = [x.msg_id for x in chain]
+        print(ids)
+        assert ids == [2, 3, 4, 5, 7]
 
     def test_family_adding(self):
         self.set_up_tmi()
@@ -75,21 +76,25 @@ class TestTelega(TestCase):
         print(f'len str ={len(json_string)}')
         pyclip.copy(json_string)  # copy to clipboard for feeding to LLM
 
-    def test_merge_translation(self):
-        import os
+    def test_find_long_topic(self):
+        self.set_up_tmi()
+        mi = self.telegram_index
+        topics = [t for t in mi.topics.values() if len(t) > 10]
+        print(f'number of topics with lengh>10 {len(topics)}')
+
+
+class TestJSONhelper(TestCase):
+    def test_merge_translated(self):
         import json
-        import glob
+        from src.json_helper import merge_chunks
+        from src.data_classes import date_to_json_serialize
 
-        merged_data = []
         search_folder = 'output/llm_output'
-
-        for filename in glob.glob(os.path.join(search_folder, 'messages*.json')):
-            with open(filename, 'r') as file:
-                data = json.load(file)
-                merged_data.extend(data)
-
-        with open('merged_data.json', 'w') as outfile:
-            json.dump(merged_data, outfile)
+        out_file_path = f'{search_folder}/merged_messages.json'
+        merged_data = merge_chunks(search_folder)
+        with open(out_file_path, 'w') as outfile:
+            json.dump(merged_data, outfile,  indent=4, default=date_to_json_serialize,  ensure_ascii=False)
+        merged_data = None
                 
 
 class TestES(TestCase):
