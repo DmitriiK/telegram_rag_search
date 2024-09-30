@@ -35,7 +35,7 @@ So, for search over russian messages I'm using simple ES search by tags, so that
 - Also for search I'm using another approach. I'm grouping the messages into topics. As as first level of this grouping I use explicit links of the messages to each other, building discussion tree, that looks like this.
 ![image](https://github.com/user-attachments/assets/8206dc68-1971-47d5-b849-e3d29c6cf907)
 But as not of the messages are linked to each other explicitly, I have to extend this list by adding adjacent messages and feed this to LLM to sort out who is relevant and to create document with topic summary,both in Russian and in English. This document is pushed to ES, where it can be used for vector search by English fields later.
-- to make grouping messages in topics I've created kind of self-made in-memori index class [telegram_messages_index](src/telegram_messages_index.py). To understand how it works refer to tests.
+- to make grouping messages in topics faster I've created kind of self-made in-memory index class [telegram_messages_index](src/telegram_messages_index.py). To understand how it works refer to tests.
 ![image](https://github.com/user-attachments/assets/e76e1565-cfcb-4187-8457-eeccedb14e02)
 
 - for configuring of ES indexes I'm using [yml files like this](src/elastic_search/index_settings.yml)
