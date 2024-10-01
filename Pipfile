@@ -12,6 +12,8 @@ elasticsearch = "*"
 openai = "*"
 pytest = "*"
 python-dotenv = "*"
+seaborn = "*"
+matplotlib = "*"
 
 [dev-packages]
 ipykernel = "*"

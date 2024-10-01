@@ -12,7 +12,7 @@ import src.llm as llm
 
 
 class RaguDuDu:
-    def __init__(self):
+    def __init__(self, llm_model=cfg.llm_model):
         print("Creating the messages    index...")
         dump_path = cfg.messages_dump_path
         msgs = telega_dump_parse_essential(dump_path=dump_path)
@@ -21,12 +21,13 @@ class RaguDuDu:
         for msg in tqdm(msgs):
             mi.add_item(msg)
         self.telegram_index = mi
+        self.llm_model = llm_model
 
     def get_topic_summary_by_message(self, topic_message_id: int) -> str:
         msgs_to_feed = self.telegram_index.get_potential_topic(topic_message_id, max_steps_up=1)
         prompt = llm.build_summarization_prompt(chat_description=cfg.chat_description, messages=msgs_to_feed)
         logging.info(f'len of prompt {len(prompt)}')
-        answer = llm.ask_llm(prompt)
+        answer = llm.ask_llm(prompt, self.llm_model)
         answer = answer.replace('```json', '').replace('```', '')
         return answer
 
@@ -39,7 +40,7 @@ class RaguDuDu:
             msgs = es.get_messages_by_id(chat_id=doc['chat_id'],  msg_ids=doc['msg_ids'])
             prompt = llm.build_rag_prompt(question, chat_description=cfg.chat_description, messages=msgs)
             logging.info(prompt)
-            answer = llm.ask_llm(prompt)
+            answer = llm.ask_llm(prompt, self.llm_model)
             return answer
 
     def rag_by_simple_search(self, question: str, tags: str) -> str:
@@ -83,12 +84,13 @@ class RaguDuDu:
             topic_msgs_all.extend(tms)
         prompt = llm.build_rag_prompt(question, chat_description=cfg.chat_description, messages=topic_msgs_all)
         logging.info(f'len of prompt {len(prompt)} for {len(topic_msgs_all)} messages')
-        answer = llm.ask_llm(prompt)
-        answer = llm.get_pure_json_from_llm_result(answer)
+        answer = llm.ask_llm(prompt, self.llm_model)
+        answer = llm.get_dict_from_llm_result(answer)
         return answer
 
 
-def translate_messages(msgs: Iterable[TelegaMessage], out_dir: str,  max_tokens_count: int = 16000, overlapping_msgs_cnt: int = 0):
+def translate_messages(msgs: Iterable[TelegaMessage], out_dir: str,  max_tokens_count: int = 16000, overlapping_msgs_cnt: int = 0,
+                       llm_model=cfg.llm_model):
     """_summary_
 
     Args:
@@ -101,7 +103,7 @@ def translate_messages(msgs: Iterable[TelegaMessage], out_dir: str,  max_tokens_
         chunk_min_msg_id, chunk_max_msg_id = chunk_messages[0]["msg_id"], chunk_messages[-1]["msg_id"] 
         print(f'chunk is ready for {len(chunk_messages)} msgs: {chunk_min_msg_id}-{chunk_max_msg_id}, {chunk_symbols_count=}') 
         prompt = llm.build_translation_prompt(json_str)
-        ret_llm = llm.ask_llm(prompt=prompt)
+        ret_llm = llm.ask_llm(prompt=prompt, llm_model=llm_model)
         ret_llm = ret_llm.replace('```json', '').replace('```', '')
         out_fn = f'{out_dir}/messages{chunk_min_msg_id}-{chunk_max_msg_id}.json'
         with open(out_fn, "w") as outfile:

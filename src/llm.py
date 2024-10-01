@@ -29,8 +29,12 @@ def ask_llm(prompt, model=cfg.llm_model):
 
 
 def get_pure_json_from_llm_result(llr_ret:  str):
+    return json.dumps(get_dict_from_llm_result(llr_ret))
+
+
+def get_dict_from_llm_result(llr_ret:  str):
     llr_ret = llr_ret.replace('```json', '').replace('```', '')
-    return json.dumps(json.loads(llr_ret), indent=4,  ensure_ascii=False)
+    return json.loads(llr_ret)
 
 
 def build_summarization_prompt(messages: List[TelegaMessage], chat_description: str = '') -> str:
