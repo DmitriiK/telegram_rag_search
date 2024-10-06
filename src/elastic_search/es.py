@@ -54,10 +54,62 @@ def load_messages_from_dump():
     # encoding = tiktoken.encoding_for_model(cfg.llm_model)
     index_docs(docs=subset, index_name=cfg.index_name_messages, recreate_index=True)
 
+
 def load_from_json_to_es(json_file_path: str, es_index_name: str):
     with open(json_file_path, 'r') as f:
         docs = json.load(f)
     index_docs(docs, index_name=es_index_name, recreate_index=True)
+
+
+def hybrid_search(search_term: str, knn_search_field: str, text_search_field: str, index_name: str, output_fields: List[str] = None,
+                  size: int = 10, chat_id: int = None):
+    chat_id = chat_id or cfg.telegram_group_id
+    model = get_st_model()
+    vector = model.encode(search_term)
+
+    knn_query = {
+        "field": knn_search_field,
+        "query_vector": vector,
+        "k": size,
+        "num_candidates": 10000,
+        "boost": 0.5
+    }
+
+    keyword_query = {
+        "bool": {
+            "must": {
+                "multi_match": {
+                    "query":  search_term,
+                    "fields": [text_search_field],
+                    "type": "best_fields",
+                    "boost": 0.5
+                }
+            }
+        }
+    }
+
+    if not output_fields:
+        ind_flds = cfg.read_index_settings(index_name)['mappings']['properties']
+        output_fields = [f for f in ind_flds
+                         if ind_flds[f]['type'] != 'dense_vector']
+    search_query = {
+        "knn": knn_query,
+        "query": keyword_query,
+        "size": size,
+        "_source": output_fields
+    }
+
+    es_results = es_client.search(
+        index=index_name,
+        body=search_query
+    )
+    
+    result_docs = []
+    
+    for hit in es_results['hits']['hits']:
+        result_docs.append(hit['_source'])
+
+    return result_docs
 
 
 def simple_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None, min_score: float = 2, size: int = 20):

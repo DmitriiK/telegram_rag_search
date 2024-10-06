@@ -141,6 +141,12 @@ class TestES(TestCase):
         srs.sort(key=lambda x: x['msg_id'])
         print(srs)
 
+    def test_hibrid_search(self):
+        search_term, knn_search_field, text_search_field = 'refrigerator repair', 'msg_text_vector',  'msg_text'
+        ret = es.hybrid_search(search_term=search_term, knn_search_field=knn_search_field, text_search_field=text_search_field,
+                               index_name=cfg.index_name_messages_eng)
+        assert ret
+
 
 class TestLLM(TestCase):
 
