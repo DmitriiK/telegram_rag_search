@@ -49,10 +49,10 @@ But as not of the messages are linked to each other explicitly, I have to extend
 - for configuring of ES indexes I'm using [yml files like this](src/elastic_search/index_settings.yml)
 
 #### Setup
-- use _pipenv install_ command to install deependencies
+- use *pipenv install* command to install dependencies
 - use [docker-compose.yaml](docker-compose.yaml) file to launch Elastick Search container
 - mind basic parameters inside [config file](src/config.py)
-- assing you api key either in your env variable, or to .env file 
+- assign you OPENAI_API_KEY either as env variable, or write to *.env* file 
 
 ### Not implemented yet, but in plans
 - Make from this telegram bot, or\and make Streamlit application as UI. 
