@@ -2,6 +2,9 @@ import logging
 from tqdm import tqdm
 from typing import Iterable, List
 import json
+import math
+
+from sentence_transformers import CrossEncoder
 
 import src.config as cfg
 from src.data_classes import TelegaMessage
@@ -35,7 +38,7 @@ class RaguDuDu:
         search_field = 'topic_name_eng_vector'
         ret = es.knn_vector_search(search_term=question, index_name=cfg.index_name_topics, search_field=search_field)
         if ret:
-            score, doc = ret[0][0], ret[0][1]
+            score, doc = ret[0]['score'], ret[0]['doc']
             logging.info(f'got result of knn search {score=}')
             msgs = es.get_messages_by_id(chat_id=doc['chat_id'],  msg_ids=doc['msg_ids'])
             prompt = llm.build_rag_prompt(question, chat_description=cfg.chat_description, messages=msgs)
@@ -73,8 +76,25 @@ class RaguDuDu:
         ed_lst = es.knn_vector_search(search_term=question, index_name=cfg.index_name_messages_eng, search_field=search_field,
                                       number_of_docs=5, min_score=0.5)
         logging.info(f'got {len(ed_lst)} documents from ES')
-        msg_ids = [md[1]['msg_id'] for md in ed_lst]
+        msg_ids = [md['doc']['msg_id'] for md in ed_lst]
         return self.rag_by_messages(question=question, msg_ids=msg_ids)
+    
+    def rerank(self,  docs: Iterable, query: str):
+        cross_encoder = CrossEncoderRanker(model_name='cross-encoder/ms-marco-MiniLM-L-12-v2')
+        answers = [x['doc']['msg_text'] for x in docs] 
+        reranking_scores = cross_encoder.predict(question=query, answers=answers)
+        for d, s in zip(docs, reranking_scores):
+            d['reranked_score'] = s
+        docs.sort(key=lambda x: x["reranked_score"], reverse=True)
+
+    def rag_reranked(self, question: str, number_of_docs_initial: int = 10, number_of_doc_for_rag: int = 5) -> str:
+        knn_search_field = 'msg_text_vector'
+        rag_candidates = es.knn_vector_search(search_term=question, search_field=knn_search_field, 
+                                              index_name=cfg.index_name_messages_eng, number_of_docs=number_of_docs_initial)
+        self.rerank(docs=rag_candidates, query=question)
+        msg_ids = [md['doc']['msg_id'] for md in rag_candidates[0: number_of_doc_for_rag]]
+        return self.rag_by_messages(question=question, msg_ids=msg_ids)
+  
     
     def rag_by_messages(self, question: str, msg_ids: List[int]) -> str:
         topic_msgs_all = []
@@ -87,6 +107,20 @@ class RaguDuDu:
         answer = llm.ask_llm(prompt, self.llm_model)
         answer = llm.get_dict_from_llm_result(answer)
         return answer
+
+
+def sigmoid(logit: float) -> float:
+    "Apply sigmoig function to logits from model in order to have score from 0 to 1."
+    return 1 / (1 + math.exp(-logit))
+
+
+class CrossEncoderRanker:
+    def __init__(self, model_name: str, max_length: int = 512) -> None:
+        self.model = CrossEncoder(model_name, max_length=max_length)
+
+    def predict(self, question: str, answers: list[str]) -> list[float]:
+        logits = self.model.predict([(question, answer) for answer in answers]).tolist()
+        return [sigmoid(logit) for logit in logits]
 
 
 def translate_messages(msgs: Iterable[TelegaMessage], out_dir: str,  max_tokens_count: int = 16000, overlapping_msgs_cnt: int = 0,

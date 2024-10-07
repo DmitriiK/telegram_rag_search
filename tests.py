@@ -118,7 +118,7 @@ class TestES(TestCase):
         search_term, search_field = 'Cats feeding', 'topic_name_eng_vector'
         ret = es.knn_vector_search(search_term=search_term,  index_name=cfg.index_name_topics, search_field=search_field)
         assert ret
-        score, doc = ret[0][0], ret[0][1]
+        score, doc = ret[0]['score'], ret[0]['doc']
         print(f'{score=}')
         ret = es.get_messages_by_id(chat_id=doc['chat_id'],  msg_ids=doc['msg_ids'])
 
@@ -162,8 +162,12 @@ class TestLLM(TestCase):
         ret = self.rg.rag_by_simple_search(question='I have a Thai cat. How should I feed him?', tags='Кот кормить')
         print(ret)
 
+    def test_rag_by_reranked_search(self):
+        ret = self.rg.rag_reranked(question='Where I can repair my refrigerator?')
+        print(ret)
+
     def test_rag_by_dense_vector_search(self):
-        ret = self.rg.rag_by_dense_vector_search(question='Where I can repair my refrigerator')
+        ret = self.rg.rag_by_dense_vector_search(question='Where I can repair my refrigerator?')
         print(ret)
 
     def test_summarize_to_topic(self):

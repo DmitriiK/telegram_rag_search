@@ -104,10 +104,7 @@ def hybrid_search(search_term: str, knn_search_field: str, text_search_field: st
         body=search_query
     )
     
-    result_docs = []
-    
-    for hit in es_results['hits']['hits']:
-        result_docs.append(hit['_source'])
+    result_docs = [{'doc': hit['_source'], 'score': hit['_score']} for hit in es_results['hits']['hits']]
 
     return result_docs
 
@@ -140,7 +137,7 @@ def simple_search(search_term: str, search_field: str, index_name: str, output_f
 
 
 def knn_vector_search(search_term: str, search_field: str, index_name: str, output_fields: List[str] = None,
-                      min_score: float = 0.7, number_of_docs: int = 5):
+                      min_score: float = None, number_of_docs: int = 5):
     model = get_st_model()
     vector = model.encode(search_term)
     knn = {
@@ -165,14 +162,9 @@ def knn_vector_search(search_term: str, search_field: str, index_name: str, outp
     }
 
     es_results = es_client.search(index=index_name, body=search_query)
-    
-    result_docs = []
-    
-    for hit in es_results['hits']['hits']:
-        score = hit['_score']
-        if score >= min_score:
-            result_docs.append((score, hit['_source']))
-
+    result_docs = [{'doc': hit['_source'], 'score': hit['_score']}
+                   for hit in es_results['hits']['hits']
+                   if not min_score or hit['_score'] > min_score]
     return result_docs
 
 
