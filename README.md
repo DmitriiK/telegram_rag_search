@@ -30,6 +30,8 @@ Features:
 You can check main features from the list above in this [notebook](telegram_llm_playing_around.ipynb)
 or by playing around with [tests](tests.py).
 Or by launching streamlit web UI (streamlit ui.py)
+![image](https://github.com/user-attachments/assets/5c07a73a-b699-4a28-83c7-a4a47a0f338e)
+
 ### Technologies been used
 - Elastic Search for search over text data
 - Open AI for summarization of the messages
