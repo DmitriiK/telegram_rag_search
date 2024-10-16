@@ -29,6 +29,7 @@ Features:
 
 You can check main features from the list above in this [notebook](telegram_llm_playing_around.ipynb)
 or by playing around with [tests](tests.py).
+Or by launching streamlit web UI (streamlit ui.py)
 ### Technologies been used
 - Elastic Search for search over text data
 - Open AI for summarization of the messages
@@ -36,6 +37,7 @@ or by playing around with [tests](tests.py).
 - CrossEncoder (model 'cross-encoder/ms-marco-MiniLM-L-12-v2') for reranking of results of ES search
 - graphviz  Digraph for visualization of graphs (Discussion tree)
 - Docker for launching of Elastic Search
+- Strealit for UI
   
 ### Implementation details
 - Unfortunatly, I could not find any SentenceTransformer model, that might work reliably create vector embedding  with Russian text.
@@ -52,12 +54,12 @@ But as not of the messages are linked to each other explicitly, I have to extend
 
 #### Setup
 - use *pipenv install* command to install dependencies
-- use [docker-compose.yaml](docker-compose.yaml) file to launch Elastick Search container
+- use [docker-compose.yaml](docker-compose.yaml) file to launch Elastick Search container (note, for MacOS without docker desktop might need to do "colima start" before "docker-compose up")
 - mind basic parameters inside [config file](src/config.py)
 - assign you OPENAI_API_KEY either as env variable, or write to *.env* file 
 
 ### Not implemented yet, but in plans
-- Make from this telegram bot, or\and make Streamlit application as UI. 
+- Make from this telegram bot
 - create ETL for pulling the new messages from the chat and pushing the documents to ES index
 - 
 

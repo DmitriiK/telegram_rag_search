@@ -192,6 +192,5 @@ def get_messages_by_id(chat_id: int, msg_ids: List[int]) -> List[TelegaMessage]:
 
     es_results = es_client.search(index=cfg.index_name_messages, body=query)
 
-    tms = [TelegaMessage.model_validate(x['_source']) for x  in es_results['hits']['hits'] ]
+    tms = [TelegaMessage.model_validate(x['_source']) for x in es_results['hits']['hits'] ]
     return tms
-
